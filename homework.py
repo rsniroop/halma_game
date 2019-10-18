@@ -26,11 +26,13 @@ class halma_game_state:
         if self.game.player == 0:
             if self.my_pos == WHITE_FINAL_VAL or \
             self.opp_pos == BLACK_FINAL_VAL:
+                print(f'0 : Terminated')
                 return True
-        else:
+        """else:
             if self.my_pos == BLACK_FINAL_VAL or \
             self.opp_pos == WHITE_FINAL_VAL:
-                return True
+                print(f'1: Terminated')
+                return True"""
 
         return False
 
@@ -103,11 +105,11 @@ class halma_game_state:
                                     #print(f'Single Move to : ({BOARD_SIZE - x}, {BOARD_SIZE - y})')
                                     moves.append([self.calculate_directional_heuristics((x,y), cur_pos, my_turn), cur_pos , (x,y)])
                                 else:
-                                    if self.game.is_pos_valid(x+i, y+j) and not ((my_pos | opp_pos) & (1<<(BOARD_SIZE*(x+i) + (y+j)))) :
+                                    if self.game.is_pos_valid(x+i, y+j) and ((my_pos | opp_pos) & (1<<(BOARD_SIZE*x + y))) and not ((my_pos | opp_pos) & (1<<(BOARD_SIZE*(x+i) + (y+j)))) :
                                         self.temp_board = self.board
                                         jump_moves.extend(self.generate_jump_moves(cur_pos, (cur_pos[0] + 2*i, cur_pos[1] + 2 *j), my_turn))
 
-        moves = sorted(jump_moves, key = lambda x : x[0], reverse = True)[:10] + sorted(moves, key = lambda x : x[0], reverse = True)[:10]
+        moves = sorted(jump_moves, key = lambda x : x[0], reverse = True) + sorted(moves, key = lambda x : x[0], reverse = True)#[:10]
         #print(f'Sorted moves : \n {moves}')
         #print(f'\nlength of moves : {len(moves)}')
         #if my_turn:
@@ -150,6 +152,7 @@ class halma_game_state:
                                 heapq.heappush(open_queue, (h_val, jump_pos, cur_pos))
                                 jump_parent[jump_pos] = [cur_pos, 0]
             jump_parent[cur_pos][1] = 1
+        print(f'moves : {moves}')
         return moves
 
     def set_pawn_position(self, cur_pos):
@@ -248,7 +251,7 @@ class halma_ai_agent:
 
     def get_nextMove(self):
         state = halma_game_state(self.game)
-        nextMove = self.alphaBetaSearch(state, 4)
+        nextMove = self.alphaBetaSearch(state, 5)
 
 
     def alphaBetaSearch(self, state, depthLimit):
@@ -306,7 +309,7 @@ class halma_ai_agent:
             if v >= beta:
                 self.maxPruning += 1
                 self.currentDepth -= 1
-                return v
+                return alpha
             alpha = max(alpha, v)
 
         self.currentDepth -= 1
@@ -340,7 +343,7 @@ class halma_ai_agent:
             if v <= alpha:
                 self.minPruning += 1
                 self.currentDepth -= 1
-                return v
+                return beta
             beta = min(beta, v)
 
         self.currentDepth -= 1
@@ -366,6 +369,7 @@ class halma_game:
         self.my_pos = 0
         self.opp_pos = 0
         self.temp_board = 0
+        self.moves_completed = 0 
 
         self.max_agent = halma_ai_agent(self)
         print(f'Game : {game_type} player : {player} playtime : {play_time}\n board :\n{board}')
@@ -509,4 +513,11 @@ if __name__ == "__main__":
     in_list = None
     with open("input.txt", "r") as in_file:
         in_list = in_file.readlines()
+    num_moves = 0
+    """with open("playdata.txt") as playdata_file:
+        play_data = playdata_file.readlines()
+    if play_data is None:
+        num_moves = 0
+    else:
+    """
     halma_obj = halma_game(in_list[0].strip("\n"), in_list[1].strip("\n"), in_list[2].strip("\n"), "".join(in_list[3:]).replace("\n", ""))

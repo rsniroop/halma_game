@@ -1,2328 +1,1638 @@
-Game : GAME player : WHITE playtime : 1
- board :
-W.W.W...........W.W.WW............................W..............W...WW..........W.WW................WW.............W.....BBB.......WW.....B.............BB..B.............BB.B...............B..............B..............B.............BB...B...........B.B.B
-White_pos : 75989745662360452647423741908161504473354675134970162912687012722682024165376 black_pos : 19055895632245138194725672857914913652757
-Board_pos : 0b1010100000000000101011000000000000000000000000000010000000000000010001100000000001011000000000000000011000000000000010000011100000001100000100000000000001100100000000000001101000000000000000100000000000000100000000000000100000000000001100010000000000010101
 1 : Max turn
-moves : []
-moves : [[40, (15, 13), (11, 13)], [60, (15, 13), (9, 13)], [48, (15, 13), (11, 11)], [68, (15, 13), (9, 11)], [52, (15, 13), (9, 15)]]
-moves : [[28, (15, 11), (13, 9)]]
-moves : [[20, (15, 11), (13, 11)], [20, (15, 11), (15, 9)]]
-moves : [[20, (14, 11), (14, 9)]]
-moves : []
-moves : [[12, (12, 13), (10, 15)], [20, (12, 13), (10, 13)]]
-moves : [[20, (11, 14), (9, 14)]]
-moves : [[20, (11, 14), (11, 12)], [28, (11, 14), (9, 12)], [32, (11, 14), (13, 10)], [24, (11, 14), (15, 10)]]
-moves : [[12, (11, 10), (9, 12)], [-8, (11, 10), (11, 12)], [-8, (11, 10), (13, 10)], [-16, (11, 10), (15, 10)]]
-moves : [[20, (11, 10), (11, 8)]]
-moves : [[-8, (11, 9), (11, 11)], [12, (11, 9), (9, 11)], [-16, (11, 9), (11, 13)], [4, (11, 9), (9, 13)], [-4, (11, 9), (9, 15)]]
-moves : [[12, (10, 14), (12, 12)]]
-moves : [[20, (10, 12), (10, 10)], [28, (10, 12), (8, 10)], [20, (10, 12), (8, 12)], [12, (10, 12), (12, 10)], [40, (10, 12), (6, 12)], [40, (10, 12), (10, 8)], [48, (10, 12), (6, 10)], [48, (10, 12), (8, 8)], [32, (10, 12), (12, 8)]]
-moves : [[28, (10, 11), (8, 9)], [20, (10, 11), (10, 9)], [-8, (10, 11), (12, 11)], [12, (10, 11), (12, 9)], [40, (10, 11), (6, 11)]]
-moves : [[-8, (10, 11), (10, 13)], [-16, (10, 11), (10, 15)]]
-moves : [[12, (10, 11), (12, 9)], [20, (10, 11), (10, 9)], [-8, (10, 11), (12, 11)], [28, (10, 11), (8, 9)], [40, (10, 11), (6, 11)]]
-moves : [[12, (9, 10), (7, 12)]]
-moves : [[20, (9, 10), (9, 8)]]
-moves : [[-28, (9, 10), (11, 12)], [-8, (9, 10), (9, 12)], [-16, (9, 10), (13, 10)], [-24, (9, 10), (15, 10)]]
-moves : [[-8, (9, 9), (9, 11)], [-28, (9, 9), (11, 11)], [-16, (9, 9), (9, 13)], [-36, (9, 9), (11, 13)], [-24, (9, 9), (9, 15)]]
-moves : [[28, (8, 11), (6, 9)]]
-moves : [[20, (8, 11), (6, 11)], [20, (8, 11), (8, 9)], [12, (8, 11), (10, 9)], [-16, (8, 11), (12, 11)], [4, (8, 11), (12, 9)]]
-moves : [[12, (8, 11), (10, 9)], [20, (8, 11), (8, 9)], [20, (8, 11), (6, 11)], [-16, (8, 11), (12, 11)], [4, (8, 11), (12, 9)]]
-moves : [[20, (7, 11), (7, 9)]]
-moves : [[-8, (7, 11), (9, 11)], [-16, (7, 11), (11, 11)], [-28, (7, 11), (9, 13)], [-36, (7, 11), (11, 13)], [-36, (7, 11), (9, 15)]]
-moves : [[-8, (7, 10), (7, 12)]]
-moves : [[-28, (7, 10), (9, 12)], [-36, (7, 10), (11, 12)], [-24, (7, 10), (13, 10)], [-32, (7, 10), (15, 10)]]
-Time = 0:00:00.002313
+Sorted moves : 
+ [[360, (1, 1), (3, 7)], [355, (1, 1), (3, 5)], [349, (1, 1), (3, 3)], [344, (2, 2), (3, 3)], [286, (1, 1), (1, 5)], [286, (1, 1), (5, 1)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)], [271, (4, 0), (5, 1)]]
+
+length of moves : 38
+Time = 0:00:00.000666
+Apply move : [(1, 1), (3, 7)]
 2 : Min turn
-moves : [[28, (8, 5), (6, 3)], [40, (8, 5), (4, 5)], [48, (8, 5), (4, 3)], [48, (8, 5), (6, 1)]]
-moves : [[20, (8, 4), (6, 4)], [40, (8, 4), (4, 4)], [48, (8, 4), (4, 2)], [48, (8, 4), (6, 0)], [60, (8, 4), (2, 4)], [72, (8, 4), (0, 6)]]
-moves : [[20, (8, 4), (8, 2)]]
-moves : [[-8, (8, 4), (8, 6)]]
-moves : [[12, (7, 4), (5, 6)], [-8, (7, 4), (7, 6)], [-8, (7, 4), (9, 4)], [20, (7, 4), (7, 2)], [28, (7, 4), (5, 2)], [48, (7, 4), (5, 0)]]
-moves : [[12, (7, 4), (9, 2)]]
-moves : [[-8, (7, 4), (9, 4)], [20, (7, 4), (7, 2)], [-8, (7, 4), (7, 6)], [28, (7, 4), (5, 2)], [12, (7, 4), (5, 6)], [48, (7, 4), (5, 0)]]
-moves : [[-28, (7, 4), (9, 6)]]
-moves : [[20, (6, 6), (6, 4)], [28, (6, 6), (4, 4)], [48, (6, 6), (4, 2)], [48, (6, 6), (2, 4)], [60, (6, 6), (0, 6)], [60, (6, 6), (6, 0)]]
-moves : [[28, (6, 5), (4, 3)], [20, (6, 5), (6, 3)], [20, (6, 5), (4, 5)], [40, (6, 5), (6, 1)]]
-moves : [[-8, (6, 5), (6, 7)]]
-moves : [[20, (6, 2), (4, 2)], [20, (6, 2), (6, 0)], [-8, (6, 2), (6, 4)], [12, (6, 2), (4, 4)], [32, (6, 2), (2, 4)], [44, (6, 2), (0, 6)]]
-moves : [[12, (6, 2), (4, 4)], [-8, (6, 2), (6, 4)], [20, (6, 2), (4, 2)], [20, (6, 2), (6, 0)], [32, (6, 2), (2, 4)], [44, (6, 2), (0, 6)]]
-moves : [[20, (5, 4), (5, 2)], [12, (5, 4), (7, 2)], [40, (5, 4), (5, 0)], [-16, (5, 4), (9, 4)], [-28, (5, 4), (7, 6)], [-8, (5, 4), (5, 6)]]
-moves : [[-28, (5, 4), (7, 6)], [-8, (5, 4), (5, 6)], [-16, (5, 4), (9, 4)], [12, (5, 4), (7, 2)], [20, (5, 4), (5, 2)], [40, (5, 4), (5, 0)]]
-moves : [[-8, (5, 3), (5, 5)], [-28, (5, 3), (7, 5)], [-8, (5, 3), (7, 3)], [-16, (5, 3), (5, 7)], [-16, (5, 3), (9, 3)], [-36, (5, 3), (7, 7)], [-36, (5, 3), (9, 5)]]
-moves : [[12, (5, 3), (7, 1)]]
-moves : [[12, (5, 1), (3, 3)]]
-moves : [[-28, (5, 1), (7, 3)], [-36, (5, 1), (7, 5)], [-16, (5, 1), (5, 5)], [-36, (5, 1), (9, 3)], [-56, (5, 1), (9, 5)], [-24, (5, 1), (5, 7)], [-44, (5, 1), (7, 7)]]
-moves : [[-8, (4, 1), (6, 1)], [-28, (4, 1), (6, 3)], [-8, (4, 1), (4, 3)], [-16, (4, 1), (4, 5)]]
-moves : [[12, (3, 2), (5, 0)], [-8, (3, 2), (5, 2)], [-16, (3, 2), (7, 2)], [-44, (3, 2), (9, 4)], [-56, (3, 2), (7, 6)], [-36, (3, 2), (5, 6)]]
-moves : [[12, (2, 3), (0, 5)], [-8, (2, 3), (2, 5)]]
-moves : [[12, (1, 5), (3, 3)]]
-moves : [[-8, (1, 4), (1, 6)]]
-moves : [[-8, (0, 4), (2, 4)], [-8, (0, 4), (0, 6)], [4, (0, 4), (4, 2)], [-24, (0, 4), (6, 4)], [-16, (0, 4), (4, 4)], [16, (0, 4), (6, 0)]]
-moves : [[-28, (0, 4), (2, 6)]]
-moves : []
-Time = 0:00:00.002386
+Sorted moves : 
+ [[327, (13, 13), (9, 13)], [314, (13, 13), (11, 13)], [310, (12, 13), (11, 12)], [309, (12, 13), (11, 13)], [308, (13, 13), (12, 12)], [308, (12, 13), (12, 12)], [245, (13, 13), (9, 15)], [235, (15, 11), (14, 10)], [235, (11, 15), (10, 14)], [234, (15, 11), (15, 10)]]
+
+length of moves : 39
+Time = 0:00:00.000430
+Apply move : [(13, 13), (9, 13)]
 3 : Max turn
-moves : []
-moves : [[28, (15, 11), (13, 9)]]
-moves : [[20, (15, 11), (13, 11)], [20, (15, 11), (15, 9)]]
-moves : [[20, (14, 11), (14, 9)]]
-moves : []
-moves : [[12, (12, 13), (10, 15)], [20, (12, 13), (10, 13)]]
-moves : [[20, (11, 14), (9, 14)]]
-moves : [[24, (11, 14), (15, 10)], [32, (11, 14), (13, 10)], [20, (11, 14), (11, 12)], [28, (11, 14), (9, 12)]]
-moves : [[12, (11, 10), (9, 12)], [-8, (11, 10), (11, 12)], [-8, (11, 10), (13, 10)], [-16, (11, 10), (15, 10)]]
-moves : [[20, (11, 10), (11, 8)]]
-moves : [[-8, (11, 9), (11, 11)], [4, (11, 9), (9, 13)], [-16, (11, 9), (11, 13)], [-4, (11, 9), (9, 15)]]
-moves : [[12, (10, 14), (12, 12)]]
-moves : [[28, (10, 12), (8, 10)], [20, (10, 12), (8, 12)], [20, (10, 12), (10, 10)], [12, (10, 12), (12, 10)], [40, (10, 12), (6, 12)], [40, (10, 12), (10, 8)], [48, (10, 12), (6, 10)], [48, (10, 12), (8, 8)], [32, (10, 12), (12, 8)]]
-moves : [[20, (10, 12), (10, 10)], [20, (10, 12), (8, 12)], [28, (10, 12), (8, 10)], [12, (10, 12), (12, 10)], [40, (10, 12), (6, 12)], [40, (10, 12), (10, 8)], [48, (10, 12), (6, 10)], [48, (10, 12), (8, 8)], [32, (10, 12), (12, 8)]]
-moves : [[28, (10, 11), (8, 9)], [20, (10, 11), (10, 9)], [-8, (10, 11), (12, 11)], [12, (10, 11), (12, 9)], [40, (10, 11), (6, 11)]]
-moves : [[-8, (10, 11), (10, 13)], [-16, (10, 11), (10, 15)]]
-moves : [[12, (10, 11), (12, 9)], [20, (10, 11), (10, 9)], [-8, (10, 11), (12, 11)], [28, (10, 11), (8, 9)], [40, (10, 11), (6, 11)]]
-moves : [[-8, (9, 11), (11, 11)], [-8, (9, 11), (9, 13)], [-28, (9, 11), (11, 13)], [-16, (9, 11), (9, 15)]]
-moves : [[-28, (9, 11), (11, 13)], [-16, (9, 11), (9, 15)], [-8, (9, 11), (9, 13)], [-8, (9, 11), (11, 11)]]
-moves : [[12, (9, 10), (7, 12)]]
-moves : [[20, (9, 10), (9, 8)]]
-moves : [[-8, (9, 10), (9, 12)], [-28, (9, 10), (11, 12)], [-16, (9, 10), (13, 10)], [-24, (9, 10), (15, 10)]]
-moves : [[-28, (9, 10), (11, 12)], [-8, (9, 10), (9, 12)], [-16, (9, 10), (13, 10)], [-24, (9, 10), (15, 10)]]
-moves : [[28, (8, 11), (6, 9)]]
-moves : [[20, (8, 11), (6, 11)], [20, (8, 11), (8, 9)], [12, (8, 11), (10, 9)], [-16, (8, 11), (12, 11)], [4, (8, 11), (12, 9)]]
-moves : [[12, (8, 11), (10, 9)], [20, (8, 11), (8, 9)], [20, (8, 11), (6, 11)], [-16, (8, 11), (12, 11)], [4, (8, 11), (12, 9)]]
-moves : [[20, (7, 11), (7, 9)]]
-moves : [[-8, (7, 10), (7, 12)]]
-moves : [[-28, (7, 10), (9, 12)], [-36, (7, 10), (11, 12)], [-24, (7, 10), (13, 10)], [-32, (7, 10), (15, 10)]]
-Time = 0:00:00.002244
-4 : Min turn
-moves : [[28, (8, 5), (6, 3)], [40, (8, 5), (4, 5)], [48, (8, 5), (4, 3)], [48, (8, 5), (6, 1)]]
-moves : [[12, (7, 4), (5, 6)], [-8, (7, 4), (7, 6)], [-8, (7, 4), (9, 4)], [20, (7, 4), (7, 2)], [28, (7, 4), (5, 2)], [48, (7, 4), (5, 0)]]
-moves : [[12, (7, 4), (9, 2)]]
-moves : [[-28, (7, 4), (9, 6)]]
-moves : [[20, (6, 6), (6, 4)], [28, (6, 6), (4, 4)], [12, (6, 6), (8, 4)], [-8, (6, 6), (8, 6)], [48, (6, 6), (4, 2)], [32, (6, 6), (8, 2)], [48, (6, 6), (2, 4)], [60, (6, 6), (6, 0)]]
-moves : [[28, (6, 5), (4, 3)], [20, (6, 5), (6, 3)], [20, (6, 5), (4, 5)], [40, (6, 5), (6, 1)]]
-moves : [[-8, (6, 5), (6, 7)]]
-moves : [[20, (6, 2), (4, 2)], [20, (6, 2), (6, 0)], [-8, (6, 2), (6, 4)], [12, (6, 2), (4, 4)], [-28, (6, 2), (8, 4)], [-8, (6, 2), (8, 2)], [32, (6, 2), (2, 4)], [-36, (6, 2), (8, 6)]]
-moves : [[12, (6, 2), (4, 4)], [-8, (6, 2), (6, 4)], [20, (6, 2), (4, 2)], [20, (6, 2), (6, 0)], [-28, (6, 2), (8, 4)], [-8, (6, 2), (8, 2)], [32, (6, 2), (2, 4)], [-36, (6, 2), (8, 6)]]
-moves : [[20, (5, 4), (5, 2)], [12, (5, 4), (7, 2)], [40, (5, 4), (5, 0)], [-16, (5, 4), (9, 4)], [-28, (5, 4), (7, 6)], [-8, (5, 4), (5, 6)]]
-moves : [[-28, (5, 4), (7, 6)], [-8, (5, 4), (5, 6)], [-16, (5, 4), (9, 4)], [12, (5, 4), (7, 2)], [20, (5, 4), (5, 2)], [40, (5, 4), (5, 0)]]
-moves : [[-8, (5, 3), (5, 5)], [-28, (5, 3), (7, 5)], [-8, (5, 3), (7, 3)], [-16, (5, 3), (5, 7)], [-16, (5, 3), (9, 3)], [-36, (5, 3), (7, 7)], [-36, (5, 3), (9, 5)]]
-moves : [[12, (5, 3), (7, 1)]]
-moves : [[12, (5, 1), (3, 3)]]
-moves : [[-28, (5, 1), (7, 3)], [-36, (5, 1), (7, 5)], [-16, (5, 1), (5, 5)], [-36, (5, 1), (9, 3)], [-56, (5, 1), (9, 5)], [-24, (5, 1), (5, 7)], [-44, (5, 1), (7, 7)]]
-moves : [[-8, (4, 1), (6, 1)], [-28, (4, 1), (6, 3)], [-8, (4, 1), (4, 3)], [-16, (4, 1), (4, 5)]]
-moves : [[12, (3, 2), (5, 0)], [-8, (3, 2), (5, 2)], [-16, (3, 2), (7, 2)], [-44, (3, 2), (9, 4)], [-56, (3, 2), (7, 6)], [-36, (3, 2), (5, 6)]]
-moves : [[12, (2, 3), (0, 5)], [-8, (2, 3), (2, 5)], [4, (2, 3), (0, 7)]]
-moves : [[12, (1, 5), (3, 3)]]
-moves : [[-8, (1, 4), (1, 6)]]
-moves : [[12, (0, 6), (2, 4)], [24, (0, 6), (4, 2)], [-4, (0, 6), (6, 4)], [4, (0, 6), (4, 4)], [36, (0, 6), (6, 0)], [-12, (0, 6), (8, 4)], [-32, (0, 6), (8, 6)], [8, (0, 6), (8, 2)]]
-moves : [[-8, (0, 4), (2, 4)], [4, (0, 4), (4, 2)], [-24, (0, 4), (6, 4)], [-16, (0, 4), (4, 4)], [16, (0, 4), (6, 0)], [-32, (0, 4), (8, 4)], [-12, (0, 4), (8, 2)], [-52, (0, 4), (8, 6)]]
-moves : [[-28, (0, 4), (2, 6)]]
-moves : []
-Time = 0:00:00.002506
-5 : Max turn
-moves : []
-moves : [[28, (15, 11), (13, 9)]]
-moves : [[20, (15, 11), (13, 11)], [20, (15, 11), (15, 9)]]
-moves : [[20, (14, 11), (14, 9)]]
-moves : []
-moves : [[12, (12, 13), (10, 15)], [20, (12, 13), (10, 13)]]
-moves : [[20, (11, 14), (9, 14)]]
-moves : [[24, (11, 14), (15, 10)], [32, (11, 14), (13, 10)], [20, (11, 14), (11, 12)]]
-moves : [[12, (11, 10), (9, 12)]]
-moves : [[20, (11, 10), (11, 8)]]
-moves : [[-8, (11, 9), (11, 11)]]
-moves : [[12, (10, 14), (12, 12)]]
-moves : [[28, (10, 11), (8, 9)], [20, (10, 11), (10, 9)], [-8, (10, 11), (12, 11)], [12, (10, 11), (12, 9)], [40, (10, 11), (6, 11)], [48, (10, 11), (6, 9)]]
-moves : [[12, (10, 11), (12, 9)], [20, (10, 11), (10, 9)], [-8, (10, 11), (12, 11)], [28, (10, 11), (8, 9)], [40, (10, 11), (6, 11)], [48, (10, 11), (6, 9)]]
-moves : [[-8, (9, 11), (11, 11)]]
-moves : [[12, (9, 10), (7, 12)]]
-moves : [[20, (9, 10), (9, 8)]]
-moves : [[-8, (9, 10), (9, 12)]]
-moves : [[-28, (9, 10), (11, 12)], [-16, (9, 10), (13, 10)], [-24, (9, 10), (15, 10)]]
-moves : [[28, (8, 11), (6, 9)], [20, (8, 11), (6, 11)], [20, (8, 11), (8, 9)], [12, (8, 11), (10, 9)], [-16, (8, 11), (12, 11)], [4, (8, 11), (12, 9)]]
-moves : [[20, (8, 11), (6, 11)], [20, (8, 11), (8, 9)], [28, (8, 11), (6, 9)], [12, (8, 11), (10, 9)], [-16, (8, 11), (12, 11)], [4, (8, 11), (12, 9)]]
-moves : [[12, (8, 11), (10, 9)], [20, (8, 11), (8, 9)], [20, (8, 11), (6, 11)], [28, (8, 11), (6, 9)], [-16, (8, 11), (12, 11)], [4, (8, 11), (12, 9)]]
-moves : [[28, (7, 11), (5, 9)]]
-moves : [[20, (7, 11), (7, 9)], [20, (7, 11), (5, 11)]]
-moves : [[20, (7, 10), (5, 10)]]
-moves : [[-8, (7, 10), (7, 12)]]
-moves : [[-28, (7, 10), (9, 12)]]
-moves : [[-8, (6, 10), (8, 10)], [-8, (6, 10), (6, 12)], [-28, (6, 10), (8, 12)], [-16, (6, 10), (10, 10)], [12, (6, 10), (8, 8)], [4, (6, 10), (10, 8)], [-36, (6, 10), (10, 12)], [-24, (6, 10), (12, 10)], [-4, (6, 10), (12, 8)]]
-moves : [[-28, (6, 10), (8, 12)], [-8, (6, 10), (8, 10)], [-8, (6, 10), (6, 12)], [-16, (6, 10), (10, 10)], [12, (6, 10), (8, 8)], [4, (6, 10), (10, 8)], [-36, (6, 10), (10, 12)], [-24, (6, 10), (12, 10)], [-4, (6, 10), (12, 8)]]
-Time = 0:00:00.001820
+Sorted moves : 
+ [[344, (2, 2), (3, 3)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)], [271, (4, 0), (5, 1)], [271, (0, 4), (1, 5)], [176, (4, 0), (2, 0)], [176, (3, 0), (2, 0)], [175, (3, 0), (3, 1)], [173, (4, 0), (4, 1)]]
 
-3 BLACK: calculateHeuristicValue 1397 - 1167
+length of moves : 23
+Time = 0:00:00.000354
+Apply move : [(2, 2), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
- calculateHeuristicValue 11700
+3 WHITES: calculateHeuristicValue -55
 
-3 BLACK: calculateHeuristicValue 1397 - 1167
+ calculateHeuristicValue 2235
+Apply move : [(3, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 11700
+3 WHITES: calculateHeuristicValue -70
 
-3 BLACK: calculateHeuristicValue 1395 - 1167
+ calculateHeuristicValue 2240
+Apply move : [(4, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 11580
+3 WHITES: calculateHeuristicValue -54
 
-3 BLACK: calculateHeuristicValue 1395 - 1167
+ calculateHeuristicValue 2160
+Apply move : [(0, 4), (0, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 11580
+3 WHITES: calculateHeuristicValue -39
 
-3 BLACK: calculateHeuristicValue 1303 - 1167
+ calculateHeuristicValue 2085
+Apply move : [(4, 0), (5, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 6920
+3 WHITES: calculateHeuristicValue -55
 
-3 BLACK: calculateHeuristicValue 1365 - 1167
+ calculateHeuristicValue 2165
+Apply move : [(0, 4), (1, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 10000
+3 WHITES: calculateHeuristicValue -55
 
-3 BLACK: calculateHeuristicValue 1365 - 1167
+ calculateHeuristicValue 2165
+Apply move : [(4, 0), (2, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 10100
+3 WHITES: calculateHeuristicValue -6
 
-3 BLACK: calculateHeuristicValue 1365 - 1167
+ calculateHeuristicValue 1920
+Apply move : [(3, 0), (2, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 10100
+3 WHITES: calculateHeuristicValue -22
 
-3 BLACK: calculateHeuristicValue 1365 - 1167
+ calculateHeuristicValue 2000
+Apply move : [(3, 0), (3, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 10100
+3 WHITES: calculateHeuristicValue -39
 
-3 BLACK: calculateHeuristicValue 1365 - 1167
+ calculateHeuristicValue 2085
+Apply move : [(4, 0), (4, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 10100
+3 WHITES: calculateHeuristicValue -39
 
-3 BLACK: calculateHeuristicValue 1365 - 1167
+ calculateHeuristicValue 2085
+Apply move : [(13, 13), (11, 13)]
+3 : Max turn
+Sorted moves : 
+ [[344, (2, 2), (3, 3)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)], [271, (4, 0), (5, 1)], [271, (0, 4), (1, 5)], [176, (4, 0), (2, 0)], [176, (3, 0), (2, 0)], [175, (3, 0), (3, 1)], [173, (4, 0), (4, 1)]]
 
- calculateHeuristicValue 10100
+length of moves : 23
+Time = 0:00:00.000332
+Apply move : [(2, 2), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
-3 BLACK: calculateHeuristicValue 1365 - 1167
+3 WHITES: calculateHeuristicValue -55
 
- calculateHeuristicValue 10100
+ calculateHeuristicValue 2235
+Apply move : [(3, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1271 - 1167
+3 WHITES: calculateHeuristicValue -70
 
- calculateHeuristicValue 5300
+ calculateHeuristicValue 2240
+Apply move : [(12, 13), (11, 12)]
+3 : Max turn
+Sorted moves : 
+ [[344, (2, 2), (3, 3)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)], [271, (4, 0), (5, 1)], [271, (0, 4), (1, 5)], [176, (4, 0), (2, 0)], [176, (3, 0), (2, 0)], [175, (3, 0), (3, 1)], [173, (4, 0), (4, 1)]]
 
-3 BLACK: calculateHeuristicValue 1363 - 1167
+length of moves : 23
+Time = 0:00:00.000414
+Apply move : [(2, 2), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
+
+3 WHITES: calculateHeuristicValue -55
 
- calculateHeuristicValue 9920
+ calculateHeuristicValue 2235
+Apply move : [(3, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
+
+3 WHITES: calculateHeuristicValue -70
 
-3 BLACK: calculateHeuristicValue 1333 - 1167
+ calculateHeuristicValue 2240
+Apply move : [(12, 13), (11, 13)]
+3 : Max turn
+Sorted moves : 
+ [[344, (2, 2), (3, 3)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)], [271, (4, 0), (5, 1)], [271, (0, 4), (1, 5)], [176, (4, 0), (2, 0)], [176, (3, 0), (2, 0)], [175, (3, 0), (3, 1)], [173, (4, 0), (4, 1)]]
 
- calculateHeuristicValue 8400
+length of moves : 23
+Time = 0:00:00.000321
+Apply move : [(2, 2), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
-3 BLACK: calculateHeuristicValue 1333 - 1167
+3 WHITES: calculateHeuristicValue -55
 
- calculateHeuristicValue 8400
+ calculateHeuristicValue 2235
+Apply move : [(3, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1363 - 1167
+3 WHITES: calculateHeuristicValue -70
 
- calculateHeuristicValue 9920
+ calculateHeuristicValue 2240
+Apply move : [(13, 13), (12, 12)]
+3 : Max turn
+Sorted moves : 
+ [[344, (2, 2), (3, 3)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)], [271, (4, 0), (5, 1)], [271, (0, 4), (1, 5)], [176, (4, 0), (2, 0)], [176, (3, 0), (2, 0)], [175, (3, 0), (3, 1)], [173, (4, 0), (4, 1)]]
 
-3 BLACK: calculateHeuristicValue 1363 - 1167
+length of moves : 23
+Time = 0:00:00.000427
+Apply move : [(2, 2), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
- calculateHeuristicValue 9900
+3 WHITES: calculateHeuristicValue -55
 
-3 BLACK: calculateHeuristicValue 1333 - 1167
+ calculateHeuristicValue 2235
+Apply move : [(3, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 8420
+3 WHITES: calculateHeuristicValue -70
 
-3 BLACK: calculateHeuristicValue 1333 - 1167
+ calculateHeuristicValue 2240
+Apply move : [(12, 13), (12, 12)]
+3 : Max turn
+Sorted moves : 
+ [[344, (2, 2), (3, 3)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)], [271, (4, 0), (5, 1)], [271, (0, 4), (1, 5)], [176, (4, 0), (2, 0)], [176, (3, 0), (2, 0)], [175, (3, 0), (3, 1)], [173, (4, 0), (4, 1)]]
 
- calculateHeuristicValue 8500
+length of moves : 23
+Time = 0:00:00.000321
+Apply move : [(2, 2), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
-3 BLACK: calculateHeuristicValue 1333 - 1167
+3 WHITES: calculateHeuristicValue -55
 
- calculateHeuristicValue 8500
+ calculateHeuristicValue 2235
+Apply move : [(3, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1333 - 1167
+3 WHITES: calculateHeuristicValue -70
 
- calculateHeuristicValue 8500
+ calculateHeuristicValue 2240
+Apply move : [(13, 13), (9, 15)]
+3 : Max turn
+Sorted moves : 
+ [[344, (2, 2), (3, 3)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)], [271, (4, 0), (5, 1)], [271, (0, 4), (1, 5)], [176, (4, 0), (2, 0)], [176, (3, 0), (2, 0)], [175, (3, 0), (3, 1)], [173, (4, 0), (4, 1)]]
 
-3 BLACK: calculateHeuristicValue 1333 - 1167
+length of moves : 23
+Time = 0:00:00.000338
+Apply move : [(2, 2), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 8500
+3 WHITES: calculateHeuristicValue -55
 
-3 BLACK: calculateHeuristicValue 1363 - 1167
+ calculateHeuristicValue 2165
+Apply move : [(3, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
- calculateHeuristicValue 9980
+3 WHITES: calculateHeuristicValue -70
 
-3 BLACK: calculateHeuristicValue 1333 - 1167
+ calculateHeuristicValue 2170
+Apply move : [(4, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
- calculateHeuristicValue 8500
+3 WHITES: calculateHeuristicValue -54
 
-3 BLACK: calculateHeuristicValue 1363 - 1167
+ calculateHeuristicValue 2090
+Apply move : [(0, 4), (0, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
- calculateHeuristicValue 9980
+3 WHITES: calculateHeuristicValue -39
 
-3 BLACK: calculateHeuristicValue 1333 - 1167
+ calculateHeuristicValue 2015
+Apply move : [(4, 0), (5, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
- calculateHeuristicValue 8500
+3 WHITES: calculateHeuristicValue -55
 
-3 BLACK: calculateHeuristicValue 1333 - 1167
+ calculateHeuristicValue 2095
+Apply move : [(0, 4), (1, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
- calculateHeuristicValue 8500
+3 WHITES: calculateHeuristicValue -55
 
-3 BLACK: calculateHeuristicValue 1363 - 1167
+ calculateHeuristicValue 2095
+Apply move : [(4, 0), (2, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
- calculateHeuristicValue 9980
+3 WHITES: calculateHeuristicValue -6
+
+ calculateHeuristicValue 1850
+Apply move : [(3, 0), (2, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
+
+3 WHITES: calculateHeuristicValue -22
+
+ calculateHeuristicValue 1930
+Apply move : [(3, 0), (3, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
+
+3 WHITES: calculateHeuristicValue -39
 
-3 BLACK: calculateHeuristicValue 1333 - 1167
+ calculateHeuristicValue 2015
+Apply move : [(4, 0), (4, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
+
+3 WHITES: calculateHeuristicValue -39
 
- calculateHeuristicValue 8500
+ calculateHeuristicValue 2015
+Apply move : [(15, 11), (14, 10)]
+3 : Max turn
+Sorted moves : 
+ [[344, (2, 2), (3, 3)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)], [271, (4, 0), (5, 1)], [271, (0, 4), (1, 5)], [176, (4, 0), (2, 0)], [176, (3, 0), (2, 0)], [175, (3, 0), (3, 1)], [173, (4, 0), (4, 1)]]
 
-3 BLACK: calculateHeuristicValue 1363 - 1167
+length of moves : 23
+Time = 0:00:00.000386
+Apply move : [(2, 2), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 9980
+3 WHITES: calculateHeuristicValue -55
 
-3 BLACK: calculateHeuristicValue 1363 - 1167
+ calculateHeuristicValue 2165
+Apply move : [(3, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
- calculateHeuristicValue 9980
+3 WHITES: calculateHeuristicValue -70
 
-3 BLACK: calculateHeuristicValue 1361 - 1167
+ calculateHeuristicValue 2170
+Apply move : [(11, 15), (10, 14)]
+3 : Max turn
+Sorted moves : 
+ [[344, (2, 2), (3, 3)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)], [271, (4, 0), (5, 1)], [271, (0, 4), (1, 5)], [176, (4, 0), (2, 0)], [176, (3, 0), (2, 0)], [175, (3, 0), (3, 1)], [173, (4, 0), (4, 1)]]
 
- calculateHeuristicValue 9800
+length of moves : 23
+Time = 0:00:00.000258
+Apply move : [(2, 2), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1361 - 1167
+3 WHITES: calculateHeuristicValue -55
 
- calculateHeuristicValue 9900
+ calculateHeuristicValue 2165
+Apply move : [(3, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1301 - 1167
+3 WHITES: calculateHeuristicValue -70
 
- calculateHeuristicValue 6920
+ calculateHeuristicValue 2170
+Apply move : [(15, 11), (15, 10)]
+3 : Max turn
+Sorted moves : 
+ [[344, (2, 2), (3, 3)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)], [271, (4, 0), (5, 1)], [271, (0, 4), (1, 5)], [176, (4, 0), (2, 0)], [176, (3, 0), (2, 0)], [175, (3, 0), (3, 1)], [173, (4, 0), (4, 1)]]
 
-3 BLACK: calculateHeuristicValue 1301 - 1167
+length of moves : 23
+Time = 0:00:00.000256
+Apply move : [(2, 2), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 6900
+3 WHITES: calculateHeuristicValue -55
 
-3 BLACK: calculateHeuristicValue 1301 - 1167
+ calculateHeuristicValue 2165
+Apply move : [(3, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
- calculateHeuristicValue 6900
+3 WHITES: calculateHeuristicValue -70
 
-3 BLACK: calculateHeuristicValue 1361 - 1167
+ calculateHeuristicValue 2170
+Apply move : [(1, 1), (3, 5)]
+2 : Min turn
+Sorted moves : 
+ [[327, (13, 13), (9, 13)], [314, (13, 13), (11, 13)], [310, (12, 13), (11, 12)], [309, (12, 13), (11, 13)], [308, (13, 13), (12, 12)], [308, (12, 13), (12, 12)], [245, (13, 13), (9, 15)], [235, (15, 11), (14, 10)], [235, (11, 15), (10, 14)], [234, (15, 11), (15, 10)]]
 
- calculateHeuristicValue 9880
+length of moves : 39
+Time = 0:00:00.000445
+Apply move : [(13, 13), (9, 13)]
+3 : Max turn
+Sorted moves : 
+ [[344, (2, 2), (3, 3)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)], [271, (4, 0), (5, 1)], [271, (0, 4), (1, 5)], [176, (4, 0), (2, 0)], [176, (3, 0), (2, 0)], [175, (3, 0), (3, 1)], [173, (4, 0), (4, 1)]]
 
-3 BLACK: calculateHeuristicValue 1301 - 1167
+length of moves : 23
+Time = 0:00:00.000481
+Apply move : [(2, 2), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
- calculateHeuristicValue 6900
+3 WHITES: calculateHeuristicValue -53
 
-3 BLACK: calculateHeuristicValue 1301 - 1167
+ calculateHeuristicValue 2225
+Apply move : [(3, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 6900
+3 WHITES: calculateHeuristicValue -68
 
-3 BLACK: calculateHeuristicValue 1301 - 1167
+ calculateHeuristicValue 2230
+Apply move : [(4, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 6900
+3 WHITES: calculateHeuristicValue -52
 
-3 BLACK: calculateHeuristicValue 1301 - 1167
+ calculateHeuristicValue 2150
+Apply move : [(0, 4), (0, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 6900
+3 WHITES: calculateHeuristicValue -37
 
-3 BLACK: calculateHeuristicValue 1301 - 1167
+ calculateHeuristicValue 2075
+Apply move : [(4, 0), (5, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 6900
+3 WHITES: calculateHeuristicValue -53
 
-3 BLACK: calculateHeuristicValue 1269 - 1167
+ calculateHeuristicValue 2155
+Apply move : [(0, 4), (1, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 5300
+3 WHITES: calculateHeuristicValue -53
 
-3 BLACK: calculateHeuristicValue 1269 - 1167
+ calculateHeuristicValue 2155
+Apply move : [(4, 0), (2, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 5300
+3 WHITES: calculateHeuristicValue -4
 
-3 BLACK: calculateHeuristicValue 1269 - 1167
+ calculateHeuristicValue 1910
+Apply move : [(3, 0), (2, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 5300
+3 WHITES: calculateHeuristicValue -20
 
-3 BLACK: calculateHeuristicValue 1269 - 1167
+ calculateHeuristicValue 1990
+Apply move : [(3, 0), (3, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 5300
+3 WHITES: calculateHeuristicValue -37
 
-3 BLACK: calculateHeuristicValue 1269 - 1167
+ calculateHeuristicValue 2075
+Apply move : [(4, 0), (4, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 5300
+3 WHITES: calculateHeuristicValue -37
 
-3 BLACK: calculateHeuristicValue 1237 - 1167
+ calculateHeuristicValue 2075
+Apply move : [(13, 13), (11, 13)]
+3 : Max turn
+Sorted moves : 
+ [[344, (2, 2), (3, 3)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)], [271, (4, 0), (5, 1)], [271, (0, 4), (1, 5)], [176, (4, 0), (2, 0)], [176, (3, 0), (2, 0)], [175, (3, 0), (3, 1)], [173, (4, 0), (4, 1)]]
 
- calculateHeuristicValue 3680
+length of moves : 23
+Time = 0:00:00.000272
+Apply move : [(2, 2), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
-3 BLACK: calculateHeuristicValue 1237 - 1167
+3 WHITES: calculateHeuristicValue -53
 
- calculateHeuristicValue 3680
+ calculateHeuristicValue 2225
+Apply move : [(3, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
+
+3 WHITES: calculateHeuristicValue -68
 
-3 BLACK: calculateHeuristicValue 1329 - 1167
+ calculateHeuristicValue 2230
+Apply move : [(12, 13), (11, 12)]
+3 : Max turn
+Sorted moves : 
+ [[344, (2, 2), (3, 3)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)], [271, (4, 0), (5, 1)], [271, (0, 4), (1, 5)], [176, (4, 0), (2, 0)], [176, (3, 0), (2, 0)], [175, (3, 0), (3, 1)], [173, (4, 0), (4, 1)]]
 
- calculateHeuristicValue 8300
+length of moves : 23
+Time = 0:00:00.000259
+Apply move : [(2, 2), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
-3 BLACK: calculateHeuristicValue 1299 - 1167
+3 WHITES: calculateHeuristicValue -53
 
- calculateHeuristicValue 6800
+ calculateHeuristicValue 2225
+Apply move : [(3, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1299 - 1167
+3 WHITES: calculateHeuristicValue -68
 
- calculateHeuristicValue 6800
+ calculateHeuristicValue 2230
+Apply move : [(12, 13), (11, 13)]
+3 : Max turn
+Sorted moves : 
+ [[344, (2, 2), (3, 3)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)], [271, (4, 0), (5, 1)], [271, (0, 4), (1, 5)], [176, (4, 0), (2, 0)], [176, (3, 0), (2, 0)], [175, (3, 0), (3, 1)], [173, (4, 0), (4, 1)]]
 
-3 BLACK: calculateHeuristicValue 1299 - 1167
+length of moves : 23
+Time = 0:00:00.000261
+Apply move : [(2, 2), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
- calculateHeuristicValue 6800
+3 WHITES: calculateHeuristicValue -53
 
-3 BLACK: calculateHeuristicValue 1329 - 1167
+ calculateHeuristicValue 2225
+Apply move : [(3, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 8300
+3 WHITES: calculateHeuristicValue -68
 
-3 BLACK: calculateHeuristicValue 1329 - 1167
+ calculateHeuristicValue 2230
+Apply move : [(13, 13), (12, 12)]
+3 : Max turn
+Sorted moves : 
+ [[344, (2, 2), (3, 3)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)], [271, (4, 0), (5, 1)], [271, (0, 4), (1, 5)], [176, (4, 0), (2, 0)], [176, (3, 0), (2, 0)], [175, (3, 0), (3, 1)], [173, (4, 0), (4, 1)]]
 
- calculateHeuristicValue 8280
+length of moves : 23
+Time = 0:00:00.000260
+Apply move : [(2, 2), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
-3 BLACK: calculateHeuristicValue 1299 - 1167
+3 WHITES: calculateHeuristicValue -53
 
- calculateHeuristicValue 6800
+ calculateHeuristicValue 2225
+Apply move : [(3, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1329 - 1167
+3 WHITES: calculateHeuristicValue -68
 
- calculateHeuristicValue 8280
+ calculateHeuristicValue 2230
+Apply move : [(12, 13), (12, 12)]
+3 : Max turn
+Sorted moves : 
+ [[344, (2, 2), (3, 3)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)], [271, (4, 0), (5, 1)], [271, (0, 4), (1, 5)], [176, (4, 0), (2, 0)], [176, (3, 0), (2, 0)], [175, (3, 0), (3, 1)], [173, (4, 0), (4, 1)]]
 
-3 BLACK: calculateHeuristicValue 1299 - 1167
+length of moves : 23
+Time = 0:00:00.000265
+Apply move : [(2, 2), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
- calculateHeuristicValue 6800
+3 WHITES: calculateHeuristicValue -53
 
-3 BLACK: calculateHeuristicValue 1329 - 1167
+ calculateHeuristicValue 2225
+Apply move : [(3, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 8280
+3 WHITES: calculateHeuristicValue -68
 
-3 BLACK: calculateHeuristicValue 1267 - 1167
+ calculateHeuristicValue 2230
+Apply move : [(13, 13), (9, 15)]
+3 : Max turn
+Sorted moves : 
+ [[344, (2, 2), (3, 3)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)], [271, (4, 0), (5, 1)], [271, (0, 4), (1, 5)], [176, (4, 0), (2, 0)], [176, (3, 0), (2, 0)], [175, (3, 0), (3, 1)], [173, (4, 0), (4, 1)]]
 
- calculateHeuristicValue 5200
+length of moves : 23
+Time = 0:00:00.000261
+Apply move : [(2, 2), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1267 - 1167
+3 WHITES: calculateHeuristicValue -53
 
- calculateHeuristicValue 5200
+ calculateHeuristicValue 2155
+Apply move : [(3, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1267 - 1167
+3 WHITES: calculateHeuristicValue -68
 
- calculateHeuristicValue 5200
+ calculateHeuristicValue 2160
+Apply move : [(4, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1267 - 1167
-
- calculateHeuristicValue 5200
-
-3 BLACK: calculateHeuristicValue 1267 - 1167
-
- calculateHeuristicValue 5200
-
-3 BLACK: calculateHeuristicValue 1267 - 1167
-
- calculateHeuristicValue 5200
-
-3 BLACK: calculateHeuristicValue 1235 - 1167
-
- calculateHeuristicValue 3580
-
-3 BLACK: calculateHeuristicValue 1235 - 1167
-
- calculateHeuristicValue 3600
-
-3 BLACK: calculateHeuristicValue 1235 - 1167
-
- calculateHeuristicValue 3600
-
-3 BLACK: calculateHeuristicValue 1297 - 1167
-
- calculateHeuristicValue 6700
-
-3 BLACK: calculateHeuristicValue 1297 - 1167
-
- calculateHeuristicValue 6700
-
-3 BLACK: calculateHeuristicValue 1297 - 1167
-
- calculateHeuristicValue 6700
-
-3 BLACK: calculateHeuristicValue 1297 - 1167
-
- calculateHeuristicValue 6700
-
-3 BLACK: calculateHeuristicValue 1265 - 1167
-
- calculateHeuristicValue 5100
-
-3 BLACK: calculateHeuristicValue 1265 - 1167
-
- calculateHeuristicValue 5100
-
-3 BLACK: calculateHeuristicValue 1348 - 1167
-
- calculateHeuristicValue 9170
-
-3 BLACK: calculateHeuristicValue 1348 - 1167
-
- calculateHeuristicValue 9250
-
-3 BLACK: calculateHeuristicValue 1348 - 1167
-
- calculateHeuristicValue 9170
-
-3 BLACK: calculateHeuristicValue 1348 - 1167
-
- calculateHeuristicValue 9170
-
-3 BLACK: calculateHeuristicValue 1348 - 1167
-
- calculateHeuristicValue 9250
-
-3 BLACK: calculateHeuristicValue 1348 - 1167
-
- calculateHeuristicValue 9250
-
-3 BLACK: calculateHeuristicValue 1348 - 1167
-
- calculateHeuristicValue 9270
-
-3 BLACK: calculateHeuristicValue 1348 - 1167
-
- calculateHeuristicValue 9250
-
-3 BLACK: calculateHeuristicValue 1348 - 1167
-
- calculateHeuristicValue 9250
-
-3 BLACK: calculateHeuristicValue 1348 - 1167
-
- calculateHeuristicValue 9250
-
-3 BLACK: calculateHeuristicValue 1348 - 1167
-
- calculateHeuristicValue 9250
-
-3 BLACK: calculateHeuristicValue 1348 - 1167
-
- calculateHeuristicValue 9250
-
-3 BLACK: calculateHeuristicValue 1332 - 1167
-
- calculateHeuristicValue 8350
-
-3 BLACK: calculateHeuristicValue 1347 - 1167
-
- calculateHeuristicValue 9120
-
-3 BLACK: calculateHeuristicValue 1347 - 1167
-
- calculateHeuristicValue 9220
-
-3 BLACK: calculateHeuristicValue 1332 - 1167
-
- calculateHeuristicValue 8450
-
-3 BLACK: calculateHeuristicValue 1347 - 1167
-
- calculateHeuristicValue 9120
-
-3 BLACK: calculateHeuristicValue 1332 - 1167
-
- calculateHeuristicValue 8370
-
-3 BLACK: calculateHeuristicValue 1332 - 1167
-
- calculateHeuristicValue 8370
-
-3 BLACK: calculateHeuristicValue 1347 - 1167
-
- calculateHeuristicValue 9200
-
-3 BLACK: calculateHeuristicValue 1347 - 1167
-
- calculateHeuristicValue 9200
-
-3 BLACK: calculateHeuristicValue 1332 - 1167
-
- calculateHeuristicValue 8450
-
-3 BLACK: calculateHeuristicValue 1347 - 1167
-
- calculateHeuristicValue 9200
-
-3 BLACK: calculateHeuristicValue 1332 - 1167
-
- calculateHeuristicValue 8470
-
-3 BLACK: calculateHeuristicValue 1332 - 1167
-
- calculateHeuristicValue 8450
-
-3 BLACK: calculateHeuristicValue 1347 - 1167
-
- calculateHeuristicValue 9200
-
-3 BLACK: calculateHeuristicValue 1347 - 1167
-
- calculateHeuristicValue 9200
-
-3 BLACK: calculateHeuristicValue 1332 - 1167
-
- calculateHeuristicValue 8450
-
-3 BLACK: calculateHeuristicValue 1332 - 1167
-
- calculateHeuristicValue 8450
-
-3 BLACK: calculateHeuristicValue 1347 - 1167
-
- calculateHeuristicValue 9180
-
-3 BLACK: calculateHeuristicValue 1332 - 1167
-
- calculateHeuristicValue 8450
-
-3 BLACK: calculateHeuristicValue 1347 - 1167
-
- calculateHeuristicValue 9180
-
-3 BLACK: calculateHeuristicValue 1332 - 1167
-
- calculateHeuristicValue 8450
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7550
-
-3 BLACK: calculateHeuristicValue 1346 - 1167
-
- calculateHeuristicValue 9170
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7650
-
-3 BLACK: calculateHeuristicValue 1346 - 1167
-
- calculateHeuristicValue 9050
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7650
-
-3 BLACK: calculateHeuristicValue 1346 - 1167
-
- calculateHeuristicValue 9150
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7630
-
-3 BLACK: calculateHeuristicValue 1346 - 1167
-
- calculateHeuristicValue 9150
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7670
-
-3 BLACK: calculateHeuristicValue 1346 - 1167
-
- calculateHeuristicValue 9150
-
-3 BLACK: calculateHeuristicValue 1346 - 1167
-
- calculateHeuristicValue 9150
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7650
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7650
-
-3 BLACK: calculateHeuristicValue 1346 - 1167
-
- calculateHeuristicValue 9150
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7650
-
-3 BLACK: calculateHeuristicValue 1346 - 1167
-
- calculateHeuristicValue 9130
-
-3 BLACK: calculateHeuristicValue 1346 - 1167
-
- calculateHeuristicValue 9130
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7650
-
-3 BLACK: calculateHeuristicValue 1346 - 1167
-
- calculateHeuristicValue 9130
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7650
-
-3 BLACK: calculateHeuristicValue 1346 - 1167
-
- calculateHeuristicValue 9130
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7650
-
-3 BLACK: calculateHeuristicValue 1315 - 1167
-
- calculateHeuristicValue 7600
-
-3 BLACK: calculateHeuristicValue 1330 - 1167
-
- calculateHeuristicValue 8350
-
-3 BLACK: calculateHeuristicValue 1315 - 1167
-
- calculateHeuristicValue 7600
-
-3 BLACK: calculateHeuristicValue 1315 - 1167
-
- calculateHeuristicValue 7600
-
-3 BLACK: calculateHeuristicValue 1330 - 1167
-
- calculateHeuristicValue 8350
-
-3 BLACK: calculateHeuristicValue 1330 - 1167
-
- calculateHeuristicValue 8350
-
-3 BLACK: calculateHeuristicValue 1315 - 1167
-
- calculateHeuristicValue 7600
-
-3 BLACK: calculateHeuristicValue 1330 - 1167
-
- calculateHeuristicValue 8350
-
-3 BLACK: calculateHeuristicValue 1315 - 1167
-
- calculateHeuristicValue 7600
-
-3 BLACK: calculateHeuristicValue 1315 - 1167
-
- calculateHeuristicValue 7600
-
-3 BLACK: calculateHeuristicValue 1330 - 1167
-
- calculateHeuristicValue 8350
-
-3 BLACK: calculateHeuristicValue 1330 - 1167
-
- calculateHeuristicValue 8330
-
-3 BLACK: calculateHeuristicValue 1315 - 1167
-
- calculateHeuristicValue 7600
-
-3 BLACK: calculateHeuristicValue 1330 - 1167
-
- calculateHeuristicValue 8330
-
-3 BLACK: calculateHeuristicValue 1314 - 1167
-
- calculateHeuristicValue 7550
-
-3 BLACK: calculateHeuristicValue 1314 - 1167
-
- calculateHeuristicValue 7550
-
-3 BLACK: calculateHeuristicValue 1314 - 1167
-
- calculateHeuristicValue 7550
-
-3 BLACK: calculateHeuristicValue 1314 - 1167
-
- calculateHeuristicValue 7550
-
-3 BLACK: calculateHeuristicValue 1314 - 1167
-
- calculateHeuristicValue 7550
-
-3 BLACK: calculateHeuristicValue 1314 - 1167
-
- calculateHeuristicValue 7550
-
-3 BLACK: calculateHeuristicValue 1314 - 1167
-
- calculateHeuristicValue 7550
-5 : Max turn
-moves : []
-moves : [[28, (15, 11), (13, 9)]]
-moves : [[20, (15, 11), (13, 11)], [20, (15, 11), (15, 9)]]
-moves : [[20, (14, 11), (14, 9)]]
-moves : []
-moves : [[12, (12, 13), (10, 15)], [20, (12, 13), (10, 13)]]
-moves : [[20, (11, 14), (9, 14)]]
-moves : [[24, (11, 14), (15, 10)], [32, (11, 14), (13, 10)], [20, (11, 14), (11, 12)]]
-moves : [[12, (11, 10), (9, 12)]]
-moves : [[20, (11, 10), (11, 8)]]
-moves : [[-8, (11, 9), (11, 11)]]
-moves : [[12, (10, 14), (12, 12)]]
-moves : [[28, (10, 11), (8, 9)], [20, (10, 11), (10, 9)], [-8, (10, 11), (12, 11)], [12, (10, 11), (12, 9)], [40, (10, 11), (6, 11)], [48, (10, 11), (6, 9)]]
-moves : [[12, (10, 11), (12, 9)], [20, (10, 11), (10, 9)], [-8, (10, 11), (12, 11)], [28, (10, 11), (8, 9)], [40, (10, 11), (6, 11)], [48, (10, 11), (6, 9)]]
-moves : [[-8, (9, 11), (11, 11)]]
-moves : [[12, (9, 10), (7, 12)]]
-moves : [[20, (9, 10), (9, 8)]]
-moves : [[-8, (9, 10), (9, 12)]]
-moves : [[-28, (9, 10), (11, 12)], [-16, (9, 10), (13, 10)], [-24, (9, 10), (15, 10)]]
-moves : [[28, (8, 11), (6, 9)], [20, (8, 11), (6, 11)], [20, (8, 11), (8, 9)], [12, (8, 11), (10, 9)], [-16, (8, 11), (12, 11)], [4, (8, 11), (12, 9)]]
-moves : [[20, (8, 11), (6, 11)], [20, (8, 11), (8, 9)], [28, (8, 11), (6, 9)], [12, (8, 11), (10, 9)], [-16, (8, 11), (12, 11)], [4, (8, 11), (12, 9)]]
-moves : [[12, (8, 11), (10, 9)], [20, (8, 11), (8, 9)], [20, (8, 11), (6, 11)], [28, (8, 11), (6, 9)], [-16, (8, 11), (12, 11)], [4, (8, 11), (12, 9)]]
-moves : [[28, (7, 11), (5, 9)]]
-moves : [[20, (7, 11), (7, 9)], [20, (7, 11), (5, 11)]]
-moves : [[20, (7, 10), (5, 10)]]
-moves : [[-8, (7, 10), (7, 12)]]
-moves : [[-28, (7, 10), (9, 12)]]
-moves : [[-8, (6, 10), (8, 10)], [-8, (6, 10), (6, 12)], [-28, (6, 10), (8, 12)], [-16, (6, 10), (10, 10)], [12, (6, 10), (8, 8)], [4, (6, 10), (10, 8)], [-36, (6, 10), (10, 12)], [-24, (6, 10), (12, 10)], [-4, (6, 10), (12, 8)]]
-moves : [[-28, (6, 10), (8, 12)], [-8, (6, 10), (8, 10)], [-8, (6, 10), (6, 12)], [-16, (6, 10), (10, 10)], [12, (6, 10), (8, 8)], [4, (6, 10), (10, 8)], [-36, (6, 10), (10, 12)], [-24, (6, 10), (12, 10)], [-4, (6, 10), (12, 8)]]
-Time = 0:00:00.002089
-
-3 BLACK: calculateHeuristicValue 1397 - 1167
-
- calculateHeuristicValue 11720
-4 : Min turn
-moves : [[28, (8, 5), (6, 3)], [40, (8, 5), (4, 5)], [48, (8, 5), (4, 3)], [48, (8, 5), (6, 1)]]
-moves : [[12, (7, 4), (5, 6)], [-8, (7, 4), (7, 6)], [-8, (7, 4), (9, 4)], [20, (7, 4), (7, 2)], [28, (7, 4), (5, 2)], [48, (7, 4), (5, 0)]]
-moves : [[12, (7, 4), (9, 2)]]
-moves : [[-28, (7, 4), (9, 6)]]
-moves : [[20, (6, 6), (6, 4)], [28, (6, 6), (4, 4)], [12, (6, 6), (8, 4)], [-8, (6, 6), (8, 6)], [48, (6, 6), (4, 2)], [32, (6, 6), (8, 2)], [48, (6, 6), (2, 4)], [60, (6, 6), (6, 0)]]
-moves : [[28, (6, 5), (4, 3)], [20, (6, 5), (6, 3)], [20, (6, 5), (4, 5)], [40, (6, 5), (6, 1)]]
-moves : [[-8, (6, 5), (6, 7)]]
-moves : [[20, (6, 2), (4, 2)], [20, (6, 2), (6, 0)], [-8, (6, 2), (6, 4)], [12, (6, 2), (4, 4)], [-28, (6, 2), (8, 4)], [-8, (6, 2), (8, 2)], [32, (6, 2), (2, 4)], [-36, (6, 2), (8, 6)]]
-moves : [[12, (6, 2), (4, 4)], [-8, (6, 2), (6, 4)], [20, (6, 2), (4, 2)], [20, (6, 2), (6, 0)], [-28, (6, 2), (8, 4)], [-8, (6, 2), (8, 2)], [32, (6, 2), (2, 4)], [-36, (6, 2), (8, 6)]]
-moves : [[20, (5, 4), (5, 2)], [12, (5, 4), (7, 2)], [40, (5, 4), (5, 0)], [-16, (5, 4), (9, 4)], [-28, (5, 4), (7, 6)], [-8, (5, 4), (5, 6)]]
-moves : [[-28, (5, 4), (7, 6)], [-8, (5, 4), (5, 6)], [-16, (5, 4), (9, 4)], [12, (5, 4), (7, 2)], [20, (5, 4), (5, 2)], [40, (5, 4), (5, 0)]]
-moves : [[-8, (5, 3), (5, 5)], [-28, (5, 3), (7, 5)], [-8, (5, 3), (7, 3)], [-16, (5, 3), (5, 7)], [-16, (5, 3), (9, 3)], [-36, (5, 3), (7, 7)], [-36, (5, 3), (9, 5)]]
-moves : [[12, (5, 3), (7, 1)]]
-moves : [[12, (5, 1), (3, 3)]]
-moves : [[-28, (5, 1), (7, 3)], [-36, (5, 1), (7, 5)], [-16, (5, 1), (5, 5)], [-36, (5, 1), (9, 3)], [-56, (5, 1), (9, 5)], [-24, (5, 1), (5, 7)], [-44, (5, 1), (7, 7)]]
-moves : [[-8, (4, 1), (6, 1)], [-28, (4, 1), (6, 3)], [-8, (4, 1), (4, 3)], [-16, (4, 1), (4, 5)]]
-moves : [[12, (3, 2), (5, 0)], [-8, (3, 2), (5, 2)], [-16, (3, 2), (7, 2)], [-44, (3, 2), (9, 4)], [-56, (3, 2), (7, 6)], [-36, (3, 2), (5, 6)]]
-moves : [[12, (2, 3), (0, 5)], [-8, (2, 3), (2, 5)], [4, (2, 3), (0, 7)]]
-moves : [[12, (1, 5), (3, 3)]]
-moves : [[-8, (1, 4), (1, 6)]]
-moves : [[12, (0, 6), (2, 4)], [24, (0, 6), (4, 2)], [-4, (0, 6), (6, 4)], [4, (0, 6), (4, 4)], [36, (0, 6), (6, 0)], [-12, (0, 6), (8, 4)], [-32, (0, 6), (8, 6)], [8, (0, 6), (8, 2)]]
-moves : [[-8, (0, 4), (2, 4)], [4, (0, 4), (4, 2)], [-24, (0, 4), (6, 4)], [-16, (0, 4), (4, 4)], [16, (0, 4), (6, 0)], [-32, (0, 4), (8, 4)], [-12, (0, 4), (8, 2)], [-52, (0, 4), (8, 6)]]
-moves : [[-28, (0, 4), (2, 6)]]
-moves : []
-Time = 0:00:00.002121
-5 : Max turn
-moves : []
-moves : [[28, (15, 11), (13, 9)]]
-moves : [[20, (15, 11), (13, 11)], [20, (15, 11), (15, 9)]]
-moves : [[20, (14, 11), (14, 9)]]
-moves : []
-moves : [[12, (12, 13), (10, 15)], [20, (12, 13), (10, 13)]]
-moves : [[20, (11, 14), (9, 14)]]
-moves : [[24, (11, 14), (15, 10)], [32, (11, 14), (13, 10)], [20, (11, 14), (11, 12)]]
-moves : [[12, (11, 10), (9, 12)]]
-moves : [[20, (11, 10), (11, 8)]]
-moves : [[-8, (11, 9), (11, 11)]]
-moves : [[12, (10, 14), (12, 12)]]
-moves : [[28, (10, 11), (8, 9)], [20, (10, 11), (10, 9)], [-8, (10, 11), (12, 11)], [12, (10, 11), (12, 9)], [40, (10, 11), (6, 11)], [48, (10, 11), (8, 7)]]
-moves : [[12, (10, 11), (12, 9)], [20, (10, 11), (10, 9)], [-8, (10, 11), (12, 11)], [28, (10, 11), (8, 9)], [40, (10, 11), (6, 11)], [48, (10, 11), (8, 7)]]
-moves : [[-8, (9, 11), (11, 11)]]
-moves : [[12, (9, 10), (7, 12)]]
-moves : [[20, (9, 10), (9, 8)], [28, (9, 10), (7, 8)]]
-moves : [[-8, (9, 10), (9, 12)]]
-moves : [[-28, (9, 10), (11, 12)], [-16, (9, 10), (13, 10)], [-24, (9, 10), (15, 10)]]
-moves : [[28, (9, 9), (7, 7)]]
-moves : [[28, (8, 11), (6, 9)]]
-moves : [[20, (8, 11), (6, 11)], [20, (8, 11), (8, 9)], [12, (8, 11), (10, 9)], [40, (8, 11), (8, 7)], [-16, (8, 11), (12, 11)], [4, (8, 11), (12, 9)]]
-moves : [[12, (8, 11), (10, 9)], [20, (8, 11), (8, 9)], [20, (8, 11), (6, 11)], [40, (8, 11), (8, 7)], [-16, (8, 11), (12, 11)], [4, (8, 11), (12, 9)]]
-moves : [[-28, (8, 8), (10, 10)], [-8, (8, 8), (8, 10)], [-8, (8, 8), (10, 8)], [12, (8, 8), (6, 10)], [-16, (8, 8), (8, 12)], [-16, (8, 8), (12, 8)], [4, (8, 8), (6, 12)], [-36, (8, 8), (10, 12)], [-36, (8, 8), (12, 10)]]
-moves : [[20, (7, 11), (7, 9)], [32, (7, 11), (9, 7)]]
-moves : [[-8, (7, 10), (7, 12)]]
-moves : [[-28, (7, 10), (9, 12)]]
-Time = 0:00:00.001678
-
-3 BLACK: calculateHeuristicValue 1337 - 1167
-
- calculateHeuristicValue 8700
-
-3 BLACK: calculateHeuristicValue 1337 - 1167
-
- calculateHeuristicValue 8700
-
-3 BLACK: calculateHeuristicValue 1365 - 1167
-
- calculateHeuristicValue 10080
-
-3 BLACK: calculateHeuristicValue 1365 - 1167
-
- calculateHeuristicValue 10080
-
-3 BLACK: calculateHeuristicValue 1305 - 1167
-
- calculateHeuristicValue 7100
-
-3 BLACK: calculateHeuristicValue 1305 - 1167
-
- calculateHeuristicValue 7100
-
-3 BLACK: calculateHeuristicValue 1273 - 1167
-
- calculateHeuristicValue 5420
-
-3 BLACK: calculateHeuristicValue 1273 - 1167
-
- calculateHeuristicValue 5500
-
-3 BLACK: calculateHeuristicValue 1335 - 1167
-
- calculateHeuristicValue 8500
-
-3 BLACK: calculateHeuristicValue 1335 - 1167
-
- calculateHeuristicValue 8600
-
-3 BLACK: calculateHeuristicValue 1335 - 1167
-
- calculateHeuristicValue 8600
-
-3 BLACK: calculateHeuristicValue 1335 - 1167
-
- calculateHeuristicValue 8600
-
-3 BLACK: calculateHeuristicValue 1335 - 1167
-
- calculateHeuristicValue 8600
-
-3 BLACK: calculateHeuristicValue 1335 - 1167
-
- calculateHeuristicValue 8600
-
-3 BLACK: calculateHeuristicValue 1241 - 1167
-
- calculateHeuristicValue 3800
-
-3 BLACK: calculateHeuristicValue 1333 - 1167
-
- calculateHeuristicValue 8420
-
-3 BLACK: calculateHeuristicValue 1303 - 1167
-
- calculateHeuristicValue 6900
-
-3 BLACK: calculateHeuristicValue 1303 - 1167
-
- calculateHeuristicValue 6900
-
-3 BLACK: calculateHeuristicValue 1333 - 1167
-
- calculateHeuristicValue 8420
-
-3 BLACK: calculateHeuristicValue 1333 - 1167
-
- calculateHeuristicValue 8400
-
-3 BLACK: calculateHeuristicValue 1303 - 1167
-
- calculateHeuristicValue 6920
-
-3 BLACK: calculateHeuristicValue 1303 - 1167
-
- calculateHeuristicValue 7000
-
-3 BLACK: calculateHeuristicValue 1303 - 1167
-
- calculateHeuristicValue 7000
-
-3 BLACK: calculateHeuristicValue 1303 - 1167
-
- calculateHeuristicValue 7000
-
-3 BLACK: calculateHeuristicValue 1303 - 1167
-
- calculateHeuristicValue 7000
-
-3 BLACK: calculateHeuristicValue 1333 - 1167
-
- calculateHeuristicValue 8480
-
-3 BLACK: calculateHeuristicValue 1303 - 1167
-
- calculateHeuristicValue 7000
-
-3 BLACK: calculateHeuristicValue 1303 - 1167
-
- calculateHeuristicValue 7000
-
-3 BLACK: calculateHeuristicValue 1333 - 1167
-
- calculateHeuristicValue 8480
-
-3 BLACK: calculateHeuristicValue 1303 - 1167
-
- calculateHeuristicValue 7000
-
-3 BLACK: calculateHeuristicValue 1331 - 1167
-
- calculateHeuristicValue 8300
-
-3 BLACK: calculateHeuristicValue 1331 - 1167
-
- calculateHeuristicValue 8400
-
-3 BLACK: calculateHeuristicValue 1271 - 1167
-
- calculateHeuristicValue 5420
-
-3 BLACK: calculateHeuristicValue 1271 - 1167
-
- calculateHeuristicValue 5400
-
-3 BLACK: calculateHeuristicValue 1271 - 1167
-
- calculateHeuristicValue 5400
-
-3 BLACK: calculateHeuristicValue 1331 - 1167
-
- calculateHeuristicValue 8380
-
-3 BLACK: calculateHeuristicValue 1271 - 1167
-
- calculateHeuristicValue 5400
-
-3 BLACK: calculateHeuristicValue 1271 - 1167
-
- calculateHeuristicValue 5400
-
-3 BLACK: calculateHeuristicValue 1331 - 1167
-
- calculateHeuristicValue 8400
-
-3 BLACK: calculateHeuristicValue 1239 - 1167
-
- calculateHeuristicValue 3800
-
-3 BLACK: calculateHeuristicValue 1239 - 1167
-
- calculateHeuristicValue 3800
-
-3 BLACK: calculateHeuristicValue 1329 - 1167
-
- calculateHeuristicValue 8280
-
-3 BLACK: calculateHeuristicValue 1299 - 1167
-
- calculateHeuristicValue 6800
-
-3 BLACK: calculateHeuristicValue 1269 - 1167
-
- calculateHeuristicValue 5300
-
-3 BLACK: calculateHeuristicValue 1269 - 1167
-
- calculateHeuristicValue 5300
-
-3 BLACK: calculateHeuristicValue 1269 - 1167
-
- calculateHeuristicValue 5300
-
-3 BLACK: calculateHeuristicValue 1299 - 1167
-
- calculateHeuristicValue 6800
-
-3 BLACK: calculateHeuristicValue 1299 - 1167
-
- calculateHeuristicValue 6800
-
-3 BLACK: calculateHeuristicValue 1269 - 1167
-
- calculateHeuristicValue 5300
-
-3 BLACK: calculateHeuristicValue 1299 - 1167
-
- calculateHeuristicValue 6780
-
-3 BLACK: calculateHeuristicValue 1237 - 1167
-
- calculateHeuristicValue 3700
-
-3 BLACK: calculateHeuristicValue 1237 - 1167
-
- calculateHeuristicValue 3700
-
-3 BLACK: calculateHeuristicValue 1237 - 1167
-
- calculateHeuristicValue 3700
-
-3 BLACK: calculateHeuristicValue 1297 - 1167
-
- calculateHeuristicValue 6700
-
-3 BLACK: calculateHeuristicValue 1237 - 1167
-
- calculateHeuristicValue 3680
-
-3 BLACK: calculateHeuristicValue 1205 - 1167
+3 WHITES: calculateHeuristicValue -52
 
  calculateHeuristicValue 2080
+Apply move : [(0, 4), (0, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1267 - 1167
+3 WHITES: calculateHeuristicValue -37
 
- calculateHeuristicValue 5200
+ calculateHeuristicValue 2005
+Apply move : [(4, 0), (5, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1267 - 1167
+3 WHITES: calculateHeuristicValue -53
 
- calculateHeuristicValue 5200
+ calculateHeuristicValue 2085
+Apply move : [(0, 4), (1, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1267 - 1167
+3 WHITES: calculateHeuristicValue -53
 
- calculateHeuristicValue 5200
+ calculateHeuristicValue 2085
+Apply move : [(4, 0), (2, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1265 - 1167
+3 WHITES: calculateHeuristicValue -4
 
- calculateHeuristicValue 5100
+ calculateHeuristicValue 1840
+Apply move : [(3, 0), (2, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1235 - 1167
+3 WHITES: calculateHeuristicValue -20
 
- calculateHeuristicValue 3600
+ calculateHeuristicValue 1920
+Apply move : [(3, 0), (3, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1318 - 1167
+3 WHITES: calculateHeuristicValue -37
 
- calculateHeuristicValue 7670
+ calculateHeuristicValue 2005
+Apply move : [(4, 0), (4, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1318 - 1167
+3 WHITES: calculateHeuristicValue -37
 
- calculateHeuristicValue 7750
-
-3 BLACK: calculateHeuristicValue 1318 - 1167
-
- calculateHeuristicValue 7670
-
-3 BLACK: calculateHeuristicValue 1318 - 1167
-
- calculateHeuristicValue 7670
-
-3 BLACK: calculateHeuristicValue 1318 - 1167
-
- calculateHeuristicValue 7750
-
-3 BLACK: calculateHeuristicValue 1318 - 1167
-
- calculateHeuristicValue 7750
-
-3 BLACK: calculateHeuristicValue 1318 - 1167
-
- calculateHeuristicValue 7770
-
-3 BLACK: calculateHeuristicValue 1318 - 1167
-
- calculateHeuristicValue 7750
-
-3 BLACK: calculateHeuristicValue 1318 - 1167
-
- calculateHeuristicValue 7750
-
-3 BLACK: calculateHeuristicValue 1318 - 1167
-
- calculateHeuristicValue 7750
-
-3 BLACK: calculateHeuristicValue 1318 - 1167
-
- calculateHeuristicValue 7750
-
-3 BLACK: calculateHeuristicValue 1318 - 1167
-
- calculateHeuristicValue 7750
-
-3 BLACK: calculateHeuristicValue 1302 - 1167
-
- calculateHeuristicValue 6850
-
-3 BLACK: calculateHeuristicValue 1317 - 1167
-
- calculateHeuristicValue 7620
-
-3 BLACK: calculateHeuristicValue 1317 - 1167
-
- calculateHeuristicValue 7720
-
-3 BLACK: calculateHeuristicValue 1302 - 1167
-
- calculateHeuristicValue 6950
-
-3 BLACK: calculateHeuristicValue 1317 - 1167
-
- calculateHeuristicValue 7620
-
-3 BLACK: calculateHeuristicValue 1302 - 1167
-
- calculateHeuristicValue 6870
-
-3 BLACK: calculateHeuristicValue 1302 - 1167
-
- calculateHeuristicValue 6870
-
-3 BLACK: calculateHeuristicValue 1317 - 1167
-
- calculateHeuristicValue 7700
-
-3 BLACK: calculateHeuristicValue 1317 - 1167
-
- calculateHeuristicValue 7700
-
-3 BLACK: calculateHeuristicValue 1302 - 1167
-
- calculateHeuristicValue 6950
-
-3 BLACK: calculateHeuristicValue 1317 - 1167
-
- calculateHeuristicValue 7700
-
-3 BLACK: calculateHeuristicValue 1302 - 1167
-
- calculateHeuristicValue 6970
-
-3 BLACK: calculateHeuristicValue 1302 - 1167
-
- calculateHeuristicValue 6950
-
-3 BLACK: calculateHeuristicValue 1317 - 1167
-
- calculateHeuristicValue 7700
-
-3 BLACK: calculateHeuristicValue 1317 - 1167
-
- calculateHeuristicValue 7700
-
-3 BLACK: calculateHeuristicValue 1302 - 1167
-
- calculateHeuristicValue 6950
-
-3 BLACK: calculateHeuristicValue 1302 - 1167
-
- calculateHeuristicValue 6950
-
-3 BLACK: calculateHeuristicValue 1317 - 1167
-
- calculateHeuristicValue 7700
-
-3 BLACK: calculateHeuristicValue 1302 - 1167
-
- calculateHeuristicValue 6950
-
-3 BLACK: calculateHeuristicValue 1317 - 1167
-
- calculateHeuristicValue 7680
-
-3 BLACK: calculateHeuristicValue 1317 - 1167
-
- calculateHeuristicValue 7700
-
-3 BLACK: calculateHeuristicValue 1302 - 1167
-
- calculateHeuristicValue 6950
-
-3 BLACK: calculateHeuristicValue 1286 - 1167
-
- calculateHeuristicValue 6050
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7670
-
-3 BLACK: calculateHeuristicValue 1286 - 1167
-
- calculateHeuristicValue 6150
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7550
-
-3 BLACK: calculateHeuristicValue 1286 - 1167
-
- calculateHeuristicValue 6150
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7650
-
-3 BLACK: calculateHeuristicValue 1286 - 1167
-
- calculateHeuristicValue 6130
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7650
-
-3 BLACK: calculateHeuristicValue 1286 - 1167
-
- calculateHeuristicValue 6170
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7650
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7650
-
-3 BLACK: calculateHeuristicValue 1286 - 1167
-
- calculateHeuristicValue 6150
-
-3 BLACK: calculateHeuristicValue 1286 - 1167
-
- calculateHeuristicValue 6150
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7650
-
-3 BLACK: calculateHeuristicValue 1286 - 1167
-
- calculateHeuristicValue 6150
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7630
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7650
-
-3 BLACK: calculateHeuristicValue 1286 - 1167
-
- calculateHeuristicValue 6150
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7630
-
-3 BLACK: calculateHeuristicValue 1286 - 1167
-
- calculateHeuristicValue 6150
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7630
-
-3 BLACK: calculateHeuristicValue 1286 - 1167
-
- calculateHeuristicValue 6150
-
-3 BLACK: calculateHeuristicValue 1285 - 1167
-
- calculateHeuristicValue 6100
-
-3 BLACK: calculateHeuristicValue 1300 - 1167
-
- calculateHeuristicValue 6850
-
-3 BLACK: calculateHeuristicValue 1285 - 1167
-
- calculateHeuristicValue 6100
-
-3 BLACK: calculateHeuristicValue 1285 - 1167
-
- calculateHeuristicValue 6100
-
-3 BLACK: calculateHeuristicValue 1300 - 1167
-
- calculateHeuristicValue 6850
-
-3 BLACK: calculateHeuristicValue 1300 - 1167
-
- calculateHeuristicValue 6850
-
-3 BLACK: calculateHeuristicValue 1285 - 1167
-
- calculateHeuristicValue 6100
-
-3 BLACK: calculateHeuristicValue 1300 - 1167
-
- calculateHeuristicValue 6850
-
-3 BLACK: calculateHeuristicValue 1285 - 1167
-
- calculateHeuristicValue 6100
-
-3 BLACK: calculateHeuristicValue 1285 - 1167
-
- calculateHeuristicValue 6100
-
-3 BLACK: calculateHeuristicValue 1300 - 1167
-
- calculateHeuristicValue 6850
-
-3 BLACK: calculateHeuristicValue 1300 - 1167
-
- calculateHeuristicValue 6850
-
-3 BLACK: calculateHeuristicValue 1285 - 1167
-
- calculateHeuristicValue 6100
-
-3 BLACK: calculateHeuristicValue 1300 - 1167
-
- calculateHeuristicValue 6830
-
-3 BLACK: calculateHeuristicValue 1285 - 1167
-
- calculateHeuristicValue 6100
-
-3 BLACK: calculateHeuristicValue 1284 - 1167
-
- calculateHeuristicValue 6050
-
-3 BLACK: calculateHeuristicValue 1284 - 1167
-
- calculateHeuristicValue 6050
-
-3 BLACK: calculateHeuristicValue 1284 - 1167
-
- calculateHeuristicValue 6050
-
-3 BLACK: calculateHeuristicValue 1284 - 1167
-
- calculateHeuristicValue 6050
-
-3 BLACK: calculateHeuristicValue 1284 - 1167
-
- calculateHeuristicValue 6050
-
-3 BLACK: calculateHeuristicValue 1284 - 1167
-
- calculateHeuristicValue 6050
-
-3 BLACK: calculateHeuristicValue 1284 - 1167
-
- calculateHeuristicValue 6050
-3 : Max turn
-moves : []
-moves : [[28, (15, 11), (13, 9)]]
-moves : [[20, (15, 11), (13, 11)], [20, (15, 11), (15, 9)]]
-moves : [[20, (14, 11), (14, 9)]]
-moves : []
-moves : [[12, (12, 13), (10, 15)], [20, (12, 13), (10, 13)]]
-moves : [[20, (11, 14), (9, 14)]]
-moves : [[24, (11, 14), (15, 10)], [32, (11, 14), (13, 10)], [20, (11, 14), (11, 12)], [28, (11, 14), (9, 12)]]
-moves : [[12, (11, 10), (9, 12)], [-8, (11, 10), (11, 12)], [-8, (11, 10), (13, 10)], [-16, (11, 10), (15, 10)]]
-moves : [[20, (11, 10), (11, 8)]]
-moves : [[-8, (11, 9), (11, 11)], [4, (11, 9), (9, 13)], [-16, (11, 9), (11, 13)], [-4, (11, 9), (9, 15)]]
-moves : [[12, (10, 14), (12, 12)]]
-moves : [[28, (10, 12), (8, 10)], [20, (10, 12), (8, 12)], [20, (10, 12), (10, 10)], [12, (10, 12), (12, 10)], [40, (10, 12), (6, 12)], [40, (10, 12), (10, 8)], [48, (10, 12), (6, 10)], [48, (10, 12), (8, 8)], [32, (10, 12), (12, 8)]]
-moves : [[20, (10, 12), (10, 10)], [20, (10, 12), (8, 12)], [28, (10, 12), (8, 10)], [12, (10, 12), (12, 10)], [40, (10, 12), (6, 12)], [40, (10, 12), (10, 8)], [48, (10, 12), (6, 10)], [48, (10, 12), (8, 8)], [32, (10, 12), (12, 8)]]
-moves : [[28, (10, 11), (8, 9)], [20, (10, 11), (10, 9)], [-8, (10, 11), (12, 11)], [12, (10, 11), (12, 9)], [40, (10, 11), (6, 11)]]
-moves : [[-8, (10, 11), (10, 13)], [-16, (10, 11), (10, 15)]]
-moves : [[12, (10, 11), (12, 9)], [20, (10, 11), (10, 9)], [-8, (10, 11), (12, 11)], [28, (10, 11), (8, 9)], [40, (10, 11), (6, 11)]]
-moves : [[-8, (9, 11), (11, 11)], [-8, (9, 11), (9, 13)], [-28, (9, 11), (11, 13)], [-16, (9, 11), (9, 15)]]
-moves : [[-28, (9, 11), (11, 13)], [-16, (9, 11), (9, 15)], [-8, (9, 11), (9, 13)], [-8, (9, 11), (11, 11)]]
-moves : [[12, (9, 10), (7, 12)]]
-moves : [[20, (9, 10), (9, 8)]]
-moves : [[-8, (9, 10), (9, 12)], [-28, (9, 10), (11, 12)], [-16, (9, 10), (13, 10)], [-24, (9, 10), (15, 10)]]
-moves : [[-28, (9, 10), (11, 12)], [-8, (9, 10), (9, 12)], [-16, (9, 10), (13, 10)], [-24, (9, 10), (15, 10)]]
-moves : [[28, (8, 11), (6, 9)]]
-moves : [[20, (8, 11), (6, 11)], [20, (8, 11), (8, 9)], [12, (8, 11), (10, 9)], [-16, (8, 11), (12, 11)], [4, (8, 11), (12, 9)]]
-moves : [[12, (8, 11), (10, 9)], [20, (8, 11), (8, 9)], [20, (8, 11), (6, 11)], [-16, (8, 11), (12, 11)], [4, (8, 11), (12, 9)]]
-moves : [[20, (7, 11), (7, 9)]]
-moves : [[-8, (7, 10), (7, 12)]]
-moves : [[-28, (7, 10), (9, 12)], [-36, (7, 10), (11, 12)], [-24, (7, 10), (13, 10)], [-32, (7, 10), (15, 10)]]
-Time = 0:00:00.002047
-4 : Min turn
-moves : [[28, (8, 5), (6, 3)], [40, (8, 5), (4, 5)], [48, (8, 5), (4, 3)], [48, (8, 5), (6, 1)]]
-moves : [[12, (7, 4), (5, 6)], [-8, (7, 4), (7, 6)], [-8, (7, 4), (9, 4)], [20, (7, 4), (7, 2)], [28, (7, 4), (5, 2)], [48, (7, 4), (5, 0)]]
-moves : [[12, (7, 4), (9, 2)]]
-moves : [[-28, (7, 4), (9, 6)]]
-moves : [[20, (6, 6), (6, 4)], [28, (6, 6), (4, 4)], [12, (6, 6), (8, 4)], [-8, (6, 6), (8, 6)], [48, (6, 6), (4, 2)], [32, (6, 6), (8, 2)], [60, (6, 6), (6, 0)]]
-moves : [[28, (6, 5), (4, 3)], [20, (6, 5), (6, 3)], [20, (6, 5), (4, 5)], [40, (6, 5), (6, 1)]]
-moves : [[-8, (6, 5), (6, 7)]]
-moves : [[20, (6, 2), (4, 2)], [20, (6, 2), (6, 0)], [-8, (6, 2), (6, 4)], [12, (6, 2), (4, 4)], [-28, (6, 2), (8, 4)], [-8, (6, 2), (8, 2)], [-36, (6, 2), (8, 6)]]
-moves : [[12, (6, 2), (4, 4)], [-8, (6, 2), (6, 4)], [20, (6, 2), (4, 2)], [20, (6, 2), (6, 0)], [-28, (6, 2), (8, 4)], [-8, (6, 2), (8, 2)], [-36, (6, 2), (8, 6)]]
-moves : [[20, (5, 4), (5, 2)], [12, (5, 4), (7, 2)], [40, (5, 4), (5, 0)], [-16, (5, 4), (9, 4)], [-28, (5, 4), (7, 6)], [-8, (5, 4), (5, 6)]]
-moves : [[-28, (5, 4), (7, 6)], [-8, (5, 4), (5, 6)], [-16, (5, 4), (9, 4)], [12, (5, 4), (7, 2)], [20, (5, 4), (5, 2)], [40, (5, 4), (5, 0)]]
-moves : [[-8, (5, 3), (5, 5)], [-28, (5, 3), (7, 5)], [-8, (5, 3), (7, 3)], [-16, (5, 3), (5, 7)], [-16, (5, 3), (9, 3)], [-36, (5, 3), (7, 7)], [-36, (5, 3), (9, 5)]]
-moves : [[12, (5, 3), (7, 1)]]
-moves : [[12, (5, 1), (3, 3)], [4, (5, 1), (3, 5)]]
-moves : [[-28, (5, 1), (7, 3)], [-36, (5, 1), (7, 5)], [-16, (5, 1), (5, 5)], [-36, (5, 1), (9, 3)], [-56, (5, 1), (9, 5)], [-24, (5, 1), (5, 7)], [-44, (5, 1), (7, 7)]]
-moves : [[-8, (4, 1), (6, 1)], [-28, (4, 1), (6, 3)], [-8, (4, 1), (4, 3)], [-16, (4, 1), (4, 5)]]
-moves : [[12, (3, 2), (5, 0)], [-8, (3, 2), (5, 2)], [-16, (3, 2), (7, 2)], [-44, (3, 2), (9, 4)], [-56, (3, 2), (7, 6)], [-36, (3, 2), (5, 6)]]
-moves : [[12, (2, 4), (0, 6)]]
-moves : [[12, (2, 4), (4, 2)], [-16, (2, 4), (6, 4)], [-8, (2, 4), (4, 4)], [24, (2, 4), (6, 0)], [-24, (2, 4), (8, 4)], [-4, (2, 4), (8, 2)], [-44, (2, 4), (8, 6)]]
-moves : [[12, (2, 3), (0, 5)], [-8, (2, 3), (2, 5)]]
-moves : [[-8, (2, 3), (2, 5)], [12, (2, 3), (0, 5)]]
-moves : [[-8, (1, 5), (3, 5)], [12, (1, 5), (3, 3)]]
-moves : [[12, (1, 5), (3, 3)], [-8, (1, 5), (3, 5)]]
-moves : [[-8, (1, 4), (1, 6)]]
-moves : [[-8, (1, 4), (3, 4)]]
-moves : [[-28, (0, 4), (2, 6)]]
-moves : []
-Time = 0:00:00.002546
-5 : Max turn
-moves : []
-moves : [[28, (15, 11), (13, 9)]]
-moves : [[20, (15, 11), (13, 11)], [20, (15, 11), (15, 9)]]
-moves : [[20, (14, 11), (14, 9)]]
-moves : []
-moves : [[12, (12, 13), (10, 15)], [20, (12, 13), (10, 13)]]
-moves : [[20, (11, 14), (9, 14)]]
-moves : [[24, (11, 14), (15, 10)], [32, (11, 14), (13, 10)], [20, (11, 14), (11, 12)]]
-moves : [[12, (11, 10), (9, 12)]]
-moves : [[20, (11, 10), (11, 8)]]
-moves : [[-8, (11, 9), (11, 11)]]
-moves : [[12, (10, 14), (12, 12)]]
-moves : [[28, (10, 11), (8, 9)], [20, (10, 11), (10, 9)], [-8, (10, 11), (12, 11)], [12, (10, 11), (12, 9)], [40, (10, 11), (6, 11)], [48, (10, 11), (6, 9)]]
-moves : [[12, (10, 11), (12, 9)], [20, (10, 11), (10, 9)], [-8, (10, 11), (12, 11)], [28, (10, 11), (8, 9)], [40, (10, 11), (6, 11)], [48, (10, 11), (6, 9)]]
-moves : [[-8, (9, 11), (11, 11)]]
-moves : [[12, (9, 10), (7, 12)]]
-moves : [[20, (9, 10), (9, 8)]]
-moves : [[-8, (9, 10), (9, 12)]]
-moves : [[-28, (9, 10), (11, 12)], [-16, (9, 10), (13, 10)], [-24, (9, 10), (15, 10)]]
-moves : [[28, (8, 11), (6, 9)], [20, (8, 11), (6, 11)], [20, (8, 11), (8, 9)], [12, (8, 11), (10, 9)], [-16, (8, 11), (12, 11)], [4, (8, 11), (12, 9)]]
-moves : [[20, (8, 11), (6, 11)], [20, (8, 11), (8, 9)], [28, (8, 11), (6, 9)], [12, (8, 11), (10, 9)], [-16, (8, 11), (12, 11)], [4, (8, 11), (12, 9)]]
-moves : [[12, (8, 11), (10, 9)], [20, (8, 11), (8, 9)], [20, (8, 11), (6, 11)], [28, (8, 11), (6, 9)], [-16, (8, 11), (12, 11)], [4, (8, 11), (12, 9)]]
-moves : [[28, (7, 11), (5, 9)]]
-moves : [[20, (7, 11), (7, 9)], [20, (7, 11), (5, 11)]]
-moves : [[20, (7, 10), (5, 10)]]
-moves : [[-8, (7, 10), (7, 12)]]
-moves : [[-28, (7, 10), (9, 12)]]
-moves : [[-8, (6, 10), (8, 10)], [-8, (6, 10), (6, 12)], [-28, (6, 10), (8, 12)], [-16, (6, 10), (10, 10)], [12, (6, 10), (8, 8)], [4, (6, 10), (10, 8)], [-36, (6, 10), (10, 12)], [-24, (6, 10), (12, 10)], [-4, (6, 10), (12, 8)]]
-moves : [[-28, (6, 10), (8, 12)], [-8, (6, 10), (8, 10)], [-8, (6, 10), (6, 12)], [-16, (6, 10), (10, 10)], [12, (6, 10), (8, 8)], [4, (6, 10), (10, 8)], [-36, (6, 10), (10, 12)], [-24, (6, 10), (12, 10)], [-4, (6, 10), (12, 8)]]
-Time = 0:00:00.001869
-
-3 BLACK: calculateHeuristicValue 1397 - 1167
-
- calculateHeuristicValue 11720
+ calculateHeuristicValue 2005
+Apply move : [(1, 1), (3, 3)]
 2 : Min turn
-moves : [[28, (8, 5), (6, 3)], [40, (8, 5), (4, 5)], [48, (8, 5), (4, 3)], [48, (8, 5), (6, 1)]]
-moves : [[20, (8, 4), (6, 4)], [40, (8, 4), (4, 4)], [48, (8, 4), (4, 2)], [48, (8, 4), (6, 0)], [60, (8, 4), (2, 4)], [72, (8, 4), (0, 6)]]
-moves : [[20, (8, 4), (8, 2)]]
-moves : [[-8, (8, 4), (8, 6)]]
-moves : [[12, (7, 4), (5, 6)], [-8, (7, 4), (7, 6)], [-8, (7, 4), (9, 4)], [20, (7, 4), (7, 2)], [28, (7, 4), (5, 2)], [48, (7, 4), (5, 0)]]
-moves : [[12, (7, 4), (9, 2)]]
-moves : [[-8, (7, 4), (9, 4)], [20, (7, 4), (7, 2)], [-8, (7, 4), (7, 6)], [28, (7, 4), (5, 2)], [12, (7, 4), (5, 6)], [48, (7, 4), (5, 0)]]
-moves : [[-28, (7, 4), (9, 6)]]
-moves : [[20, (6, 6), (6, 4)], [28, (6, 6), (4, 4)], [48, (6, 6), (4, 2)], [48, (6, 6), (2, 4)], [60, (6, 6), (0, 6)], [60, (6, 6), (6, 0)]]
-moves : [[28, (6, 5), (4, 3)], [20, (6, 5), (6, 3)], [20, (6, 5), (4, 5)], [40, (6, 5), (6, 1)]]
-moves : [[-8, (6, 5), (6, 7)]]
-moves : [[20, (6, 2), (4, 2)], [20, (6, 2), (6, 0)], [-8, (6, 2), (6, 4)], [12, (6, 2), (4, 4)], [32, (6, 2), (2, 4)], [44, (6, 2), (0, 6)]]
-moves : [[12, (6, 2), (4, 4)], [-8, (6, 2), (6, 4)], [20, (6, 2), (4, 2)], [20, (6, 2), (6, 0)], [32, (6, 2), (2, 4)], [44, (6, 2), (0, 6)]]
-moves : [[20, (5, 4), (5, 2)], [12, (5, 4), (7, 2)], [40, (5, 4), (5, 0)], [-16, (5, 4), (9, 4)], [-28, (5, 4), (7, 6)], [-8, (5, 4), (5, 6)]]
-moves : [[-28, (5, 4), (7, 6)], [-8, (5, 4), (5, 6)], [-16, (5, 4), (9, 4)], [12, (5, 4), (7, 2)], [20, (5, 4), (5, 2)], [40, (5, 4), (5, 0)]]
-moves : [[-8, (5, 3), (5, 5)], [-28, (5, 3), (7, 5)], [-8, (5, 3), (7, 3)], [-16, (5, 3), (5, 7)], [-16, (5, 3), (9, 3)], [-36, (5, 3), (7, 7)], [-36, (5, 3), (9, 5)]]
-moves : [[12, (5, 3), (7, 1)]]
-moves : [[12, (5, 1), (3, 3)]]
-moves : [[-28, (5, 1), (7, 3)], [-36, (5, 1), (7, 5)], [-16, (5, 1), (5, 5)], [-36, (5, 1), (9, 3)], [-56, (5, 1), (9, 5)], [-24, (5, 1), (5, 7)], [-44, (5, 1), (7, 7)]]
-moves : [[-8, (4, 1), (6, 1)], [-28, (4, 1), (6, 3)], [-8, (4, 1), (4, 3)], [-16, (4, 1), (4, 5)]]
-moves : [[12, (3, 2), (5, 0)], [-8, (3, 2), (5, 2)], [-16, (3, 2), (7, 2)], [-44, (3, 2), (9, 4)], [-56, (3, 2), (7, 6)], [-36, (3, 2), (5, 6)]]
-moves : [[12, (2, 3), (0, 5)], [-8, (2, 3), (2, 5)]]
-moves : [[12, (1, 5), (3, 3)]]
-moves : [[-8, (1, 4), (1, 6)]]
-moves : [[-8, (0, 4), (2, 4)], [-8, (0, 4), (0, 6)], [4, (0, 4), (4, 2)], [-24, (0, 4), (6, 4)], [-16, (0, 4), (4, 4)], [16, (0, 4), (6, 0)]]
-moves : [[-28, (0, 4), (2, 6)]]
-moves : []
-Time = 0:00:00.002146
+Sorted moves : 
+ [[327, (13, 13), (9, 13)], [314, (13, 13), (11, 13)], [310, (12, 13), (11, 12)], [309, (12, 13), (11, 13)], [308, (13, 13), (12, 12)], [308, (12, 13), (12, 12)], [245, (13, 13), (9, 15)], [235, (15, 11), (14, 10)], [235, (11, 15), (10, 14)], [234, (15, 11), (15, 10)]]
+
+length of moves : 39
+Time = 0:00:00.000361
+Apply move : [(13, 13), (9, 13)]
 3 : Max turn
-moves : []
-moves : [[28, (15, 11), (13, 9)]]
-moves : [[20, (15, 11), (13, 11)], [20, (15, 11), (15, 9)]]
-moves : [[20, (14, 11), (14, 9)]]
-moves : []
-moves : [[12, (12, 13), (10, 15)], [20, (12, 13), (10, 13)], [40, (12, 13), (8, 13)]]
-moves : [[20, (11, 14), (9, 14)], [28, (11, 14), (9, 12)], [20, (11, 14), (11, 12)], [32, (11, 14), (13, 10)], [24, (11, 14), (15, 10)]]
-moves : [[24, (11, 14), (15, 10)], [32, (11, 14), (13, 10)], [20, (11, 14), (11, 12)], [28, (11, 14), (9, 12)], [20, (11, 14), (9, 14)]]
-moves : [[12, (11, 10), (9, 12)], [-8, (11, 10), (11, 12)], [4, (11, 10), (9, 14)], [-8, (11, 10), (13, 10)], [-16, (11, 10), (15, 10)]]
-moves : [[20, (11, 10), (11, 8)]]
-moves : [[-8, (11, 9), (11, 11)], [12, (11, 9), (9, 11)], [-16, (11, 9), (11, 13)], [-4, (11, 9), (9, 15)]]
-moves : [[28, (10, 14), (8, 12)], [48, (10, 14), (8, 10)], [40, (10, 14), (10, 10)], [48, (10, 14), (6, 12)], [32, (10, 14), (12, 10)], [56, (10, 14), (6, 10)], [60, (10, 14), (10, 8)], [68, (10, 14), (8, 8)], [52, (10, 14), (12, 8)]]
-moves : [[12, (10, 14), (12, 12)]]
-moves : [[12, (10, 12), (8, 14)]]
-moves : [[20, (10, 12), (10, 10)], [28, (10, 12), (8, 10)], [20, (10, 12), (8, 12)], [12, (10, 12), (12, 10)], [40, (10, 12), (6, 12)], [40, (10, 12), (10, 8)], [48, (10, 12), (6, 10)], [48, (10, 12), (8, 8)], [32, (10, 12), (12, 8)]]
-moves : [[28, (10, 11), (8, 9)], [20, (10, 11), (10, 9)], [-8, (10, 11), (12, 11)], [12, (10, 11), (12, 9)], [40, (10, 11), (6, 11)]]
-moves : [[-8, (10, 11), (10, 13)], [12, (10, 11), (8, 13)], [-16, (10, 11), (10, 15)]]
-moves : [[12, (10, 11), (12, 9)], [20, (10, 11), (10, 9)], [-8, (10, 11), (12, 11)], [28, (10, 11), (8, 9)], [40, (10, 11), (6, 11)]]
-moves : [[12, (9, 13), (11, 11)], [20, (9, 13), (9, 11)], [-8, (9, 13), (11, 13)], [-8, (9, 13), (9, 15)]]
-moves : [[-8, (9, 13), (11, 13)], [20, (9, 13), (9, 11)], [-8, (9, 13), (9, 15)], [12, (9, 13), (11, 11)]]
-moves : [[12, (9, 10), (7, 12)]]
-moves : [[20, (9, 10), (9, 8)]]
-moves : [[-28, (9, 10), (11, 12)], [-8, (9, 10), (9, 12)], [-16, (9, 10), (9, 14)], [-16, (9, 10), (13, 10)], [-24, (9, 10), (15, 10)]]
-moves : [[-8, (9, 9), (9, 11)], [-28, (9, 9), (11, 11)], [-36, (9, 9), (11, 13)], [-24, (9, 9), (9, 15)]]
-moves : [[28, (8, 11), (6, 9)]]
-moves : [[20, (8, 11), (6, 11)], [20, (8, 11), (8, 9)], [12, (8, 11), (10, 9)], [-16, (8, 11), (12, 11)], [4, (8, 11), (12, 9)]]
-moves : [[12, (8, 11), (10, 9)], [20, (8, 11), (8, 9)], [20, (8, 11), (6, 11)], [-16, (8, 11), (12, 11)], [4, (8, 11), (12, 9)]]
-moves : [[20, (7, 11), (7, 9)]]
-moves : [[-8, (7, 11), (9, 11)], [-16, (7, 11), (11, 11)], [-36, (7, 11), (11, 13)], [-36, (7, 11), (9, 15)]]
-moves : [[-8, (7, 10), (7, 12)]]
-moves : [[-28, (7, 10), (9, 12)], [-36, (7, 10), (9, 14)], [-36, (7, 10), (11, 12)], [-24, (7, 10), (13, 10)], [-32, (7, 10), (15, 10)]]
-Time = 0:00:00.002334
-4 : Min turn
-moves : [[28, (8, 5), (6, 3)], [40, (8, 5), (4, 5)], [48, (8, 5), (4, 3)], [48, (8, 5), (6, 1)]]
-moves : [[12, (7, 4), (5, 6)], [-8, (7, 4), (7, 6)], [-8, (7, 4), (9, 4)], [20, (7, 4), (7, 2)], [28, (7, 4), (5, 2)], [48, (7, 4), (5, 0)]]
-moves : [[12, (7, 4), (9, 2)]]
-moves : [[-28, (7, 4), (9, 6)]]
-moves : [[20, (6, 6), (6, 4)], [28, (6, 6), (4, 4)], [12, (6, 6), (8, 4)], [-8, (6, 6), (8, 6)], [48, (6, 6), (4, 2)], [32, (6, 6), (8, 2)], [48, (6, 6), (2, 4)], [60, (6, 6), (6, 0)]]
-moves : [[28, (6, 5), (4, 3)], [20, (6, 5), (6, 3)], [20, (6, 5), (4, 5)], [40, (6, 5), (6, 1)]]
-moves : [[-8, (6, 5), (6, 7)]]
-moves : [[20, (6, 2), (4, 2)], [20, (6, 2), (6, 0)], [-8, (6, 2), (6, 4)], [12, (6, 2), (4, 4)], [-28, (6, 2), (8, 4)], [-8, (6, 2), (8, 2)], [32, (6, 2), (2, 4)], [-36, (6, 2), (8, 6)]]
-moves : [[12, (6, 2), (4, 4)], [-8, (6, 2), (6, 4)], [20, (6, 2), (4, 2)], [20, (6, 2), (6, 0)], [-28, (6, 2), (8, 4)], [-8, (6, 2), (8, 2)], [32, (6, 2), (2, 4)], [-36, (6, 2), (8, 6)]]
-moves : [[20, (5, 4), (5, 2)], [12, (5, 4), (7, 2)], [40, (5, 4), (5, 0)], [-16, (5, 4), (9, 4)], [-28, (5, 4), (7, 6)], [-8, (5, 4), (5, 6)]]
-moves : [[-28, (5, 4), (7, 6)], [-8, (5, 4), (5, 6)], [-16, (5, 4), (9, 4)], [12, (5, 4), (7, 2)], [20, (5, 4), (5, 2)], [40, (5, 4), (5, 0)]]
-moves : [[-8, (5, 3), (5, 5)], [-28, (5, 3), (7, 5)], [-8, (5, 3), (7, 3)], [-16, (5, 3), (5, 7)], [-16, (5, 3), (9, 3)], [-36, (5, 3), (7, 7)], [-36, (5, 3), (9, 5)]]
-moves : [[12, (5, 3), (7, 1)]]
-moves : [[12, (5, 1), (3, 3)]]
-moves : [[-28, (5, 1), (7, 3)], [-36, (5, 1), (7, 5)], [-16, (5, 1), (5, 5)], [-36, (5, 1), (9, 3)], [-56, (5, 1), (9, 5)], [-24, (5, 1), (5, 7)], [-44, (5, 1), (7, 7)]]
-moves : [[-8, (4, 1), (6, 1)], [-28, (4, 1), (6, 3)], [-8, (4, 1), (4, 3)], [-16, (4, 1), (4, 5)]]
-moves : [[12, (3, 2), (5, 0)], [-8, (3, 2), (5, 2)], [-16, (3, 2), (7, 2)], [-44, (3, 2), (9, 4)], [-56, (3, 2), (7, 6)], [-36, (3, 2), (5, 6)]]
-moves : [[12, (2, 3), (0, 5)], [-8, (2, 3), (2, 5)], [4, (2, 3), (0, 7)]]
-moves : [[12, (1, 5), (3, 3)]]
-moves : [[-8, (1, 4), (1, 6)]]
-moves : [[12, (0, 6), (2, 4)], [24, (0, 6), (4, 2)], [-4, (0, 6), (6, 4)], [4, (0, 6), (4, 4)], [36, (0, 6), (6, 0)], [-12, (0, 6), (8, 4)], [-32, (0, 6), (8, 6)], [8, (0, 6), (8, 2)]]
-moves : [[-8, (0, 4), (2, 4)], [4, (0, 4), (4, 2)], [-24, (0, 4), (6, 4)], [-16, (0, 4), (4, 4)], [16, (0, 4), (6, 0)], [-32, (0, 4), (8, 4)], [-12, (0, 4), (8, 2)], [-52, (0, 4), (8, 6)]]
-moves : [[-28, (0, 4), (2, 6)]]
-moves : []
-Time = 0:00:00.002123
-5 : Max turn
-moves : []
-moves : [[28, (15, 11), (13, 9)]]
-moves : [[20, (15, 11), (13, 11)], [20, (15, 11), (15, 9)]]
-moves : [[20, (14, 11), (14, 9)]]
-moves : []
-moves : [[12, (12, 13), (10, 15)]]
-moves : [[24, (11, 14), (15, 10)], [32, (11, 14), (13, 10)], [20, (11, 14), (11, 12)], [28, (11, 14), (9, 12)], [20, (11, 14), (9, 14)]]
-moves : [[12, (11, 10), (9, 12)], [-8, (11, 10), (11, 12)], [4, (11, 10), (9, 14)], [-8, (11, 10), (13, 10)], [-16, (11, 10), (15, 10)]]
-moves : [[20, (11, 10), (11, 8)]]
-moves : [[-8, (11, 9), (11, 11)], [12, (11, 9), (9, 11)], [-16, (11, 9), (11, 13)]]
-moves : [[12, (10, 12), (8, 14)]]
-moves : [[20, (10, 12), (10, 10)], [28, (10, 12), (8, 10)], [20, (10, 12), (8, 12)], [-8, (10, 12), (10, 14)], [12, (10, 12), (12, 10)], [-8, (10, 12), (12, 12)], [40, (10, 12), (6, 12)], [40, (10, 12), (10, 8)], [48, (10, 12), (6, 10)], [32, (10, 12), (12, 8)]]
-moves : [[28, (10, 11), (8, 9)], [20, (10, 11), (10, 9)], [-8, (10, 11), (12, 11)], [12, (10, 11), (12, 9)], [40, (10, 11), (6, 11)], [48, (10, 11), (8, 7)]]
-moves : [[-8, (10, 11), (10, 13)], [12, (10, 11), (8, 13)]]
-moves : [[12, (10, 11), (12, 9)], [20, (10, 11), (10, 9)], [-8, (10, 11), (12, 11)], [28, (10, 11), (8, 9)], [40, (10, 11), (6, 11)], [48, (10, 11), (8, 7)]]
-moves : [[12, (9, 13), (11, 11)], [20, (9, 13), (9, 11)], [-8, (9, 13), (11, 13)]]
-moves : [[12, (9, 10), (7, 12)]]
-moves : [[20, (9, 10), (9, 8)], [28, (9, 10), (7, 8)]]
-moves : [[-28, (9, 10), (11, 12)], [-8, (9, 10), (9, 12)], [-16, (9, 10), (9, 14)], [-16, (9, 10), (13, 10)], [-24, (9, 10), (15, 10)]]
-moves : [[28, (9, 9), (7, 7)]]
-moves : [[-8, (9, 9), (9, 11)], [-28, (9, 9), (11, 11)], [-36, (9, 9), (11, 13)]]
-moves : [[28, (8, 11), (6, 9)]]
-moves : [[20, (8, 11), (6, 11)], [20, (8, 11), (8, 9)], [12, (8, 11), (10, 9)], [40, (8, 11), (8, 7)], [-16, (8, 11), (12, 11)], [4, (8, 11), (12, 9)]]
-moves : [[12, (8, 11), (10, 9)], [20, (8, 11), (8, 9)], [20, (8, 11), (6, 11)], [40, (8, 11), (8, 7)], [-16, (8, 11), (12, 11)], [4, (8, 11), (12, 9)]]
-moves : [[-28, (8, 8), (10, 10)], [-8, (8, 8), (8, 10)], [-8, (8, 8), (10, 8)], [12, (8, 8), (6, 10)], [-16, (8, 8), (8, 12)], [-16, (8, 8), (12, 8)], [4, (8, 8), (6, 12)], [-36, (8, 8), (12, 10)], [-44, (8, 8), (10, 14)], [-56, (8, 8), (12, 12)]]
-moves : [[20, (7, 11), (7, 9)], [32, (7, 11), (9, 7)]]
-moves : [[-8, (7, 11), (9, 11)], [-16, (7, 11), (11, 11)], [-36, (7, 11), (11, 13)]]
-moves : [[-8, (7, 10), (7, 12)]]
-moves : [[-28, (7, 10), (9, 12)], [-36, (7, 10), (9, 14)], [-36, (7, 10), (11, 12)], [-24, (7, 10), (13, 10)], [-32, (7, 10), (15, 10)]]
-Time = 0:00:00.002259
+Sorted moves : 
+ [[354, (2, 2), (4, 8)], [353, (2, 2), (6, 8)], [353, (2, 2), (8, 6)], [352, (2, 2), (8, 8)], [348, (2, 2), (6, 6)], [344, (2, 2), (4, 4)], [280, (2, 2), (6, 2)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)]]
 
-3 BLACK: calculateHeuristicValue 1367 - 1167
+length of moves : 29
+Time = 0:00:00.000408
+Apply move : [(2, 2), (4, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
- calculateHeuristicValue 10220
+3 WHITES: calculateHeuristicValue -72
 
-3 BLACK: calculateHeuristicValue 1337 - 1167
+ calculateHeuristicValue 2320
+Apply move : [(2, 2), (6, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
- calculateHeuristicValue 8720
+3 WHITES: calculateHeuristicValue -104
 
-3 BLACK: calculateHeuristicValue 1337 - 1167
+ calculateHeuristicValue 2480
+Apply move : [(2, 2), (8, 6)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
- calculateHeuristicValue 8720
+3 WHITES: calculateHeuristicValue -134
 
-3 BLACK: calculateHeuristicValue 1365 - 1167
+ calculateHeuristicValue 2630
+Apply move : [(2, 2), (8, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
- calculateHeuristicValue 10100
+3 WHITES: calculateHeuristicValue -136
 
-3 BLACK: calculateHeuristicValue 1305 - 1167
+ calculateHeuristicValue 2640
+Apply move : [(2, 2), (6, 6)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
- calculateHeuristicValue 7120
+3 WHITES: calculateHeuristicValue -102
 
-3 BLACK: calculateHeuristicValue 1365 - 1167
+ calculateHeuristicValue 2470
+Apply move : [(2, 2), (4, 4)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
- calculateHeuristicValue 10100
+3 WHITES: calculateHeuristicValue -68
 
-3 BLACK: calculateHeuristicValue 1365 - 1167
+ calculateHeuristicValue 2300
+Apply move : [(2, 2), (6, 2)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 10100
+3 WHITES: calculateHeuristicValue -98
 
-3 BLACK: calculateHeuristicValue 1305 - 1167
+ calculateHeuristicValue 2380
+Apply move : [(3, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 7120
+3 WHITES: calculateHeuristicValue -66
 
-3 BLACK: calculateHeuristicValue 1305 - 1167
+ calculateHeuristicValue 2220
+Apply move : [(4, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 7120
+3 WHITES: calculateHeuristicValue -50
 
-3 BLACK: calculateHeuristicValue 1273 - 1167
+ calculateHeuristicValue 2140
+Apply move : [(0, 4), (0, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 5440
+3 WHITES: calculateHeuristicValue -35
 
-3 BLACK: calculateHeuristicValue 1273 - 1167
+ calculateHeuristicValue 2065
+Apply move : [(13, 13), (11, 13)]
+3 : Max turn
+Sorted moves : 
+ [[354, (2, 2), (4, 8)], [353, (2, 2), (6, 8)], [353, (2, 2), (8, 6)], [352, (2, 2), (8, 8)], [348, (2, 2), (6, 6)], [344, (2, 2), (4, 4)], [280, (2, 2), (6, 2)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)]]
 
- calculateHeuristicValue 5500
+length of moves : 29
+Time = 0:00:00.000363
+Apply move : [(2, 2), (4, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
-3 BLACK: calculateHeuristicValue 1273 - 1167
+3 WHITES: calculateHeuristicValue -72
 
- calculateHeuristicValue 5520
+ calculateHeuristicValue 2320
+Apply move : [(2, 2), (6, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
-3 BLACK: calculateHeuristicValue 1335 - 1167
+3 WHITES: calculateHeuristicValue -104
 
- calculateHeuristicValue 8520
+ calculateHeuristicValue 2480
+Apply move : [(2, 2), (8, 6)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
-3 BLACK: calculateHeuristicValue 1335 - 1167
+3 WHITES: calculateHeuristicValue -134
 
- calculateHeuristicValue 8540
+ calculateHeuristicValue 2630
+Apply move : [(2, 2), (8, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
-3 BLACK: calculateHeuristicValue 1335 - 1167
+3 WHITES: calculateHeuristicValue -136
 
- calculateHeuristicValue 8620
+ calculateHeuristicValue 2640
+Apply move : [(12, 13), (11, 12)]
+3 : Max turn
+Sorted moves : 
+ [[354, (2, 2), (4, 8)], [353, (2, 2), (6, 8)], [353, (2, 2), (8, 6)], [352, (2, 2), (8, 8)], [348, (2, 2), (6, 6)], [344, (2, 2), (4, 4)], [280, (2, 2), (6, 2)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)]]
 
-3 BLACK: calculateHeuristicValue 1335 - 1167
+length of moves : 29
+Time = 0:00:00.000355
+Apply move : [(2, 2), (4, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
- calculateHeuristicValue 8620
+3 WHITES: calculateHeuristicValue -72
 
-3 BLACK: calculateHeuristicValue 1335 - 1167
+ calculateHeuristicValue 2320
+Apply move : [(2, 2), (6, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
- calculateHeuristicValue 8620
+3 WHITES: calculateHeuristicValue -104
 
-3 BLACK: calculateHeuristicValue 1335 - 1167
+ calculateHeuristicValue 2480
+Apply move : [(2, 2), (8, 6)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
- calculateHeuristicValue 8620
+3 WHITES: calculateHeuristicValue -134
 
-3 BLACK: calculateHeuristicValue 1335 - 1167
+ calculateHeuristicValue 2630
+Apply move : [(2, 2), (8, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
- calculateHeuristicValue 8620
+3 WHITES: calculateHeuristicValue -136
 
-3 BLACK: calculateHeuristicValue 1335 - 1167
+ calculateHeuristicValue 2640
+Apply move : [(12, 13), (11, 13)]
+3 : Max turn
+Sorted moves : 
+ [[354, (2, 2), (4, 8)], [353, (2, 2), (6, 8)], [353, (2, 2), (8, 6)], [352, (2, 2), (8, 8)], [348, (2, 2), (6, 6)], [344, (2, 2), (4, 4)], [280, (2, 2), (6, 2)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)]]
 
- calculateHeuristicValue 8620
+length of moves : 29
+Time = 0:00:00.000357
+Apply move : [(2, 2), (4, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
-3 BLACK: calculateHeuristicValue 1241 - 1167
+3 WHITES: calculateHeuristicValue -72
 
- calculateHeuristicValue 3820
+ calculateHeuristicValue 2320
+Apply move : [(2, 2), (6, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
-3 BLACK: calculateHeuristicValue 1333 - 1167
+3 WHITES: calculateHeuristicValue -104
 
- calculateHeuristicValue 8440
+ calculateHeuristicValue 2480
+Apply move : [(2, 2), (8, 6)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
-3 BLACK: calculateHeuristicValue 1303 - 1167
+3 WHITES: calculateHeuristicValue -134
 
- calculateHeuristicValue 6920
+ calculateHeuristicValue 2630
+Apply move : [(2, 2), (8, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
-3 BLACK: calculateHeuristicValue 1303 - 1167
+3 WHITES: calculateHeuristicValue -136
 
- calculateHeuristicValue 6920
+ calculateHeuristicValue 2640
+Apply move : [(13, 13), (12, 12)]
+3 : Max turn
+Sorted moves : 
+ [[354, (2, 2), (4, 8)], [353, (2, 2), (6, 8)], [353, (2, 2), (8, 6)], [352, (2, 2), (8, 8)], [348, (2, 2), (6, 6)], [344, (2, 2), (4, 4)], [280, (2, 2), (6, 2)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)]]
 
-3 BLACK: calculateHeuristicValue 1303 - 1167
+length of moves : 29
+Time = 0:00:00.000359
+Apply move : [(2, 2), (4, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
- calculateHeuristicValue 6940
+3 WHITES: calculateHeuristicValue -72
 
-3 BLACK: calculateHeuristicValue 1333 - 1167
+ calculateHeuristicValue 2320
+Apply move : [(2, 2), (6, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
- calculateHeuristicValue 8420
+3 WHITES: calculateHeuristicValue -104
 
-3 BLACK: calculateHeuristicValue 1303 - 1167
+ calculateHeuristicValue 2480
+Apply move : [(2, 2), (8, 6)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
- calculateHeuristicValue 7020
+3 WHITES: calculateHeuristicValue -134
 
-3 BLACK: calculateHeuristicValue 1303 - 1167
+ calculateHeuristicValue 2630
+Apply move : [(2, 2), (8, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
- calculateHeuristicValue 7020
+3 WHITES: calculateHeuristicValue -136
 
-3 BLACK: calculateHeuristicValue 1333 - 1167
+ calculateHeuristicValue 2640
+Apply move : [(12, 13), (12, 12)]
+3 : Max turn
+Sorted moves : 
+ [[354, (2, 2), (4, 8)], [353, (2, 2), (6, 8)], [353, (2, 2), (8, 6)], [352, (2, 2), (8, 8)], [348, (2, 2), (6, 6)], [344, (2, 2), (4, 4)], [280, (2, 2), (6, 2)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)]]
 
- calculateHeuristicValue 8520
+length of moves : 29
+Time = 0:00:00.000356
+Apply move : [(2, 2), (4, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
-3 BLACK: calculateHeuristicValue 1303 - 1167
+3 WHITES: calculateHeuristicValue -72
 
- calculateHeuristicValue 7020
+ calculateHeuristicValue 2320
+Apply move : [(2, 2), (6, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
-3 BLACK: calculateHeuristicValue 1303 - 1167
+3 WHITES: calculateHeuristicValue -104
 
- calculateHeuristicValue 7020
+ calculateHeuristicValue 2480
+Apply move : [(2, 2), (8, 6)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
-3 BLACK: calculateHeuristicValue 1303 - 1167
+3 WHITES: calculateHeuristicValue -134
 
- calculateHeuristicValue 7020
+ calculateHeuristicValue 2630
+Apply move : [(2, 2), (8, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 28
 
-3 BLACK: calculateHeuristicValue 1303 - 1167
+3 WHITES: calculateHeuristicValue -136
 
- calculateHeuristicValue 7020
+ calculateHeuristicValue 2640
+Apply move : [(13, 13), (9, 15)]
+3 : Max turn
+Sorted moves : 
+ [[354, (2, 2), (4, 8)], [353, (2, 2), (6, 8)], [353, (2, 2), (8, 6)], [352, (2, 2), (8, 8)], [348, (2, 2), (6, 6)], [344, (2, 2), (4, 4)], [280, (2, 2), (6, 2)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)]]
 
-3 BLACK: calculateHeuristicValue 1333 - 1167
+length of moves : 29
+Time = 0:00:00.000356
+Apply move : [(2, 2), (4, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 8500
+3 WHITES: calculateHeuristicValue -72
 
-3 BLACK: calculateHeuristicValue 1303 - 1167
+ calculateHeuristicValue 2250
+Apply move : [(2, 2), (6, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 7020
+3 WHITES: calculateHeuristicValue -104
 
-3 BLACK: calculateHeuristicValue 1303 - 1167
+ calculateHeuristicValue 2410
+Apply move : [(2, 2), (8, 6)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 7020
+3 WHITES: calculateHeuristicValue -134
 
-3 BLACK: calculateHeuristicValue 1333 - 1167
+ calculateHeuristicValue 2560
+Apply move : [(2, 2), (8, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 8500
+3 WHITES: calculateHeuristicValue -136
 
-3 BLACK: calculateHeuristicValue 1303 - 1167
+ calculateHeuristicValue 2570
+Apply move : [(2, 2), (6, 6)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 7020
+3 WHITES: calculateHeuristicValue -102
 
-3 BLACK: calculateHeuristicValue 1331 - 1167
+ calculateHeuristicValue 2400
+Apply move : [(2, 2), (4, 4)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 8320
+3 WHITES: calculateHeuristicValue -68
 
-3 BLACK: calculateHeuristicValue 1331 - 1167
+ calculateHeuristicValue 2230
+Apply move : [(2, 2), (6, 2)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
- calculateHeuristicValue 8420
+3 WHITES: calculateHeuristicValue -98
 
-3 BLACK: calculateHeuristicValue 1331 - 1167
+ calculateHeuristicValue 2310
+Apply move : [(3, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
- calculateHeuristicValue 8420
+3 WHITES: calculateHeuristicValue -66
 
-3 BLACK: calculateHeuristicValue 1331 - 1167
+ calculateHeuristicValue 2150
+Apply move : [(4, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
- calculateHeuristicValue 8400
+3 WHITES: calculateHeuristicValue -50
 
-3 BLACK: calculateHeuristicValue 1271 - 1167
+ calculateHeuristicValue 2070
+Apply move : [(0, 4), (0, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
- calculateHeuristicValue 5420
+3 WHITES: calculateHeuristicValue -35
 
-3 BLACK: calculateHeuristicValue 1271 - 1167
+ calculateHeuristicValue 1995
+Apply move : [(15, 11), (14, 10)]
+3 : Max turn
+Sorted moves : 
+ [[354, (2, 2), (4, 8)], [353, (2, 2), (6, 8)], [353, (2, 2), (8, 6)], [352, (2, 2), (8, 8)], [348, (2, 2), (6, 6)], [344, (2, 2), (4, 4)], [280, (2, 2), (6, 2)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)]]
 
- calculateHeuristicValue 5420
+length of moves : 29
+Time = 0:00:00.000353
+Apply move : [(2, 2), (4, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1331 - 1167
+3 WHITES: calculateHeuristicValue -72
 
- calculateHeuristicValue 8400
+ calculateHeuristicValue 2250
+Apply move : [(2, 2), (6, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1271 - 1167
+3 WHITES: calculateHeuristicValue -104
 
- calculateHeuristicValue 5420
+ calculateHeuristicValue 2410
+Apply move : [(2, 2), (8, 6)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1271 - 1167
+3 WHITES: calculateHeuristicValue -134
 
- calculateHeuristicValue 5420
+ calculateHeuristicValue 2560
+Apply move : [(2, 2), (8, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1331 - 1167
+3 WHITES: calculateHeuristicValue -136
 
- calculateHeuristicValue 8400
+ calculateHeuristicValue 2570
+Apply move : [(11, 15), (10, 14)]
+3 : Max turn
+Sorted moves : 
+ [[354, (2, 2), (4, 8)], [353, (2, 2), (6, 8)], [353, (2, 2), (8, 6)], [352, (2, 2), (8, 8)], [348, (2, 2), (6, 6)], [344, (2, 2), (4, 4)], [280, (2, 2), (6, 2)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)]]
 
-3 BLACK: calculateHeuristicValue 1271 - 1167
+length of moves : 29
+Time = 0:00:00.000356
+Apply move : [(2, 2), (4, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 5420
+3 WHITES: calculateHeuristicValue -72
 
-3 BLACK: calculateHeuristicValue 1271 - 1167
+ calculateHeuristicValue 2250
+Apply move : [(2, 2), (6, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 5420
+3 WHITES: calculateHeuristicValue -104
 
-3 BLACK: calculateHeuristicValue 1331 - 1167
+ calculateHeuristicValue 2410
+Apply move : [(2, 2), (8, 6)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 8420
+3 WHITES: calculateHeuristicValue -134
 
-3 BLACK: calculateHeuristicValue 1329 - 1167
+ calculateHeuristicValue 2560
+Apply move : [(2, 2), (8, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
- calculateHeuristicValue 8300
+3 WHITES: calculateHeuristicValue -136
 
-3 BLACK: calculateHeuristicValue 1239 - 1167
+ calculateHeuristicValue 2570
+Apply move : [(15, 11), (15, 10)]
+3 : Max turn
+Sorted moves : 
+ [[354, (2, 2), (4, 8)], [353, (2, 2), (6, 8)], [353, (2, 2), (8, 6)], [352, (2, 2), (8, 8)], [348, (2, 2), (6, 6)], [344, (2, 2), (4, 4)], [280, (2, 2), (6, 2)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)]]
 
- calculateHeuristicValue 3820
+length of moves : 29
+Time = 0:00:00.000358
+Apply move : [(2, 2), (4, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1239 - 1167
+3 WHITES: calculateHeuristicValue -72
 
- calculateHeuristicValue 3820
+ calculateHeuristicValue 2250
+Apply move : [(2, 2), (6, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1329 - 1167
+3 WHITES: calculateHeuristicValue -104
 
- calculateHeuristicValue 8300
+ calculateHeuristicValue 2410
+Apply move : [(2, 2), (8, 6)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1299 - 1167
+3 WHITES: calculateHeuristicValue -134
 
- calculateHeuristicValue 6820
+ calculateHeuristicValue 2560
+Apply move : [(2, 2), (8, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1269 - 1167
+3 WHITES: calculateHeuristicValue -136
 
- calculateHeuristicValue 5320
+ calculateHeuristicValue 2570
+Apply move : [(2, 2), (3, 3)]
+2 : Min turn
+Sorted moves : 
+ [[327, (13, 13), (9, 13)], [314, (13, 13), (11, 13)], [310, (12, 13), (11, 12)], [309, (12, 13), (11, 13)], [308, (13, 13), (12, 12)], [308, (12, 13), (12, 12)], [245, (13, 13), (9, 15)], [235, (15, 11), (14, 10)], [235, (11, 15), (10, 14)], [234, (15, 11), (15, 10)]]
 
-3 BLACK: calculateHeuristicValue 1299 - 1167
+length of moves : 39
+Time = 0:00:00.000304
+Apply move : [(13, 13), (9, 13)]
+3 : Max turn
+Sorted moves : 
+ [[279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)], [271, (4, 0), (5, 1)], [271, (0, 4), (1, 5)], [178, (1, 1), (0, 1)], [178, (1, 1), (1, 0)], [178, (1, 1), (1, 2)], [178, (1, 1), (2, 1)], [176, (4, 0), (2, 0)]]
 
- calculateHeuristicValue 6820
+length of moves : 24
+Time = 0:00:00.000244
+Apply move : [(3, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1299 - 1167
+3 WHITES: calculateHeuristicValue -49
 
- calculateHeuristicValue 6800
+ calculateHeuristicValue 2135
+Apply move : [(4, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1269 - 1167
+3 WHITES: calculateHeuristicValue -33
 
- calculateHeuristicValue 5320
+ calculateHeuristicValue 2055
+Apply move : [(0, 4), (0, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1269 - 1167
+3 WHITES: calculateHeuristicValue -18
 
- calculateHeuristicValue 5320
+ calculateHeuristicValue 1980
+Apply move : [(4, 0), (5, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1299 - 1167
+3 WHITES: calculateHeuristicValue -34
 
- calculateHeuristicValue 6820
+ calculateHeuristicValue 2060
+Apply move : [(0, 4), (1, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1269 - 1167
+3 WHITES: calculateHeuristicValue -34
 
- calculateHeuristicValue 5320
+ calculateHeuristicValue 2060
+Apply move : [(1, 1), (0, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1269 - 1167
+3 WHITES: calculateHeuristicValue -1
 
- calculateHeuristicValue 5320
+ calculateHeuristicValue 1895
+Apply move : [(1, 1), (1, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1299 - 1167
+3 WHITES: calculateHeuristicValue -16
 
- calculateHeuristicValue 6820
+ calculateHeuristicValue 1970
+Apply move : [(1, 1), (1, 2)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1299 - 1167
+3 WHITES: calculateHeuristicValue -18
 
- calculateHeuristicValue 6820
+ calculateHeuristicValue 1980
+Apply move : [(1, 1), (2, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1299 - 1167
+3 WHITES: calculateHeuristicValue -33
 
- calculateHeuristicValue 6820
+ calculateHeuristicValue 2055
+Apply move : [(4, 0), (2, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1269 - 1167
+3 WHITES: calculateHeuristicValue 15
 
- calculateHeuristicValue 5320
+ calculateHeuristicValue 1815
+Apply move : [(1, 1), (1, 5)]
+2 : Min turn
+Sorted moves : 
+ [[327, (13, 13), (9, 13)], [314, (13, 13), (11, 13)], [310, (12, 13), (11, 12)], [309, (12, 13), (11, 13)], [308, (13, 13), (12, 12)], [308, (12, 13), (12, 12)], [245, (13, 13), (9, 15)], [235, (15, 11), (14, 10)], [235, (11, 15), (10, 14)], [234, (15, 11), (15, 10)]]
 
-3 BLACK: calculateHeuristicValue 1269 - 1167
+length of moves : 39
+Time = 0:00:00.000306
+Apply move : [(13, 13), (9, 13)]
+3 : Max turn
+Sorted moves : 
+ [[345, (0, 4), (2, 6)], [344, (2, 2), (3, 3)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [274, (0, 4), (0, 5)], [271, (4, 0), (5, 1)], [176, (4, 0), (2, 0)], [176, (3, 0), (2, 0)], [175, (3, 0), (3, 1)], [173, (4, 0), (4, 1)]]
 
- calculateHeuristicValue 5320
+length of moves : 23
+Time = 0:00:00.000245
+Apply move : [(0, 4), (2, 6)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1299 - 1167
+3 WHITES: calculateHeuristicValue -38
 
- calculateHeuristicValue 6800
+ calculateHeuristicValue 2080
+Apply move : [(2, 2), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1237 - 1167
+3 WHITES: calculateHeuristicValue -21
 
- calculateHeuristicValue 3700
+ calculateHeuristicValue 1995
+Apply move : [(3, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1297 - 1167
+3 WHITES: calculateHeuristicValue -36
 
- calculateHeuristicValue 6720
+ calculateHeuristicValue 2000
+Apply move : [(4, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1297 - 1167
+3 WHITES: calculateHeuristicValue -20
 
- calculateHeuristicValue 6700
+ calculateHeuristicValue 1920
+Apply move : [(0, 4), (0, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1237 - 1167
+3 WHITES: calculateHeuristicValue -5
 
- calculateHeuristicValue 3720
+ calculateHeuristicValue 1845
+Apply move : [(4, 0), (5, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1237 - 1167
+3 WHITES: calculateHeuristicValue -21
 
- calculateHeuristicValue 3720
+ calculateHeuristicValue 1925
+Apply move : [(4, 0), (2, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1237 - 1167
+3 WHITES: calculateHeuristicValue 28
 
- calculateHeuristicValue 3720
+ calculateHeuristicValue 1680
+Apply move : [(3, 0), (2, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1297 - 1167
+3 WHITES: calculateHeuristicValue 12
 
- calculateHeuristicValue 6720
+ calculateHeuristicValue 1760
+Apply move : [(3, 0), (3, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1237 - 1167
+3 WHITES: calculateHeuristicValue -5
 
- calculateHeuristicValue 3700
+ calculateHeuristicValue 1845
+Apply move : [(4, 0), (4, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1237 - 1167
+3 WHITES: calculateHeuristicValue -5
 
- calculateHeuristicValue 3720
+ calculateHeuristicValue 1845
+Apply move : [(1, 1), (5, 1)]
+2 : Min turn
+Sorted moves : 
+ [[327, (13, 13), (9, 13)], [314, (13, 13), (11, 13)], [310, (12, 13), (11, 12)], [309, (12, 13), (11, 13)], [308, (13, 13), (12, 12)], [308, (12, 13), (12, 12)], [245, (13, 13), (9, 15)], [235, (15, 11), (14, 10)], [235, (11, 15), (10, 14)], [234, (15, 11), (15, 10)]]
 
-3 BLACK: calculateHeuristicValue 1205 - 1167
+length of moves : 39
+Time = 0:00:00.000339
+Apply move : [(13, 13), (9, 13)]
+3 : Max turn
+Sorted moves : 
+ [[364, (4, 0), (4, 8)], [361, (3, 0), (5, 8)], [358, (4, 0), (6, 8)], [357, (4, 0), (8, 8)], [356, (3, 0), (5, 6)], [354, (4, 0), (4, 4)], [353, (4, 0), (6, 6)], [353, (4, 0), (8, 6)], [352, (3, 0), (5, 4)], [348, (3, 0), (5, 2)]]
 
- calculateHeuristicValue 2100
+length of moves : 36
+Time = 0:00:00.000551
+Apply move : [(4, 0), (4, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1205 - 1167
+3 WHITES: calculateHeuristicValue -72
 
- calculateHeuristicValue 2120
+ calculateHeuristicValue 2250
+Apply move : [(3, 0), (5, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1267 - 1167
+3 WHITES: calculateHeuristicValue -104
 
- calculateHeuristicValue 5220
+ calculateHeuristicValue 2410
+Apply move : [(4, 0), (6, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1267 - 1167
+3 WHITES: calculateHeuristicValue -104
 
- calculateHeuristicValue 5220
+ calculateHeuristicValue 2410
+Apply move : [(4, 0), (8, 8)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1267 - 1167
+3 WHITES: calculateHeuristicValue -136
 
- calculateHeuristicValue 5220
+ calculateHeuristicValue 2570
+Apply move : [(3, 0), (5, 6)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1267 - 1167
+3 WHITES: calculateHeuristicValue -102
 
- calculateHeuristicValue 5220
+ calculateHeuristicValue 2400
+Apply move : [(4, 0), (4, 4)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1173 - 1167
+3 WHITES: calculateHeuristicValue -68
 
- calculateHeuristicValue 500
+ calculateHeuristicValue 2230
+Apply move : [(4, 0), (6, 6)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1265 - 1167
+3 WHITES: calculateHeuristicValue -102
 
- calculateHeuristicValue 5120
+ calculateHeuristicValue 2400
+Apply move : [(4, 0), (8, 6)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1235 - 1167
+3 WHITES: calculateHeuristicValue -134
 
- calculateHeuristicValue 3620
+ calculateHeuristicValue 2560
+Apply move : [(3, 0), (5, 4)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1235 - 1167
+3 WHITES: calculateHeuristicValue -100
 
- calculateHeuristicValue 3620
+ calculateHeuristicValue 2390
+Apply move : [(3, 0), (5, 2)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1265 - 1167
+3 WHITES: calculateHeuristicValue -98
 
- calculateHeuristicValue 5100
+ calculateHeuristicValue 2380
+Apply move : [(3, 0), (5, 0)]
+2 : Min turn
+Sorted moves : 
+ [[327, (13, 13), (9, 13)], [314, (13, 13), (11, 13)], [310, (12, 13), (11, 12)], [309, (12, 13), (11, 13)], [308, (13, 13), (12, 12)], [308, (12, 13), (12, 12)], [245, (13, 13), (9, 15)], [235, (15, 11), (14, 10)], [235, (11, 15), (10, 14)], [234, (15, 11), (15, 10)]]
 
-3 BLACK: calculateHeuristicValue 1235 - 1167
+length of moves : 39
+Time = 0:00:00.000320
+Apply move : [(13, 13), (9, 13)]
+3 : Max turn
+Sorted moves : 
+ [[360, (1, 1), (3, 7)], [355, (1, 1), (3, 5)], [349, (1, 1), (3, 3)], [344, (2, 2), (3, 3)], [286, (1, 1), (1, 5)], [286, (1, 1), (5, 1)], [276, (4, 0), (6, 0)], [274, (0, 4), (0, 5)], [271, (4, 0), (5, 1)], [271, (0, 4), (1, 5)]]
 
- calculateHeuristicValue 3620
+length of moves : 32
+Time = 0:00:00.000369
+Apply move : [(1, 1), (3, 7)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1263 - 1167
+3 WHITES: calculateHeuristicValue -70
 
- calculateHeuristicValue 5000
+ calculateHeuristicValue 2240
+Apply move : [(1, 1), (3, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1233 - 1167
+3 WHITES: calculateHeuristicValue -68
 
- calculateHeuristicValue 3520
+ calculateHeuristicValue 2230
+Apply move : [(1, 1), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1318 - 1167
+3 WHITES: calculateHeuristicValue -66
 
- calculateHeuristicValue 7690
+ calculateHeuristicValue 2220
+Apply move : [(2, 2), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1318 - 1167
+3 WHITES: calculateHeuristicValue -49
 
- calculateHeuristicValue 7770
+ calculateHeuristicValue 2135
+Apply move : [(1, 1), (1, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1318 - 1167
+3 WHITES: calculateHeuristicValue -36
 
- calculateHeuristicValue 7690
+ calculateHeuristicValue 2000
+Apply move : [(1, 1), (5, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1318 - 1167
+3 WHITES: calculateHeuristicValue -96
 
- calculateHeuristicValue 7690
+ calculateHeuristicValue 2300
+Apply move : [(4, 0), (6, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1318 - 1167
+3 WHITES: calculateHeuristicValue -64
 
- calculateHeuristicValue 7770
+ calculateHeuristicValue 2140
+Apply move : [(0, 4), (0, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1318 - 1167
+3 WHITES: calculateHeuristicValue -33
 
- calculateHeuristicValue 7770
+ calculateHeuristicValue 1985
+Apply move : [(4, 0), (5, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1318 - 1167
+3 WHITES: calculateHeuristicValue -49
 
- calculateHeuristicValue 7770
+ calculateHeuristicValue 2065
+Apply move : [(0, 4), (1, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1318 - 1167
+3 WHITES: calculateHeuristicValue -49
 
- calculateHeuristicValue 7770
+ calculateHeuristicValue 2065
+Apply move : [(4, 0), (5, 0)]
+2 : Min turn
+Sorted moves : 
+ [[327, (13, 13), (9, 13)], [314, (13, 13), (11, 13)], [310, (12, 13), (11, 12)], [309, (12, 13), (11, 13)], [308, (13, 13), (12, 12)], [308, (12, 13), (12, 12)], [245, (13, 13), (9, 15)], [235, (15, 11), (14, 10)], [235, (11, 15), (10, 14)], [234, (15, 11), (15, 10)]]
 
-3 BLACK: calculateHeuristicValue 1318 - 1167
+length of moves : 39
+Time = 0:00:00.000297
+Apply move : [(13, 13), (9, 13)]
+3 : Max turn
+Sorted moves : 
+ [[360, (1, 1), (3, 7)], [355, (1, 1), (3, 5)], [349, (1, 1), (3, 3)], [344, (2, 2), (3, 3)], [286, (1, 1), (1, 5)], [286, (1, 1), (5, 1)], [274, (0, 4), (0, 5)], [271, (0, 4), (1, 5)], [180, (1, 1), (1, 3)], [180, (1, 1), (3, 1)]]
 
- calculateHeuristicValue 7770
+length of moves : 32
+Time = 0:00:00.000348
+Apply move : [(1, 1), (3, 7)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1318 - 1167
+3 WHITES: calculateHeuristicValue -54
 
- calculateHeuristicValue 7770
+ calculateHeuristicValue 2160
+Apply move : [(1, 1), (3, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1318 - 1167
+3 WHITES: calculateHeuristicValue -52
 
- calculateHeuristicValue 7770
+ calculateHeuristicValue 2150
+Apply move : [(1, 1), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1318 - 1167
+3 WHITES: calculateHeuristicValue -50
 
- calculateHeuristicValue 7770
+ calculateHeuristicValue 2140
+Apply move : [(2, 2), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1302 - 1167
+3 WHITES: calculateHeuristicValue -33
 
- calculateHeuristicValue 6870
+ calculateHeuristicValue 2055
+Apply move : [(1, 1), (1, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1317 - 1167
+3 WHITES: calculateHeuristicValue -20
 
- calculateHeuristicValue 7640
+ calculateHeuristicValue 1920
+Apply move : [(1, 1), (5, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1317 - 1167
+3 WHITES: calculateHeuristicValue -80
 
- calculateHeuristicValue 7740
+ calculateHeuristicValue 2220
+Apply move : [(0, 4), (0, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1302 - 1167
+3 WHITES: calculateHeuristicValue -17
 
- calculateHeuristicValue 6970
+ calculateHeuristicValue 1905
+Apply move : [(0, 4), (1, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1317 - 1167
+3 WHITES: calculateHeuristicValue -33
 
- calculateHeuristicValue 7640
+ calculateHeuristicValue 1985
+Apply move : [(1, 1), (1, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1302 - 1167
+3 WHITES: calculateHeuristicValue -18
 
- calculateHeuristicValue 6890
+ calculateHeuristicValue 1910
+Apply move : [(1, 1), (3, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1317 - 1167
+3 WHITES: calculateHeuristicValue -48
 
- calculateHeuristicValue 7620
+ calculateHeuristicValue 2060
+Apply move : [(0, 4), (0, 5)]
+2 : Min turn
+Sorted moves : 
+ [[327, (13, 13), (9, 13)], [314, (13, 13), (11, 13)], [310, (12, 13), (11, 12)], [309, (12, 13), (11, 13)], [308, (13, 13), (12, 12)], [308, (12, 13), (12, 12)], [245, (13, 13), (9, 15)], [235, (15, 11), (14, 10)], [235, (11, 15), (10, 14)], [234, (15, 11), (15, 10)]]
 
-3 BLACK: calculateHeuristicValue 1302 - 1167
+length of moves : 39
+Time = 0:00:00.000296
+Apply move : [(13, 13), (9, 13)]
+3 : Max turn
+Sorted moves : 
+ [[360, (1, 1), (3, 7)], [355, (1, 1), (3, 5)], [349, (1, 1), (3, 3)], [344, (2, 2), (3, 3)], [286, (1, 1), (1, 5)], [286, (1, 1), (5, 1)], [279, (3, 0), (5, 0)], [274, (4, 0), (5, 0)], [271, (4, 0), (5, 1)], [180, (1, 1), (1, 3)]]
 
- calculateHeuristicValue 6890
+length of moves : 33
+Time = 0:00:00.000389
+Apply move : [(1, 1), (3, 7)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1317 - 1167
+3 WHITES: calculateHeuristicValue -39
 
- calculateHeuristicValue 7720
+ calculateHeuristicValue 2085
+Apply move : [(1, 1), (3, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1317 - 1167
+3 WHITES: calculateHeuristicValue -37
 
- calculateHeuristicValue 7720
+ calculateHeuristicValue 2075
+Apply move : [(1, 1), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1302 - 1167
+3 WHITES: calculateHeuristicValue -35
 
- calculateHeuristicValue 6970
+ calculateHeuristicValue 2065
+Apply move : [(2, 2), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1317 - 1167
+3 WHITES: calculateHeuristicValue -18
 
- calculateHeuristicValue 7720
+ calculateHeuristicValue 1980
+Apply move : [(1, 1), (1, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1317 - 1167
+3 WHITES: calculateHeuristicValue -5
 
- calculateHeuristicValue 7720
+ calculateHeuristicValue 1845
+Apply move : [(1, 1), (5, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1302 - 1167
+3 WHITES: calculateHeuristicValue -65
 
- calculateHeuristicValue 6970
+ calculateHeuristicValue 2145
+Apply move : [(3, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1317 - 1167
+3 WHITES: calculateHeuristicValue -33
 
- calculateHeuristicValue 7700
+ calculateHeuristicValue 1985
+Apply move : [(4, 0), (5, 0)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1302 - 1167
+3 WHITES: calculateHeuristicValue -17
 
- calculateHeuristicValue 6970
+ calculateHeuristicValue 1905
+Apply move : [(4, 0), (5, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1317 - 1167
+3 WHITES: calculateHeuristicValue -18
 
- calculateHeuristicValue 7720
+ calculateHeuristicValue 1910
+Apply move : [(1, 1), (1, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1317 - 1167
+3 WHITES: calculateHeuristicValue -3
 
- calculateHeuristicValue 7720
+ calculateHeuristicValue 1835
+Apply move : [(4, 0), (5, 1)]
+2 : Min turn
+Sorted moves : 
+ [[327, (13, 13), (9, 13)], [314, (13, 13), (11, 13)], [310, (12, 13), (11, 12)], [309, (12, 13), (11, 13)], [308, (13, 13), (12, 12)], [308, (12, 13), (12, 12)], [245, (13, 13), (9, 15)], [235, (15, 11), (14, 10)], [235, (11, 15), (10, 14)], [234, (15, 11), (15, 10)]]
 
-3 BLACK: calculateHeuristicValue 1302 - 1167
+length of moves : 39
+Time = 0:00:00.000295
+Apply move : [(13, 13), (9, 13)]
+3 : Max turn
+Sorted moves : 
+ [[360, (1, 1), (3, 7)], [355, (1, 1), (3, 5)], [349, (1, 1), (3, 3)], [344, (2, 2), (3, 3)], [286, (1, 1), (1, 5)], [274, (0, 4), (0, 5)], [271, (0, 4), (1, 5)], [180, (1, 1), (1, 3)], [180, (1, 1), (3, 1)], [178, (1, 1), (0, 1)]]
 
- calculateHeuristicValue 6970
+length of moves : 31
+Time = 0:00:00.000332
+Apply move : [(1, 1), (3, 7)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1302 - 1167
+3 WHITES: calculateHeuristicValue -55
 
- calculateHeuristicValue 6970
+ calculateHeuristicValue 2165
+Apply move : [(1, 1), (3, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1317 - 1167
+3 WHITES: calculateHeuristicValue -53
 
- calculateHeuristicValue 7720
+ calculateHeuristicValue 2155
+Apply move : [(1, 1), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1302 - 1167
+3 WHITES: calculateHeuristicValue -51
 
- calculateHeuristicValue 6970
+ calculateHeuristicValue 2145
+Apply move : [(2, 2), (3, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 27
 
-3 BLACK: calculateHeuristicValue 1317 - 1167
+3 WHITES: calculateHeuristicValue -34
 
- calculateHeuristicValue 7700
+ calculateHeuristicValue 2060
+Apply move : [(1, 1), (1, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1317 - 1167
+3 WHITES: calculateHeuristicValue -21
 
- calculateHeuristicValue 7720
+ calculateHeuristicValue 1925
+Apply move : [(0, 4), (0, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1302 - 1167
+3 WHITES: calculateHeuristicValue -18
 
- calculateHeuristicValue 6970
+ calculateHeuristicValue 1910
+Apply move : [(0, 4), (1, 5)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1286 - 1167
+3 WHITES: calculateHeuristicValue -34
 
- calculateHeuristicValue 6070
+ calculateHeuristicValue 1990
+Apply move : [(1, 1), (1, 3)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1316 - 1167
+3 WHITES: calculateHeuristicValue -19
 
- calculateHeuristicValue 7690
+ calculateHeuristicValue 1915
+Apply move : [(1, 1), (3, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1286 - 1167
+3 WHITES: calculateHeuristicValue -49
 
- calculateHeuristicValue 6170
+ calculateHeuristicValue 2065
+Apply move : [(1, 1), (0, 1)]
+1 : calculateHeuristicValue 0
+2 : calculateHeuristicValue 26
 
-3 BLACK: calculateHeuristicValue 1316 - 1167
+3 WHITES: calculateHeuristicValue -1
 
- calculateHeuristicValue 7570
-
-3 BLACK: calculateHeuristicValue 1286 - 1167
-
- calculateHeuristicValue 6170
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7670
-
-3 BLACK: calculateHeuristicValue 1286 - 1167
-
- calculateHeuristicValue 6150
-
-3 BLACK: calculateHeuristicValue 1286 - 1167
-
- calculateHeuristicValue 6170
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7670
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7650
-
-3 BLACK: calculateHeuristicValue 1286 - 1167
-
- calculateHeuristicValue 6170
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7670
-
-3 BLACK: calculateHeuristicValue 1286 - 1167
-
- calculateHeuristicValue 6170
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7650
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7670
-
-3 BLACK: calculateHeuristicValue 1286 - 1167
-
- calculateHeuristicValue 6170
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7650
-
-3 BLACK: calculateHeuristicValue 1286 - 1167
-
- calculateHeuristicValue 6170
-
-3 BLACK: calculateHeuristicValue 1316 - 1167
-
- calculateHeuristicValue 7650
-
-3 BLACK: calculateHeuristicValue 1286 - 1167
-
- calculateHeuristicValue 6170
-
-3 BLACK: calculateHeuristicValue 1285 - 1167
-
- calculateHeuristicValue 6120
-
-3 BLACK: calculateHeuristicValue 1300 - 1167
-
- calculateHeuristicValue 6870
-
-3 BLACK: calculateHeuristicValue 1285 - 1167
-
- calculateHeuristicValue 6120
-
-3 BLACK: calculateHeuristicValue 1285 - 1167
-
- calculateHeuristicValue 6120
-
-3 BLACK: calculateHeuristicValue 1300 - 1167
-
- calculateHeuristicValue 6870
-
-3 BLACK: calculateHeuristicValue 1285 - 1167
-
- calculateHeuristicValue 6120
-
-3 BLACK: calculateHeuristicValue 1285 - 1167
-
- calculateHeuristicValue 6120
-
-3 BLACK: calculateHeuristicValue 1300 - 1167
-
- calculateHeuristicValue 6850
-
-3 BLACK: calculateHeuristicValue 1285 - 1167
-
- calculateHeuristicValue 6120
-
-3 BLACK: calculateHeuristicValue 1300 - 1167
-
- calculateHeuristicValue 6870
-
-3 BLACK: calculateHeuristicValue 1285 - 1167
-
- calculateHeuristicValue 6120
-
-3 BLACK: calculateHeuristicValue 1285 - 1167
-
- calculateHeuristicValue 6120
-
-3 BLACK: calculateHeuristicValue 1300 - 1167
-
- calculateHeuristicValue 6870
-
-3 BLACK: calculateHeuristicValue 1285 - 1167
-
- calculateHeuristicValue 6120
-
-3 BLACK: calculateHeuristicValue 1300 - 1167
-
- calculateHeuristicValue 6870
-
-3 BLACK: calculateHeuristicValue 1285 - 1167
-
- calculateHeuristicValue 6120
-
-3 BLACK: calculateHeuristicValue 1300 - 1167
-
- calculateHeuristicValue 6850
-
-3 BLACK: calculateHeuristicValue 1285 - 1167
-
- calculateHeuristicValue 6120
-
-3 BLACK: calculateHeuristicValue 1284 - 1167
-
- calculateHeuristicValue 6070
-
-3 BLACK: calculateHeuristicValue 1284 - 1167
-
- calculateHeuristicValue 6070
-
-3 BLACK: calculateHeuristicValue 1284 - 1167
-
- calculateHeuristicValue 6070
-
-3 BLACK: calculateHeuristicValue 1284 - 1167
-
- calculateHeuristicValue 6070
-
-3 BLACK: calculateHeuristicValue 1284 - 1167
-
- calculateHeuristicValue 6050
-
-3 BLACK: calculateHeuristicValue 1284 - 1167
-
- calculateHeuristicValue 6070
-
-3 BLACK: calculateHeuristicValue 1284 - 1167
-
- calculateHeuristicValue 6070
-
-3 BLACK: calculateHeuristicValue 1284 - 1167
-
- calculateHeuristicValue 6070
-Time = 0:00:00.058544
-selected value 11700
-selected move : (0, 2) ---> (6, 2)
-(1) max depth of the tree = 5
-(2) total number of nodes generated = 15
-(3) number of times pruning occurred in the MAX-VALUE() = 6
-(4) number of times pruning occurred in the MIN-VALUE() = 6
-my_pos : 75989745662360452647423741908161504473354675134970162912687012722682024165376 opp_pos : 19055895632245138194725672857914913652757
+ calculateHeuristicValue 1825
+Time = 0:00:00.028836
+selected value 2570
+selected move : (14, 14) ---> (12, 12)
+(1) max depth of the tree = 3
+(2) total number of nodes generated = 45
+(3) number of times pruning occurred in the MAX-VALUE() = 21
+(4) number of times pruning occurred in the MIN-VALUE() = 8
+Suggested move : [[14, 14], [12, 12]]

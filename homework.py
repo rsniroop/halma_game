@@ -4,15 +4,40 @@ import math
 import json
 import os
 
+"""
+" WHITE Camp Initial Value
+" BLACK Camp Goal Value
+"""
 BLACK_FINAL_VAL = 55342202610392170527
+
+"""
+" BLACK Camp Initial Value
+" White Camp Goal Value
+"""
 WHITE_FINAL_VAL = 112175298107019378335687140669482314051633935764227932350769375443651114565632
 
+"""
+" Middle of the board value
+"""
 MIDDLE_BOARD    = 1263795709708793273810665949815186122510200626757953117174276030464
 
 
+"""
+" Initial moves lookup table
+"""
 lookup_table = [[((0,3), (2,5)), ((1,4),(3,6)), ((0,2), (4,6)), ((0,0), (2,4)), ((1,1), (5,7)), ((2,3), (3,4)), ((0,1), (6,7))], \
                 [((15,12), (13,10)), ((14,11),(12,9)), ((15,13), (11,9)), ((15,15), (13,11)), ((14,14), (10,8)), ((13,12), (12,11)), ((15,14), (9,8))]]
+
+"""
+" Size of the board
+"""
 BOARD_SIZE = 16
+
+"""
+" Destination Lookup
+"""
+
+destination_lookup = [{'0,0' :(15,15), '0,1' :(15,15), '0,2' :(15,15), '0,3' :(15,15), '0,4' :(15,15), '1,0' :(15,15), '1,1' :(15,15), '1,2' :(15,15), '1,3' :(15,15), '1,4' :(15,15), '2,0' :(15,15), '2,1' :(15,15), '2,2' :(15,15), '2,3' :(15,15), '3,0' :(15,15), '3,1' :(15,15), '3,2' :(15,15), '4,0' :(15,15), '4,1' :(15,15)}, {'15,15': (0,0), '15,14': (0,0), '15,13': (0,0), '15,12': (0,0), '15,11': (0,0), '14,15': (0,0), '14,14': (0,0), '14,13': (0,0), '14,12': (0,0), '14,11': (0,0), '13,15': (0,0), '13,14': (0,0), '13,13': (0,0), '13,12': (0,0), '12,15': (0,0), '12,14': (0,0), '12,13': (0,0), '11,15': (0,0), '11,14': (0,0)}]
 
 """
 " Halma Game state
@@ -32,12 +57,10 @@ class halma_game_state:
         if self.game.my_player == 0:
             if self.my_pos == WHITE_FINAL_VAL or \
             self.opp_pos == BLACK_FINAL_VAL:
-                print(f'0 : Terminated')
                 return True
         else:
             if self.my_pos == BLACK_FINAL_VAL or \
             self.opp_pos == WHITE_FINAL_VAL:
-                print(f'1: Terminated')
                 return True
 
         return False
@@ -85,10 +108,8 @@ class halma_game_state:
             temp2 = temp1
             temp1 = self.game.SetMSBToZero(temp1)
             pos     += self.game.ffs(temp1^temp2)
-        if self.game.my_player == 0:
-            return pos
-        else:
-            return pos
+
+        return pos
 
     def getAllMoves(self, my_turn):
         starttime = datetime.datetime.now()
@@ -148,7 +169,6 @@ class halma_game_state:
         moves = sorted(jump_moves + moves, key = lambda x : x[0], reverse = True)
         print(f'Sorted moves : \n {moves[:15]}')
         print(f'\nlength of moves : {len(moves)}')
-        print("Time = " + str(datetime.datetime.now() - starttime))
         return moves
 
     def generate_jump_moves(self, orig_pos, next_jump_pos, my_turn):
@@ -195,19 +215,20 @@ class halma_game_state:
         jump_parent                = {}
         jump_parent[orig_pos]      = [None, 0]
         jump_parent[next_jump_pos] = [orig_pos, 0]
-        moves                      = []
         open_queue                 = []
         heapq.heappush(open_queue, (self.calculate_heuristics(next_jump_pos,orig_pos, my_turn), next_jump_pos, orig_pos))
-        key = ','.join(map(str, orig_pos))
         while open_queue :
             pop_h_val, cur_pos, old_pos = heapq.heappop(open_queue)
-            #print(f'Jump from : ({(BOARD_SIZE - 1) - old_pos[0]}, {(BOARD_SIZE - 1) - old_pos[1]}) -> ({(BOARD_SIZE - 1) - cur_pos[0]}, {(BOARD_SIZE - 1) - cur_pos[1]})')
             self.set_pawn_position(cur_pos)
             self.unset_pawn_position(old_pos)
             h_val = self.calculate_directional_heuristics(cur_pos, orig_pos,  my_turn)
-            #if self.move_not_in_my_camp(cur_pos) and h_val > 0:
             if h_val > 0:
-                    moves.append([h_val, orig_pos, cur_pos])
+                if not (self.move_not_in_my_camp(orig_pos)) and (self.move_not_in_my_camp(cur_pos)):
+                    self.initial_moves_campout.append([h_val, orig_pos , cur_pos])
+                elif not (self.move_not_in_my_camp(orig_pos)) and not (self.move_not_in_my_camp(cur_pos)) and self.check_valid_move_in_camp(orig_pos, cur_pos):
+                    self.initial_moves_in_camp.append([h_val, orig_pos , cur_pos])
+                else :
+                    self.moves.append([h_val, orig_pos , cur_pos])
             for i in (-1,0,1):
                 for j in (-1,0,1):
                     if i != 0 or j != 0:
@@ -226,31 +247,32 @@ class halma_game_state:
                                 heapq.heappush(open_queue, (h_val, jump_pos, cur_pos))
                                 jump_parent[jump_pos] = [cur_pos, 0]
             jump_parent[cur_pos][1] = 1
-        return moves
 
     def get_single_move(self):
         my_pos = self.my_pos
         opp_pos = self.opp_pos
 
-        moves = []
-        jump_moves = []
+        self.moves = []
+        self.initial_moves_campout = []
+        self.initial_moves_in_camp = []
+        self.jump_moves = []
         temp1 = my_pos
-        pawn_in_base_camp = False
+        """pawn_in_base_camp = False
 
         if self.game.player == 0:
             if temp1 & BLACK_FINAL_VAL:
                 pawn_in_base_camp = True
         else:
             if temp1 & WHITE_FINAL_VAL:
-                pawn_in_base_camp = True
+                pawn_in_base_camp = True"""
     
         while temp1:
             temp2 = temp1
             temp1 = self.game.SetMSBToZero(temp1)
             pos     = self.game.ffs(temp1^temp2)
             cur_pos = (pos//BOARD_SIZE, pos%BOARD_SIZE)
-            if pawn_in_base_camp and self.move_not_in_my_camp(cur_pos):
-                continue
+            """if pawn_in_base_camp and self.move_not_in_my_camp(cur_pos):
+                continue"""
 
             for i in (-1,0,1):
                 for j in (-1,0,1):
@@ -265,14 +287,35 @@ class halma_game_state:
                             if self.game.is_pos_valid(x, y): 
                                 if not ((my_pos | opp_pos) & (1<<(BOARD_SIZE*x + y))): #and (self.move_not_in_my_camp((x,y))) :
                                     h_val = self.get_single_game_heuristics((x,y), cur_pos)
-                                    if h_val > 0 :
-                                        moves.append([h_val, cur_pos , (x,y)])
+                                    if not (self.move_not_in_my_camp(cur_pos)) and (self.move_not_in_my_camp((x,y))):
+                                        self.initial_moves_campout.append([h_val, cur_pos , (x,y)])
+                                    elif not (self.move_not_in_my_camp(cur_pos)) and not (self.move_not_in_my_camp((x,y))) and self.check_valid_move_in_camp(cur_pos, (x, y)) and h_val > 0:
+                                        self.initial_moves_in_camp.append([h_val, cur_pos , (x,y)])
+                                    else :
+                                        self.moves.append([h_val, cur_pos , (x,y)])
                                 else:
                                     if self.game.is_pos_valid(x+i, y+j) and ((my_pos | opp_pos) & (1<<(BOARD_SIZE*x + y))) and not ((my_pos | opp_pos) & (1<<(BOARD_SIZE*(x+i) + (y+j)))) :
                                         self.temp_board = self.board
-                                        jump_moves.extend(self.generate_single_jump_moves(cur_pos, (cur_pos[0] + 2*i, cur_pos[1] + 2 *j), True))
-        return sorted(jump_moves + moves, key = lambda x : x[0], reverse = True)[0][1:]
+                                        self.generate_single_jump_moves(cur_pos, (cur_pos[0] + 2*i, cur_pos[1] + 2 *j), True)
 
+        print(f'initial_moves_campout : {self.initial_moves_campout}')
+        print(f'initial_moves_in_camp : {self.initial_moves_in_camp}')
+        print(f'Moves : {self.moves}')
+        if self.initial_moves_campout:
+            return sorted(self.initial_moves_campout, key = lambda x: x[0], reverse = True)[0][1:]
+        elif self.initial_moves_in_camp:
+            return sorted(self.initial_moves_in_camp, key = lambda x: x[0], reverse = True)[0][1:]
+        else:
+            return sorted(self.moves, key = lambda x: x[0], reverse = True)[0][1:]
+
+    def check_valid_move_in_camp(self, old_pos, next_pos):
+        if self.game.my_player == 0:
+            if (next_pos[0] > old_pos[0]) and (next_pos[1] > old_pos[1]):
+                return True
+        else:
+            if (next_pos[0] < old_pos[0]) and (next_pos[1] <  old_pos[1]):
+                return True
+        return False
 
     def set_pawn_position(self, cur_pos):
         self.temp_board |= (1<<((BOARD_SIZE)*(cur_pos[0]) + cur_pos[1]))
@@ -281,7 +324,6 @@ class halma_game_state:
         self.temp_board &= ~(1<<((BOARD_SIZE)*(pos[0]) + pos[1]))
 
     def applyMove(self, move, my_turn):
-        print(f'Apply move : {move}')
         if my_turn:
             self.my_pos |= (1<<((BOARD_SIZE)*move[1][0] + move[1][1]))
             self.my_pos &= ~(1<<((BOARD_SIZE)*move[0][0] + move[0][1]))
@@ -321,26 +363,34 @@ class halma_game_state:
 
     def calculate_directional_heuristics(self, cur_pos, old_pos, my_turn):
         #change if condition
+
+        if self.game.game_type == "SINGLE" and self.game.player == 0:
+            end_pos = (15,15)
+        elif self.game.game_type == "SINGLE" and self.game.player == 1:
+            end_pos = (0,0)
+
         if self.game.game_type == "GAME" and self.game.player == 0:
             key = ','.join([str(15 - old_pos[0]), str(15 - old_pos[1])])
             if key in self.game.json_data['destined_pos'] :
                 end_pos = self.game.json_data['destined_pos'][key]
             else:
                 end_pos = (15, 15)
-        else:
-            end_pos = (0,0)
+        elif self.game.game_type == "GAME" and self.game.player == 1:
+            key = ','.join([str(15 - old_pos[0]), str(15 - old_pos[1])])
+            if key in self.game.json_data['destined_pos'] :
+                end_pos = self.game.json_data['destined_pos'][key]
+            else:
+                end_pos = (0,0)
 
         if self.game.player == 1:
             d_min = min((old_pos[0] - cur_pos[0]), (old_pos[1] - cur_pos[1]))
             d_max = max((old_pos[0] - cur_pos[0]), (old_pos[1] - cur_pos[1]))
-            d_min_goal = min((cur_pos[0]), (cur_pos[1]))
-            d_max_goal = max((cur_pos[0]), (cur_pos[1]))
         else:
             d_min = min((cur_pos[0] - old_pos[0]), (cur_pos[1] - old_pos[1]))
             d_max = max((cur_pos[0] - old_pos[0]), (cur_pos[1] - old_pos[1]))
-            d_min_goal = min(abs(15 - end_pos[0] - cur_pos[0]), abs(15 - end_pos[1] - cur_pos[1]))
-            d_max_goal = max(abs(15 - end_pos[0] - cur_pos[0]), abs(15 - end_pos[1] - cur_pos[1]))
-        result = 5 * int(1.4 * d_min + (d_max - d_min)) + 5 * int(1.4 * d_min_goal + (d_max_goal - d_min_goal))
+        d_min_goal = min(abs(15 - end_pos[0] - cur_pos[0]), abs(15 - end_pos[1] - cur_pos[1]))
+        d_max_goal = max(abs(15 - end_pos[0] - cur_pos[0]), abs(15 - end_pos[1] - cur_pos[1]))
+        result = 5 * int(1.4 * d_min + (d_max - d_min)) + 1 * int(1.4 * d_min_goal + (d_max_goal - d_min_goal))
 
 
         if not self.move_not_in_my_camp(old_pos):
@@ -357,8 +407,8 @@ class halma_game_state:
             result += 75
 
         if self.move_in_opp_camp(cur_pos) and not (self.my_pos & (1<<((BOARD_SIZE)*(cur_pos[0]) + cur_pos[1]))):
-            print(f'Moving from {old_pos} to unoccupied goal {cur_pos}')
-            result += 300
+            #print(f'Moving from {old_pos} to unoccupied goal {cur_pos}')
+            result += 20
 
         # Weight for pawns in the back
         result += 2 * ((15 - cur_pos[0]) + (15 - cur_pos[1]))
@@ -393,7 +443,7 @@ class halma_game_state:
             result += 75
 
         # Weight for pawns in the back
-        result += 2 * ((15 - cur_pos[0]) + (15 - cur_pos[1]))
+        #result += 2 * ((15 - cur_pos[0]) + (15 - cur_pos[1]))
 
         return result
 
@@ -503,7 +553,7 @@ class halma_ai_agent:
         #print(f'cur board : {state.print_board_state()}')
         v = -math.inf
         #print(f' Maxvalue :  moves len : {len(state.getAllMoves(True))}')
-        for move in state.getAllMoves(True)[:30]:
+        for move in state.getAllMoves(True)[:1]:
             state.applyMove(move[1:], True)
             #cur_val = state.getDisplacementVal()
             r_val = self.minValue(state, alpha, beta, depthLimit - 1, cur_val, (player + 1) % 2)
@@ -539,7 +589,7 @@ class halma_ai_agent:
         #print(f'cur board : {state.print_board_state()}')
         v = math.inf
         #print(f' Minvalue :  moves len : {len(state.getAllMoves(False))}')
-        for move in state.getAllMoves(False)[:30]:
+        for move in state.getAllMoves(False)[:1]:
             state.applyMove(move[1:], False)
             #cur_val = state.getDisplacementVal()
             r_val = self.maxValue(state, alpha, beta, depthLimit - 1, cur_val, (player+1) % 2)
@@ -562,7 +612,7 @@ class halma_ai_agent:
 """
 class halma_game:
 
-    def __init__(self, game_type, player, play_time, board, num_moves):
+    def __init__(self, game_type, player, play_time, board):
         """
         " Initiate game variables
         """
@@ -590,29 +640,36 @@ class halma_game:
             self.suggested_move = self.max_agent.generate_single_move()
 
         else:
+            num_moves = 0
+            with open("playdata.txt", "r") as playdata_file:
+                if os.stat("playdata.txt").st_size == 0:
+                    num_moves = 0
+                else:
+                    self.json_data = json.load(playdata_file)
+                    num_moves = self.json_data['num_moves']
 
-            with open("playdata.txt", "r") as data_file:
-                self.json_data = json.load(data_file)
+                playdata_file.close()
+
             if num_moves == 0:
-                self.init_playdata()
+                with open("playdata.txt", "w+") as pfile:
+                    self.json_data = json.loads('{"num_moves": 0, "moves": {}}')
+                    self.init_playdata()
             self.suggested_move = self.max_agent.get_nextMove()
 
-
-        self.moves_completed = num_moves
-
-        #self.suggested_move = [[15 - self.suggested_move[0][0], 15 - self.suggested_move[0][1]], [15 - self.suggested_move[1][0], 15 - self.suggested_move[1][1]] ]
-
+            self.moves_completed = num_moves
 
         self.dump_move()
 
     def init_playdata(self):
-
+        """
+        " Initialize Playdata file
+        """
         with open("playdata.txt", "w+") as data_file:
             if 'destined_pos' not in self.json_data:
                 if self.my_player  == 0:
-                    self.json_data['destined_pos'] = {'0,0' :(15,15), '0,1' :(15,15), '0,2' :(15,15), '0,3' :(15,15), '0,4' :(15,15), '1,0' :(15,15), '1,1' :(15,15), '1,2' :(15,15), '1,3' :(15,15), '1,4' :(15,15), '2,0' :(15,15), '2,1' :(15,15), '2,2' :(15,15), '2,3' :(15,15), '3,0' :(15,15), '3,1' :(15,15), '3,2' :(15,15), '4,0' :(15,15), '4,1' :(15,15)}
+                    self.json_data['destined_pos'] = destination_lookup[0]
                 else:
-                    self.json_data['destined_pos'] = {'15,15': (0,0), '15,14': (0,0), '15,13': (0,0), '15,12': (0,0), '15,11': (0,0), '14,15': (0,0), '14,14': (0,0), '14,13': (0,0), '14,12': (0,0), '14,11': (0,0), '13,15': (0,0), '13,14': (0,0), '13,13': (0,0), '13,12': (0,0), '12,15': (0,0), '12,14': (0,0), '12,13': (0,0), '11,15': (0,0), '11,14': (0,0)}
+                    self.json_data['destined_pos'] = destination_lookup[1]
             json.dump(self.json_data, data_file)
 
 
@@ -634,6 +691,9 @@ class halma_game:
         pass
 
     def getBoardInfo(self):
+        """
+        " Get positions of the both the players
+        """
         return self.my_pos, self.opp_pos
 
     def set_pawn_position(self, cur_pos):
@@ -696,7 +756,6 @@ class halma_game:
         self.board = self.my_pos | self.opp_pos
     def assign_destined_pos(self):
         print(f'Assign Destination positions')
-        #self.json_data['destined_pos'][','.join(map(str, self.suggested_move[0]))] = self.suggested_move[1]
 
         self.apply_suggested_move()
         if self.my_player == 0:
@@ -839,19 +898,6 @@ if __name__ == "__main__":
     in_list = None
     with open("input.txt", "r") as in_file:
         in_list = in_file.readlines()
-    num_moves = 0
-    with open("playdata.txt", "r") as playdata_file:
-        if os.stat("playdata.txt").st_size == 0:
-            num_moves = 0
-        else:
-            json_data = json.load(playdata_file)
-            num_moves = json_data['num_moves']
-  
-    playdata_file.close()
- 
-    if num_moves == 0:
-        with open("playdata.txt", "w+") as pfile:
-            json.dump(json.loads('{"num_moves": 0, "moves": {}}'), pfile)
- 
     in_file.close()
-    halma_obj = halma_game(in_list[0].strip("\n"), in_list[1].strip("\n"), in_list[2].strip("\n"), "".join(in_list[3:]).replace("\n", ""), num_moves)
+    halma_obj = halma_game(in_list[0].strip("\n"), in_list[1].strip("\n"), in_list[2].strip("\n"), "".join(in_list[3:]).replace("\n", ""))
+

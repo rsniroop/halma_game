@@ -110,8 +110,9 @@ class halma_game_state:
             #print(f'1 : calculateHeuristicValue {heuristic}')
             heuristic += game_heuristics[game_stage][4] * (bin(self.my_pos & MIDDLE_BOARD)[2:].count('1') + bin(self.opp_pos & MIDDLE_BOARD)[2:].count('1'))
             #print(f"2 : calculateHeuristicValue {bin(self.my_pos & MIDDLE_BOARD)[2:].count('1') + bin(self.opp_pos & MIDDLE_BOARD)[2:].count('1')}")
-            heuristic += game_heuristics[game_stage][3] * (prev_val - self.getDisplacementVal())
-            #print(f'\n3 BLACK: calculateHeuristicValue {prev_val - self.getDisplacementVal()}')
+
+            heuristic += game_heuristics[game_stage][3] * (self.getDisplacementVal() - prev_val)
+            #print(f'\n3 BLACKS: calculateHeuristicValue prev_val : {prev_val} - DPVAL : {self.getDisplacementVal()}')
             heuristic += self.move_val
 
         #print(f'\n calculateHeuristicValue {heuristic}')
@@ -126,7 +127,10 @@ class halma_game_state:
             temp1 = self.game.SetMSBToZero(temp1)
             pos     += self.game.ffs(temp1^temp2)
 
-        return pos
+        if self.game.my_player == 0:
+            return pos
+        else:
+            return 4845 - pos
 
     def getAllMoves(self, my_turn):
         starttime = datetime.datetime.now()
@@ -174,10 +178,13 @@ class halma_game_state:
                                         self.generate_jump_moves(cur_pos, (cur_pos[0] + 2*i, cur_pos[1] + 2 *j), my_turn)
 
         if self.initial_moves_campout:
+            #print(f'initial_moves_campout : {sorted(self.initial_moves_campout, key = lambda x: x[0], reverse = True)}')
             return sorted(self.initial_moves_campout, key = lambda x: x[0], reverse = True)
         elif self.initial_moves_in_camp:
+            #print(f'initial_moves_in_camp : {sorted(self.initial_moves_in_camp, key = lambda x: x[0], reverse = True)}')
             return sorted(self.initial_moves_in_camp, key = lambda x: x[0], reverse = True)
         else:
+            #print(f'All moves : {sorted(self.moves, key = lambda x: x[0], reverse = True)}')
             return sorted(self.moves, key = lambda x: x[0], reverse = True)
 
     def generate_jump_moves(self, orig_pos, next_jump_pos, my_turn):
@@ -357,7 +364,9 @@ class halma_game_state:
         return result
 
     def calculate_directional_heuristics(self, cur_pos, old_pos, my_turn):
-        #change if condition
+
+        """if my_turn:
+            print(f'\n Move : {old_pos} -> {cur_pos}')"""
 
         if self.game.game_type == "SINGLE" and self.game.player == 0:
             end_pos = (15,15)
@@ -380,12 +389,16 @@ class halma_game_state:
         if self.game.player == 1:
             d_min = min((old_pos[0] - cur_pos[0]), (old_pos[1] - cur_pos[1]))
             d_max = max((old_pos[0] - cur_pos[0]), (old_pos[1] - cur_pos[1]))
+            #d_min_goal = min(abs(end_pos[0] - cur_pos[0]), abs(end_pos[1] - cur_pos[1]))
+            #d_max_goal = max(abs(end_pos[0] - cur_pos[0]), abs(end_pos[1] - cur_pos[1]))
         else:
             d_min = min((cur_pos[0] - old_pos[0]), (cur_pos[1] - old_pos[1]))
             d_max = max((cur_pos[0] - old_pos[0]), (cur_pos[1] - old_pos[1]))
+
         d_min_goal = min(abs(15 - end_pos[0] - cur_pos[0]), abs(15 - end_pos[1] - cur_pos[1]))
         d_max_goal = max(abs(15 - end_pos[0] - cur_pos[0]), abs(15 - end_pos[1] - cur_pos[1]))
         result = 5 * int(1.4 * d_min + (d_max - d_min)) + 1 * int(1.4 * d_min_goal + (d_max_goal - d_min_goal))
+        #print(f'Move Heuristics : move weight {result}')
 
 
         if not self.move_not_in_my_camp(old_pos):
@@ -394,6 +407,7 @@ class halma_game_state:
         if not self.move_not_in_my_camp(cur_pos):
             result -= 100
 
+        #print(f'Move Heuristics : weight for moves in camp {result}')
         if self.move_in_opp_camp(cur_pos) and not self.move_in_opp_camp(old_pos):
             result += 100
         elif self.move_in_opp_camp(old_pos) and not self.move_in_opp_camp(cur_pos):
@@ -401,11 +415,16 @@ class halma_game_state:
         elif not self.move_in_opp_camp(old_pos) and self.move_in_midboard(cur_pos):
             result += 75
 
+        #print(f'Move Heuristics : move weight for opp camp/midboard {result}')
+
         if self.move_in_opp_camp(cur_pos) and self.move_in_opp_camp(old_pos):
             if game_stage == 1 or game_stage == 2:
                 result -= 75
             else:
                 result -= 25
+        #print(f'Move Heuristics : move weight for within opp camp {result}')
+
+        #this is screwed up..need to change?
 
         if self.move_in_opp_camp(cur_pos) and not (self.my_pos & (1<<((BOARD_SIZE)*(cur_pos[0]) + cur_pos[1]))):
             #print(f'Moving from {old_pos} to unoccupied goal {cur_pos}')
@@ -419,18 +438,29 @@ class halma_game_state:
             else:
                 result -= 50
         # Weight for pawns in the back
-        if not (self.move_in_opp_camp(old_pos)):
+        
+        """if not (self.move_in_opp_camp(old_pos)):
             #changed cur_pos to next_pos
-            result += game_heuristics[game_stage][7] * ((15 - old_pos[0]) + (15 - old_pos[1]))
+            result += game_heuristics[game_stage][7] * ((15 - old_pos[0]) + (15 - old_pos[1]))"""
 
         # ADDED GAME STATE CHECK!!!!!
         if self.game.my_player == 0:
+
+            if not (self.move_in_opp_camp(old_pos)):
+                result += game_heuristics[game_stage][7] * ((15 - old_pos[0]) + (15 - old_pos[1]))
+
             if (old_pos[0] > 7 and cur_pos[0] > 7) and (cur_pos[1] - old_pos[1] > 0):
                 result += 25
         elif self.game.my_player == 1:
-            if (old_pos[0] < 7 and cur_pos[0] < 7) and (15 - cur_pos[1] -  (15 - old_pos[1]) > 0): 
+
+            if not (self.move_in_opp_camp(old_pos)):
+                result += game_heuristics[game_stage][7] * ((old_pos[0]) + (old_pos[1]))
+
+            if (old_pos[0] < 7 and cur_pos[0] < 7) and (old_pos[1] - cur_pos[1] > 0): 
+                #print(f'Add weight for pawns left behind')
                 result += 25
 
+        #print(f'Move Heuristics : pawn weight {result}')
         return result
 
     def get_single_game_heuristics(self, cur_pos, old_pos):
@@ -564,7 +594,7 @@ class halma_ai_agent:
 
         starttime = datetime.datetime.now()
         cur_val = state.getDisplacementVal()
-        v = self.maxValue(state, -math.inf, math.inf, self.depthLimit, cur_val, self.game.player)
+        v = self.maxValue(state, -math.inf, math.inf, self.depthLimit, cur_val, self.game.my_player)
 
         print("\nNiroop's Move")
         print("Time = " + str(datetime.datetime.now() - starttime))

@@ -37,9 +37,9 @@ BOARD_SIZE = 16
 " Destination Lookup
 """
 
-destination_lookup = [{'0,0' :(15,15), '0,1' :(15,15), '0,2' :(15,15), '0,3' :(15,15), '0,4' :(15,15), '1,0' :(15,15), '1,1' :(15,15), '1,2' :(15,15), '1,3' :(15,15), '1,4' :(15,15), '2,0' :(15,15), '2,1' :(15,15), '2,2' :(15,15), '2,3' :(15,15), '3,0' :(15,15), '3,1' :(15,15), '3,2' :(15,15), '4,0' :(15,15), '4,1' :(15,15)}, {'15,15': (0,0), '15,14': (0,0), '15,13': (0,0), '15,12': (0,0), '15,11': (0,0), '14,15': (0,0), '14,14': (0,0), '14,13': (0,0), '14,12': (0,0), '14,11': (0,0), '13,15': (0,0), '13,14': (0,0), '13,13': (0,0), '13,12': (0,0), '12,15': (0,0), '12,14': (0,0), '12,13': (0,0), '11,15': (0,0), '11,14': (0,0)}]
+"""destination_lookup = [{'0,0' :(15,15), '0,1' :(15,15), '0,2' :(15,15), '0,3' :(15,15), '0,4' :(15,15), '1,0' :(15,15), '1,1' :(15,15), '1,2' :(15,15), '1,3' :(15,15), '1,4' :(15,15), '2,0' :(15,15), '2,1' :(15,15), '2,2' :(15,15), '2,3' :(15,15), '3,0' :(15,15), '3,1' :(15,15), '3,2' :(15,15), '4,0' :(15,15), '4,1' :(15,15)}, {'15,15': (0,0), '15,14': (0,0), '15,13': (0,0), '15,12': (0,0), '15,11': (0,0), '14,15': (0,0), '14,14': (0,0), '14,13': (0,0), '14,12': (0,0), '14,11': (0,0), '13,15': (0,0), '13,14': (0,0), '13,13': (0,0), '13,12': (0,0), '12,15': (0,0), '12,14': (0,0), '12,13': (0,0), '11,15': (0,0), '11,14': (0,0)}]"""
 
-
+destination_lookup = [{'0,0' :(0,0), '0,1' :(0,0), '0,2' :(0,0), '0,3' :(0,0), '0,4' :(0,0), '1,0' :(0,0), '1,1' :(0,0), '1,2' :(0,0), '1,3' :(0,0), '1,4' :(0,0), '2,0' :(0,0), '2,1' :(0,0), '2,2' :(0,0), '2,3' :(0,0), '3,0' :(0,0), '3,1' :(0,0), '3,2' :(0,0), '4,0' :(0,0), '4,1' :(0,0)}, {'15,15': (15,15), '15,14': (15,15), '15,13': (15,15), '15,12': (15,15), '15,11': (15,15), '14,15': (15,15), '14,14': (15,15), '14,13': (15,15), '14,12': (15,15), '14,11': (15,15), '13,15': (15,15), '13,14': (15,15), '13,13': (15,15), '13,12': (15,15), '12,15': (15,15), '12,14': (15,15), '12,13': (15,15), '11,15': (15,15), '11,14': (15,15)}]
 """
 " Heuristics weights
 " [No of nodes, final_weight, depth, displacement, middle_board, goal, goal_penalty]
@@ -47,7 +47,8 @@ destination_lookup = [{'0,0' :(15,15), '0,1' :(15,15), '0,2' :(15,15), '0,3' :(1
 
 game_heuristics = [[40, 150, 3, 5, 70, 100, 50, 4, 40], \
                     [40, 150, 3, 1, 20, 100, 25, 4, 40],
-                    [25, 200, 5, 1, 10, 150, 5, 6, 5]]
+                    #[15, 220, 5, 1, 10, 150, 5, 6, 15]]
+                    [15, 200, 5, 1, 10, 150, 5, 6, 5]]
 
 game_stage = 0
 """
@@ -186,7 +187,7 @@ class halma_game_state:
             #print(f'initial_moves_in_camp : {sorted(self.initial_moves_in_camp, key = lambda x: x[0], reverse = True)}')
             return sorted(self.initial_moves_in_camp, key = lambda x: x[0], reverse = True)
         else:
-            #print(f'All moves : {sorted(self.moves, key = lambda x: x[0], reverse = True)}')
+            #print(f'\nAll moves : {sorted(self.moves, key = lambda x: x[0], reverse = True)}')
             return sorted(self.moves, key = lambda x: x[0], reverse = True)
 
     def generate_jump_moves(self, orig_pos, next_jump_pos, my_turn):
@@ -379,12 +380,14 @@ class halma_game_state:
 
         if self.game.game_type == "GAME" and self.game.player == 0:
             key = ','.join([str(15 - old_pos[0]), str(15 - old_pos[1])])
+            #key = ','.join([str(old_pos[0]), str(ld_pos[1])])
             if key in self.game.json_data['destined_pos'] :
                 end_pos = self.game.json_data['destined_pos'][key]
             else:
                 end_pos = (15, 15)
         elif self.game.game_type == "GAME" and self.game.player == 1:
             key = ','.join([str(15 - old_pos[0]), str(15 - old_pos[1])])
+            #key = ','.join([str(old_pos[0]), str(old_pos[1])])
             if key in self.game.json_data['destined_pos'] :
                 end_pos = self.game.json_data['destined_pos'][key]
             else:
@@ -422,14 +425,22 @@ class halma_game_state:
         #print(f'Move Heuristics : move weight for opp camp/midboard {result}')
 
         if self.move_in_opp_camp(cur_pos) and self.move_in_opp_camp(old_pos):
-            if game_stage == 1 or game_stage == 2:
+            if game_stage == 1:
                 result -= 75
+            elif game_stage == 2:
+                result -= 25
             else:
                 result -= 25
         #print(f'Move Heuristics : move weight for within opp camp {result}')
 
         #this is screwed up..need to change?
+        if self.game.my_player == 0:
+            final_pos = WHITE_FINAL_VAL
+        else:
+            final_pos = BLACK_FINAL_VAL
 
+        #changed from my_pos to final_pos
+        #if self.move_in_opp_camp(cur_pos) and not ((self.my_pos & final_pos) & (1<<((BOARD_SIZE)*(cur_pos[0]) + cur_pos[1]))):
         if self.move_in_opp_camp(cur_pos) and not (self.my_pos & (1<<((BOARD_SIZE)*(cur_pos[0]) + cur_pos[1]))):
             #print(f'Moving from {old_pos} to unoccupied goal {cur_pos}')
             #Change this
@@ -438,7 +449,10 @@ class halma_game_state:
         if ((key in self.game.json_data['moves']) and (self.game.json_data['moves'][key] == list(cur_pos))):
             if game_stage == 1 or game_stage == 2:
                 #CHANGED THIS FROM 10 to 15!!!!!
+                #CHANGED THIS FROM 15 to 30
                 result -= 15
+            #elif game_stage == 2:
+               # result -= 30
             else:
                 result -= 50
         # Weight for pawns in the back
@@ -666,7 +680,7 @@ class halma_ai_agent:
         #print(f'cur board : {state.print_board_state()}')
         v = math.inf
         #print(f' Minvalue :  moves len : {len(state.getAllMoves(False))}')
-        for move in state.getAllMoves(False)[:game_heuristics[game_stage][0]]:
+        for move in state.getAllMoves(False)[:game_heuristics[game_stage][8]]:
             state.applyMove(move, False)
             #cur_val = state.getDisplacementVal()
             r_val = self.maxValue(state, alpha, beta, depthLimit - 1, cur_val, (player+1) % 2)
@@ -838,9 +852,8 @@ class halma_game:
 
     def assign_destined_pos(self):
 
-        self.apply_suggested_move()
+        #self.apply_suggested_move()
         if self.my_player == 0:
-            my_pos = self.my_pos
             final_pos = BLACK_FINAL_VAL
         else:
             final_pos = WHITE_FINAL_VAL
@@ -849,6 +862,7 @@ class halma_game:
             pos_msb = self.get_msb(my_pos)
             final_msb = self.get_msb(final_pos)
             key = ','.join(map(str, pos_msb))
+            print(f'Assign K:V - > {key}->{final_msb}')
             self.json_data['destined_pos'][key] = final_msb
             my_pos = self.SetMSBToZero(my_pos)
             final_pos = self.SetMSBToZero(final_pos)
@@ -944,12 +958,13 @@ class halma_game:
             with open("playdata_n.txt", "r") as data_file:
                 self.json_data = json.load(data_file)
 
-            self.suggested_move = [[15 - self.suggested_move[0][0], 15 - self.suggested_move[0][1]], [15 - self.suggested_move[1][0], 15 - self.suggested_move[1][1]]]
+            self.apply_suggested_move()
+            suggested_move = [[15 - self.suggested_move[0][0], 15 - self.suggested_move[0][1]], [15 - self.suggested_move[1][0], 15 - self.suggested_move[1][1]]]
             with open("playdata_n.txt", "w+") as data_file:
                 self.json_data['num_moves'] = self.moves_completed + 1
                 self.json_data['moves'][','.join(map(str, self.suggested_move[0]))] = self.suggested_move[1]
-                self.json_data['destined_pos'][','.join(map(str, self.suggested_move[1]))] = self.json_data['destined_pos'][','.join(map(str, self.suggested_move[0]))]
-                del self.json_data['destined_pos'][','.join(map(str, self.suggested_move[0]))]
+                self.json_data['destined_pos'][','.join(map(str, suggested_move[1]))] = self.json_data['destined_pos'][','.join(map(str, suggested_move[0]))]
+                del self.json_data['destined_pos'][','.join(map(str, suggested_move[0]))]
                 if self.move_in_opp_camp(self.suggested_move[1]):
                     self.assign_destined_pos()
                 json.dump(self.json_data, data_file)

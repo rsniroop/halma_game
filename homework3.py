@@ -160,7 +160,7 @@ class halma_game_state:
                                         self.initial_moves_campout.append([h_val, cur_pos , (x,y)])
                                     elif not (self.move_not_in_my_camp(cur_pos)) and not (self.move_not_in_my_camp((x,y))) and self.check_valid_move_in_camp(cur_pos, (x, y)) and h_val > 0:
                                         self.initial_moves_in_camp.append([h_val, cur_pos , (x,y)])
-                                    else :
+                                    elif (self.move_not_in_my_camp(cur_pos)) :
                                         self.moves.append([h_val, cur_pos , (x,y)])
                                 else:
                                     if self.game.is_pos_valid(x+i, y+j) and ((my_pos | opp_pos) & (1<<(BOARD_SIZE*x + y))) and not ((my_pos | opp_pos) & (1<<(BOARD_SIZE*(x+i) + (y+j)))) :
@@ -193,7 +193,7 @@ class halma_game_state:
                         self.initial_moves_campout.append([h_val, orig_pos , cur_pos])
                     elif not (self.move_not_in_my_camp(orig_pos)) and not (self.move_not_in_my_camp(cur_pos)) and self.check_valid_move_in_camp(orig_pos, cur_pos):
                         self.initial_moves_in_camp.append([h_val, orig_pos , cur_pos])
-                    else :
+                    elif (self.move_not_in_my_camp(cur_pos)) :
                         self.moves.append([h_val, orig_pos , cur_pos])
             for i in (-1,0,1):
                 for j in (-1,0,1):
@@ -223,17 +223,17 @@ class halma_game_state:
             pop_h_val, cur_pos, old_pos = heapq.heappop(open_queue)
             self.set_pawn_position(cur_pos)
             self.unset_pawn_position(old_pos)
-            h_val = self.calculate_directional_heuristics(cur_pos, orig_pos,  my_turn)
-            if h_val > 0:
-                if not(self.move_in_opp_camp(orig_pos) and not (self.move_in_opp_camp(cur_pos))) \
-                and not (self.move_not_in_my_camp(orig_pos) and not (self.move_not_in_my_camp(cur_pos))):
+            h_val = self.calculate_single_directional_heuristics(cur_pos, orig_pos,  my_turn)
+            if not(self.move_in_opp_camp(orig_pos) and not (self.move_in_opp_camp(cur_pos))) \
+            and not (self.move_not_in_my_camp(orig_pos) and not (self.move_not_in_my_camp(cur_pos))):
 
-                    if not (self.move_not_in_my_camp(orig_pos)) and (self.move_not_in_my_camp(cur_pos)):
-                        self.initial_moves_campout.append([h_val, orig_pos , cur_pos])
-                    elif not (self.move_not_in_my_camp(orig_pos)) and not (self.move_not_in_my_camp(cur_pos)) and self.check_valid_move_in_camp(orig_pos, cur_pos):
-                        self.initial_moves_in_camp.append([h_val, orig_pos , cur_pos])
-                    else :
-                        self.moves.append([h_val, orig_pos , cur_pos])
+                if not (self.move_not_in_my_camp(orig_pos)) and (self.move_not_in_my_camp(cur_pos)):
+                    self.initial_moves_campout.append([h_val, orig_pos , cur_pos])
+                elif not (self.move_not_in_my_camp(orig_pos)) and not (self.move_not_in_my_camp(cur_pos)) and self.check_valid_move_in_camp(orig_pos, cur_pos):
+                    self.initial_moves_in_camp.append([h_val, orig_pos , cur_pos])
+                elif (self.move_not_in_my_camp(cur_pos)) :
+                    self.moves.append([h_val, orig_pos , cur_pos])
+
             for i in (-1,0,1):
                 for j in (-1,0,1):
                     if i != 0 or j != 0:
@@ -284,12 +284,12 @@ class halma_game_state:
                                         continue
                                     if (self.move_not_in_my_camp(cur_pos) and not (self.move_not_in_my_camp((x,y)))):
                                         continue
-                                    h_val = self.get_single_game_heuristics((x,y), cur_pos)
+                                    h_val = self.calculate_single_directional_heuristics((x,y), cur_pos, True)
                                     if not (self.move_not_in_my_camp(cur_pos)) and (self.move_not_in_my_camp((x,y))):
                                         self.initial_moves_campout.append([h_val, cur_pos , (x,y)])
-                                    elif not (self.move_not_in_my_camp(cur_pos)) and not (self.move_not_in_my_camp((x,y))) and self.check_valid_move_in_camp(cur_pos, (x, y)) and h_val > 0:
+                                    elif not (self.move_not_in_my_camp(cur_pos)) and not (self.move_not_in_my_camp((x,y))) and self.check_valid_move_in_camp(cur_pos, (x, y)):
                                         self.initial_moves_in_camp.append([h_val, cur_pos , (x,y)])
-                                    else :
+                                    elif (self.move_not_in_my_camp(cur_pos)) :
                                         self.moves.append([h_val, cur_pos , (x,y)])
                                 else:
                                     if self.game.is_pos_valid(x+i, y+j) and ((my_pos | opp_pos) & (1<<(BOARD_SIZE*x + y))) and not ((my_pos | opp_pos) & (1<<(BOARD_SIZE*(x+i) + (y+j)))) :
@@ -301,6 +301,8 @@ class halma_game_state:
         elif self.initial_moves_in_camp:
             return sorted(self.initial_moves_in_camp, key = lambda x: x[0], reverse = True)[0][1:]
         else:
+            print(f'Moves: {self.moves}')
+            print(f'Len of Moves : {len(self.moves)}')
             return sorted(self.moves, key = lambda x: x[0], reverse = True)[0][1:]
 
     def check_valid_move_in_camp(self, old_pos, next_pos):
@@ -343,6 +345,63 @@ class halma_game_state:
         d_min = min(abs(cur_pos[0] - old_pos[0]), abs(cur_pos[1] - old_pos[1]))
         d_max = max(abs(cur_pos[0] - old_pos[0]), abs(cur_pos[1] - old_pos[1]))
         result = int(1.4 * d_min + (d_max - d_min))
+
+        return result
+
+
+    def calculate_single_directional_heuristics(self, cur_pos, old_pos, my_turn):
+
+
+        if self.game.game_type == "SINGLE" and self.game.player == 0:
+            end_pos = (15,15)
+        elif self.game.game_type == "SINGLE" and self.game.player == 1:
+            end_pos = (0,0)
+        else:
+            return 0
+
+        if self.game.player == 1:
+            d_min = min((old_pos[0] - cur_pos[0]), (old_pos[1] - cur_pos[1]))
+            d_max = max((old_pos[0] - cur_pos[0]), (old_pos[1] - cur_pos[1]))
+        else:
+            d_min = min((cur_pos[0] - old_pos[0]), (cur_pos[1] - old_pos[1]))
+            d_max = max((cur_pos[0] - old_pos[0]), (cur_pos[1] - old_pos[1]))
+
+        d_min_goal = min(abs(15 - end_pos[0] - cur_pos[0]), abs(15 - end_pos[1] - cur_pos[1]))
+        d_max_goal = max(abs(15 - end_pos[0] - cur_pos[0]), abs(15 - end_pos[1] - cur_pos[1]))
+        result = 5 * int(1.4 * d_min + (d_max - d_min)) + 1 * int(1.4 * d_min_goal + (d_max_goal - d_min_goal))
+
+
+        if not self.move_not_in_my_camp(old_pos):
+            result += 200
+
+        if not self.move_not_in_my_camp(cur_pos):
+            result -= 100
+
+        if self.move_in_opp_camp(cur_pos) and not self.move_in_opp_camp(old_pos):
+            result += 100
+        elif self.move_in_opp_camp(old_pos) and not self.move_in_opp_camp(cur_pos):
+            result -= 200
+        elif not self.move_in_opp_camp(old_pos) and self.move_in_midboard(cur_pos):
+            result += 75
+
+        if self.move_in_opp_camp(cur_pos) and self.move_in_opp_camp(old_pos):
+            if game_stage == 1:
+                result -= 75
+            elif game_stage == 2:
+                result -= 25
+            else:
+                result -= 25
+
+
+        if self.game.my_player == 0:
+
+
+            if (old_pos[0] > 7 and cur_pos[0] > 7) and (cur_pos[1] - old_pos[1] > 0):
+                result += 25
+        elif self.game.my_player == 1:
+
+            if (old_pos[0] < 7 and cur_pos[0] < 7) and (old_pos[1] - cur_pos[1] > 0): 
+                result += 25
 
         return result
 

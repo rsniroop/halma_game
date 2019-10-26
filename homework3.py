@@ -301,8 +301,6 @@ class halma_game_state:
         elif self.initial_moves_in_camp:
             return sorted(self.initial_moves_in_camp, key = lambda x: x[0], reverse = True)[0][1:]
         else:
-            print(f'Moves: {self.moves}')
-            print(f'Len of Moves : {len(self.moves)}')
             return sorted(self.moves, key = lambda x: x[0], reverse = True)[0][1:]
 
     def check_valid_move_in_camp(self, old_pos, next_pos):
@@ -488,35 +486,6 @@ class halma_game_state:
 
         return result
 
-    def get_single_game_heuristics(self, cur_pos, old_pos):
-        if self.game.player == 1:
-            d_min = min((old_pos[0] - cur_pos[0]), (old_pos[1] - cur_pos[1]))
-            d_max = max((old_pos[0] - cur_pos[0]), (old_pos[1] - cur_pos[1]))
-            d_min_goal = min((cur_pos[0]), (cur_pos[1]))
-            d_max_goal = max((cur_pos[0]), (cur_pos[1]))
-        else:
-            d_min = min((cur_pos[0] - old_pos[0]), (cur_pos[1] - old_pos[1]))
-            d_max = max((cur_pos[0] - old_pos[0]), (cur_pos[1] - old_pos[1]))
-            d_min_goal = min(abs(15 - cur_pos[0]), abs(15 - cur_pos[1]))
-            d_max_goal = max(abs(15 - cur_pos[0]), abs(15 - cur_pos[1]))
-        result = 5 * int(1.4 * d_min + (d_max - d_min)) + int(1.4 * d_min_goal + (d_max_goal - d_min_goal))
-
-
-        if not self.move_not_in_my_camp(old_pos):
-            result += 200
-
-        if not self.move_not_in_my_camp(cur_pos):
-            result -= 100
-
-        if self.move_in_opp_camp(cur_pos) and not self.move_in_opp_camp(old_pos):
-            result += 100
-        elif self.move_in_opp_camp(old_pos) and not self.move_in_opp_camp(cur_pos):
-            result -= 200
-        elif not self.move_in_opp_camp(old_pos) and self.move_in_midboard(cur_pos):
-            result += 75
-
-        return result
-
     def move_not_in_my_camp(self, move):
         if self.game.player == 0:
             if (BLACK_FINAL_VAL & (1<<((BOARD_SIZE)*(move[0]) + move[1]))):
@@ -599,9 +568,6 @@ class halma_ai_agent:
 
         cur_val = state.getDisplacementVal()
         v = self.maxValue(state, -math.inf, math.inf, self.depthLimit, cur_val, self.game.my_player)
-
-        print("selected value " + str(v))
-        print(f"selected move : ({15 - self.bestMove[0][0]}, {15 - self.bestMove[0][1]}) ---> ({15 - self.bestMove[1][0]}, {15 - self.bestMove[1][1]})")
 
         return self.bestMove
 

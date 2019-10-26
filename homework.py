@@ -227,12 +227,15 @@ class halma_game_state:
             self.unset_pawn_position(old_pos)
             h_val = self.calculate_directional_heuristics(cur_pos, orig_pos,  my_turn)
             if h_val > 0:
-                if not (self.move_not_in_my_camp(orig_pos)) and (self.move_not_in_my_camp(cur_pos)):
-                    self.initial_moves_campout.append([h_val, orig_pos , cur_pos])
-                elif not (self.move_not_in_my_camp(orig_pos)) and not (self.move_not_in_my_camp(cur_pos)) and self.check_valid_move_in_camp(orig_pos, cur_pos):
-                    self.initial_moves_in_camp.append([h_val, orig_pos , cur_pos])
-                else :
-                    self.moves.append([h_val, orig_pos , cur_pos])
+                if not(self.move_in_opp_camp(orig_pos) and not (self.move_in_opp_camp(cur_pos))) \
+                and not (self.move_not_in_my_camp(orig_pos) and not (self.move_not_in_my_camp(cur_pos))):
+
+                    if not (self.move_not_in_my_camp(orig_pos)) and (self.move_not_in_my_camp(cur_pos)):
+                        self.initial_moves_campout.append([h_val, orig_pos , cur_pos])
+                    elif not (self.move_not_in_my_camp(orig_pos)) and not (self.move_not_in_my_camp(cur_pos)) and self.check_valid_move_in_camp(orig_pos, cur_pos):
+                        self.initial_moves_in_camp.append([h_val, orig_pos , cur_pos])
+                    else :
+                        self.moves.append([h_val, orig_pos , cur_pos])
             for i in (-1,0,1):
                 for j in (-1,0,1):
                     if i != 0 or j != 0:
@@ -279,6 +282,10 @@ class halma_game_state:
                             y = cur_pos[1] + j 
                             if self.game.is_pos_valid(x, y): 
                                 if not ((my_pos | opp_pos) & (1<<(BOARD_SIZE*x + y))):
+                                    if self.move_in_opp_camp(cur_pos) and not (self.move_in_opp_camp((x,y))):
+                                        continue
+                                    if (self.move_not_in_my_camp(cur_pos) and not (self.move_not_in_my_camp((x,y)))):
+                                        continue
                                     h_val = self.get_single_game_heuristics((x,y), cur_pos)
                                     if not (self.move_not_in_my_camp(cur_pos)) and (self.move_not_in_my_camp((x,y))):
                                         self.initial_moves_campout.append([h_val, cur_pos , (x,y)])
